@@ -8,4 +8,14 @@ class AppTextStyles {
         fontSize: 28.sp,
         fontWeight: FontWeight.bold,
       );
+  static TextStyle get font48WhiteBold => TextStyle(
+        fontSize: 48.sp,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      );
+  static TextStyle get font16WhiteRegular => TextStyle(
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w400,
+        color: Colors.white,
+      );
 }

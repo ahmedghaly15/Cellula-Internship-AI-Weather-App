@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:internship_ai_weather_app/src/core/themes/app_colors.dart';
+import 'package:internship_ai_weather_app/src/core/themes/app_text_styles.dart';
 import 'package:internship_ai_weather_app/src/core/utils/app_strings.dart';
 
 class AppThemes {
@@ -19,6 +20,12 @@ class AppThemes {
             statusBarColor: AppColors.scaffoldBackgroundColor,
             statusBarBrightness: Brightness.light,
             statusBarIconBrightness: Brightness.dark,
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: Colors.tealAccent[400],
+            textStyle: AppTextStyles.font16WhiteRegular,
           ),
         ),
       );

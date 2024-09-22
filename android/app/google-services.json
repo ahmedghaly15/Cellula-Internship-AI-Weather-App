@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "815246154921",
+    "project_id": "cellula-internship-1a146",
+    "storage_bucket": "cellula-internship-1a146.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815246154921:android:3c909f5315f74d656b9db8",
+        "android_client_info": {
+          "package_name": "com.example.internship_ai_weather_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASDEj3JF24btP8pduXraV7er7rl5Phpx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
