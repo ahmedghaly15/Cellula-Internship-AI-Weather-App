@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_ai_weather_app/src/core/router/routes.dart';
+import 'package:internship_ai_weather_app/src/features/login/presentation/views/login_view.dart';
 import 'package:internship_ai_weather_app/src/features/start/presentation/views/start_view.dart';
 
 class AppRouter {
@@ -11,6 +12,11 @@ class AppRouter {
       case Routes.startRoute:
         return MaterialPageRoute(
           builder: (_) => const StartView(),
+        );
+
+      case Routes.loginRoute:
+        return MaterialPageRoute(
+          builder: (_) => const LoginView(),
         );
 
       default:
