@@ -10,6 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
   
+  # Firebase
+  cloud_firestore: ^4.15.10
+  firebase_auth: ^4.18.0
+  firebase_core: ^2.27.2
   # State management
   flutter_bloc: ^8.1.6
   # Code generator (mainly used with Cubit & retrofit)
