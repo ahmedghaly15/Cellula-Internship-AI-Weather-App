@@ -1,0 +1,44 @@
+name: internship_ai_weather_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State management
+  flutter_bloc: ^8.1.6
+  # Code generator (mainly used with Cubit & retrofit)
+  freezed_annotation: ^2.4.1
+  # Easily create beautify toast with a series of animations and make toast more beautiful.
+  flutter_styled_toast: ^2.2.1
+  # Simple direct Service Locator that allows to access the concrete implementation from everywhere
+  get_it: ^7.7.0
+  # Dart library that checks for internet
+  internet_connection_checker: ^2.0.0
+  # Flutter plugin for reading and writing simple key-value pairs for cache
+  shared_preferences: ^2.2.3
+  # Provides API to store data in secure storage
+  flutter_secure_storage: ^9.2.2
+  # A flutter plugin for adapting screen and font size.Guaranteed to look good on different models
+  flutter_screenutil: ^5.9.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # A build system for Dart code generation and modular compilation.
+  build_runner: ^2.4.12
+  # Recommended lints to encourage good coding practices
+  flutter_lints: ^4.0.0
+  # Code generator (mainly used with Cubit & retrofit)
+  freezed: ^2.5.2
+  # Performs static analysis of Dart code. It is useful for tool integration and embedding.
+  analyzer: ^6.7.0
+
+flutter:
+  uses-material-design: true
