@@ -14,7 +14,7 @@ class AIWeatherApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(
+      builder: (_, __) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: AppStrings.appTitle,
         theme: AppThemes.lightMode,
