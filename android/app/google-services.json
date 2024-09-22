@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "712411863933",
+    "project_id": "cellula-internship",
+    "storage_bucket": "cellula-internship.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712411863933:android:6f06c0d962511dedc18a14",
+        "android_client_info": {
+          "package_name": "com.example.internship_ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjfHqrBXwoTfvNro7B_XOpMfx0BtOn0Fk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
