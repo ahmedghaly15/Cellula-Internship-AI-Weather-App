@@ -41,46 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAtKoB2cFDneducbUfIgMr6AgVhDHe8wGk',
-    appId: '1:712411863933:web:7a6b5e31ecd84e1cc18a14',
-    messagingSenderId: '712411863933',
-    projectId: 'cellula-internship',
-    authDomain: 'cellula-internship.firebaseapp.com',
-    storageBucket: 'cellula-internship.appspot.com',
+    apiKey: 'AIzaSyAnwzvfxNpg-R0BxQK1m4zjtnnNyxaG8Lc',
+    appId: '1:815246154921:web:7e5232092a234b086b9db8',
+    messagingSenderId: '815246154921',
+    projectId: 'cellula-internship-1a146',
+    authDomain: 'cellula-internship-1a146.firebaseapp.com',
+    storageBucket: 'cellula-internship-1a146.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBjfHqrBXwoTfvNro7B_XOpMfx0BtOn0Fk',
-    appId: '1:712411863933:android:6f06c0d962511dedc18a14',
-    messagingSenderId: '712411863933',
-    projectId: 'cellula-internship',
-    storageBucket: 'cellula-internship.appspot.com',
+    apiKey: 'AIzaSyASDEj3JF24btP8pduXraV7er7rl5Phpx0',
+    appId: '1:815246154921:android:3c909f5315f74d656b9db8',
+    messagingSenderId: '815246154921',
+    projectId: 'cellula-internship-1a146',
+    storageBucket: 'cellula-internship-1a146.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAHt-cxkyU_n8NLeoBAb9YCMAuVbqwF1fA',
-    appId: '1:712411863933:ios:1119031fcd58ffb6c18a14',
-    messagingSenderId: '712411863933',
-    projectId: 'cellula-internship',
-    storageBucket: 'cellula-internship.appspot.com',
+    apiKey: 'AIzaSyBxcrhbfmbSdVYPTblTVI3HZQEjvt-t22k',
+    appId: '1:815246154921:ios:1172b99f32b1b6be6b9db8',
+    messagingSenderId: '815246154921',
+    projectId: 'cellula-internship-1a146',
+    storageBucket: 'cellula-internship-1a146.appspot.com',
     iosBundleId: 'com.example.internshipAiWeatherApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAHt-cxkyU_n8NLeoBAb9YCMAuVbqwF1fA',
-    appId: '1:712411863933:ios:1119031fcd58ffb6c18a14',
-    messagingSenderId: '712411863933',
-    projectId: 'cellula-internship',
-    storageBucket: 'cellula-internship.appspot.com',
+    apiKey: 'AIzaSyBxcrhbfmbSdVYPTblTVI3HZQEjvt-t22k',
+    appId: '1:815246154921:ios:1172b99f32b1b6be6b9db8',
+    messagingSenderId: '815246154921',
+    projectId: 'cellula-internship-1a146',
+    storageBucket: 'cellula-internship-1a146.appspot.com',
     iosBundleId: 'com.example.internshipAiWeatherApp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAtKoB2cFDneducbUfIgMr6AgVhDHe8wGk',
-    appId: '1:712411863933:web:cb012167fe5dd6eac18a14',
-    messagingSenderId: '712411863933',
-    projectId: 'cellula-internship',
-    authDomain: 'cellula-internship.firebaseapp.com',
-    storageBucket: 'cellula-internship.appspot.com',
+    apiKey: 'AIzaSyAnwzvfxNpg-R0BxQK1m4zjtnnNyxaG8Lc',
+    appId: '1:815246154921:web:a0c89e8a586124e16b9db8',
+    messagingSenderId: '815246154921',
+    projectId: 'cellula-internship-1a146',
+    authDomain: 'cellula-internship-1a146.firebaseapp.com',
+    storageBucket: 'cellula-internship-1a146.appspot.com',
   );
 }
