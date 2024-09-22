@@ -26,6 +26,10 @@ dependencies:
   flutter_secure_storage: ^9.2.2
   # A flutter plugin for adapting screen and font size.Guaranteed to look good on different models
   flutter_screenutil: ^5.9.3
+  # An SVG rendering and widget library for Flutter, which allows painting
+  flutter_svg: ^2.0.10+1
+  # For Beautiful animations 
+  animate_do: ^3.3.4
 
 dev_dependencies:
   flutter_test:
@@ -42,3 +46,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/svgs/
+
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/src/core/utils/
+  filename: app_assets.dart
+  field_prefix: null
