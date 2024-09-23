@@ -6,6 +6,8 @@ import 'package:internship_ai_weather_app/src/core/router/routes.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/views/home_view.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/blocs/login_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/views/login_view.dart';
+import 'package:internship_ai_weather_app/src/features/register/presentation/bloc/register_bloc.dart';
+import 'package:internship_ai_weather_app/src/features/register/presentation/views/register_view.dart';
 import 'package:internship_ai_weather_app/src/features/start/presentation/views/start_view.dart';
 
 class AppRouter {
@@ -29,6 +31,14 @@ class AppRouter {
       case Routes.homeRoute:
         return MaterialPageRoute(
           builder: (_) => const HomeView(),
+        );
+
+      case Routes.registerRoute:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (_) => getIt.get<RegisterBloc>(),
+            child: const RegisterView(),
+          ),
         );
 
       default:
