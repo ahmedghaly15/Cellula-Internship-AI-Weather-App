@@ -1,7 +1,7 @@
-class LoginParams {
+class AuthActionParams {
   final String email, password;
 
-  const LoginParams({
+  const AuthActionParams({
     required this.email,
     required this.password,
   });

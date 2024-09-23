@@ -4,7 +4,12 @@ import 'package:internship_ai_weather_app/src/core/helpers/cache_keys.dart';
 import 'package:internship_ai_weather_app/src/core/helpers/secure_storage_helper.dart';
 import 'package:internship_ai_weather_app/src/core/models/app_user.dart';
 
-Future<void> cacheUserId(String userId) async {
+Future<void> cacheUserAndHisId(AppUser appUser) async {
+  await cacheAppUser(appUser);
+  await _cacheUserId(appUser.userId);
+}
+
+Future<void> _cacheUserId(String userId) async {
   await SecureStorageHelper.setSecuredString(CacheKeys.userId, userId);
 }
 
