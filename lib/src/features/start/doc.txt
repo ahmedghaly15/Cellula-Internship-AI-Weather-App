@@ -1,0 +1,8 @@
+Start Feature Documentation
+
+Overview
+
+The Start feature serves as the initial screen of the application, 
+providing users with two main options: "Sign up" and "Log in." 
+This feature is designed to facilitate navigation and direct users to the appropriate action 
+based on their intent, whether they want to create a new account or access an existing one.

@@ -1,0 +1,41 @@
+Login Feature Documentation
+
+Overview
+
+The login feature allows users to authenticate via Firebase. It is structured using clean architecture principles,
+with Firebase handling the authentication logic. The feature is implemented across
+two main layers: the data layer and the presentation layer. 
+
+No domain layer is used since it was deemed unnecessary for this feature's simplicity.
+
+****** Data Layer ******
+
+1 - Remote Data Source: 
+
+Purpose: Handles the interaction with Firebase for logging in.
+
+Implementation:
+A single method is used to communicate with Firebase for user authentication, so no abstraction (interface) was created.
+The data source fetches and returns login results directly from Firebase.
+
+2 - Models:
+
+(AuthActionParams Model):
+This model is used to hold the login parameters (such as email and password) required for authentication.
+
+3 - Repository: (LoginRepo)
+
+A repo class that manages login actions and interacts with the remote data source.
+Like the remote data source, no abstraction is implemented here due to the simplicity 
+of the feature and the fact that only a single method is needed.
+
+
+**** Presentation Layer ****
+
+1 - State Management: (Bloc)
+
+
+2 - UI (Views & Widgets):
+
+The user interface is built using built-in widgets & custom reusable widgets.
+The Bloc's state changes are reflected in the UI (e.g., showing a Custom circular indicator during login loading or error messages in a toast if login fails).

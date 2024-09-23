@@ -12,7 +12,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final RegisterRepo _registerRepo;
 
   RegisterBloc(this._registerRepo) : super(const RegisterState.initial()) {
-    on<SaveUserInFirebaseDatabaseEvent>((event, emit) async {
+    on<SaveUserInFirebaseDatabaseEvent>((event, _) async {
       await _saveUserDataInFirebaseAndCacheIt(event.userId);
     });
     on<Register>(_register);

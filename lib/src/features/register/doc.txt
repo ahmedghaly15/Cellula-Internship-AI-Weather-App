@@ -1,0 +1,44 @@
+Register Feature Documentation
+
+Overview
+
+The register feature allows users to create new accounts via Firebase.
+It follows the same clean architecture principles as the login feature, where Firebase handles the registration logic. 
+The feature is implemented across two main layers: the data layer and the presentation layer.
+
+No domain layer is used, as the registration functionality is straightforward 
+and does not require complex business logic.
+
+---
+
+Data Layer
+
+1. Remote Data Source:
+   - Purpose Handles the interaction with Firebase for registering new users.
+   - Implementation:
+     - A single method is responsible for sending registration data to Firebase and receiving the result.
+     - No abstraction (interface) was created because only one method is used, keeping the structure simple.
+   
+2. Models:
+   - AuthActionParams Model:
+     - This model holds the registration parameters (such as email, password, and possibly additional fields like username) required for Firebase authentication.
+
+3. Repository:
+   - RegisterRepo:
+     - A repository class that manages the registration process and interacts with the remote data source.
+     - Like the remote data source, no abstraction is used due to the simplicity of the feature.
+
+---
+
+Presentation Layer
+
+1. State Management:
+   - Bloc:
+     - Bloc is used for handling the state and logic of the registration feature.
+     - It responds to events (e.g., register button click) and manages various states such as loading, success, 
+       or error states based on the result of the Firebase registration process.
+
+2. UI (Views & Widgets):
+   - The user interface is built using Flutter's built-in widgets, with custom reusable widgets for form fields and buttons.
+   - The UI dynamically updates based on the Bloc's state changes, displaying feedback to the user such as a loading indicator during the registration process or error messages if registration fails.
+
