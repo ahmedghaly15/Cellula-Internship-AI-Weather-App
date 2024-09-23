@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_ai_weather_app/src/core/di/dependency_injection.dart';
 import 'package:internship_ai_weather_app/src/core/router/routes.dart';
+import 'package:internship_ai_weather_app/src/features/home/presentation/views/home_view.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/blocs/login_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/views/login_view.dart';
 import 'package:internship_ai_weather_app/src/features/start/presentation/views/start_view.dart';
@@ -23,6 +24,11 @@ class AppRouter {
             create: (_) => getIt.get<LoginBloc>(),
             child: const LoginView(),
           ),
+        );
+
+      case Routes.homeRoute:
+        return MaterialPageRoute(
+          builder: (_) => const HomeView(),
         );
 
       default:
