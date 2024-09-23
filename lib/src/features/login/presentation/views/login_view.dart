@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
+import 'package:internship_ai_weather_app/src/core/router/routes.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/auth_view_description.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/auth_view_label.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/have_account_or_not_action.dart';
@@ -32,7 +34,7 @@ class LoginView extends StatelessWidget {
                   MySizedBox.height24,
                   const LoginButtonBlocConsumer(),
                   HaveAccountOrNotAction(
-                    onPressed: () {},
+                    onPressed: () => context.pushNamed(Routes.registerRoute),
                     buttonText: 'Sign up',
                     question: "Don't have an account?",
                   ),

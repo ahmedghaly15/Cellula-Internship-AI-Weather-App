@@ -30,8 +30,7 @@ class StartView extends StatelessWidget {
               from: 50.h,
               child: MainButton(
                 margin: EdgeInsets.only(top: 24.h, bottom: 12.h),
-                onPressed: () =>
-                    context.pushReplacementNamed(Routes.registerRoute),
+                onPressed: () => context.pushNamed(Routes.registerRoute),
                 text: "Sign up",
               ),
             ),
@@ -39,8 +38,7 @@ class StartView extends StatelessWidget {
               duration: const Duration(seconds: 1),
               from: 50.h,
               child: MainButton(
-                onPressed: () =>
-                    context.pushReplacementNamed(Routes.loginRoute),
+                onPressed: () => context.pushNamed(Routes.loginRoute),
                 text: "Log in",
                 backgroundColor: Colors.white,
                 textColor: AppColors.primaryColor,
