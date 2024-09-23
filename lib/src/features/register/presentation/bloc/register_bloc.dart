@@ -12,6 +12,9 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final RegisterRepo _registerRepo;
 
   RegisterBloc(this._registerRepo) : super(const RegisterState.initial()) {
+    on<SaveUserInFirebaseDatabaseEvent>((event, emit) async {
+      await _saveUserDataInFirebaseAndCacheIt(event.userId);
+    });
     on<Register>(_register);
     on<TogglePassVisibilityEvent>(_togglePassVisibility);
     on<ToggleConfirmPassVisibilityEvent>(_toggleConfirmPassVisibility);
@@ -51,35 +54,21 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     final result = await _registerRepo.register(params);
     result.when(
       success: (credential) async {
-        await _saveUserDataInFirebaseAndCacheIt(credential.user!.uid, emit);
+        add(SaveUserInFirebaseDatabaseEvent(userId: credential.user!.uid));
         emit(RegisterState.registerSuccess(credential.user!.uid));
       },
       failure: (failure) => emit(RegisterState.registerFailed(failure.error)),
     );
   }
 
-  Future<void> _saveUserDataInFirebaseAndCacheIt(
-    String userId,
-    Emitter<RegisterState<dynamic>> emit,
-  ) async {
+  Future<void> _saveUserDataInFirebaseAndCacheIt(String userId) async {
     final AppUser appUser = AppUser(
       userId: userId,
       name: nameController.text.trim(),
       email: emailController.text.trim(),
     );
-    await _saveUserInFirebaseDatabase(appUser, emit);
+    await _registerRepo.saveUserInFirebaseDatabase(appUser);
     await cacheUserAndHisId(appUser);
-  }
-
-  Future<void> _saveUserInFirebaseDatabase(
-    AppUser appUser,
-    Emitter<RegisterState> emit,
-  ) async {
-    final result = await _registerRepo.saveUserInFirebaseDatabase(appUser);
-    result.when(
-      success: (_) => emit(const RegisterState.saveUserInFirebaseDatabase()),
-      failure: (failure) => emit(RegisterState.registerFailed(failure.error)),
-    );
   }
 
   bool isPassVisible = true;

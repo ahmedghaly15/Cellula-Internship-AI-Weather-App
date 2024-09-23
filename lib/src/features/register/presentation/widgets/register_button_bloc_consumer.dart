@@ -16,7 +16,7 @@ class RegisterButtonBlocConsumer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<RegisterBloc, RegisterState>(
       listenWhen: (_, current) =>
-          current is RegisterSuccess || current is RegisterFailed,
+          current is RegisterFailed || current is RegisterSuccess,
       listener: (context, state) {
         state.whenOrNull(
           registerFailed: (error) => CustomToast.showToast(
@@ -34,7 +34,7 @@ class RegisterButtonBlocConsumer extends StatelessWidget {
           current is RegisterFailed,
       builder: (context, state) => MainButton(
         margin: EdgeInsets.symmetric(horizontal: 24.w),
-        onPressed: () {},
+        onPressed: () => context.read<RegisterBloc>().register(context),
         child: circularIndicatorOrTextWidget(
           isLoading: state is RegisterLoading,
           text: "SIGN UP",
