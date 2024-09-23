@@ -2,7 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:internship_ai_weather_app/src/core/extensions/app_navigator.dart';
+import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
 import 'package:internship_ai_weather_app/src/core/router/routes.dart';
 import 'package:internship_ai_weather_app/src/core/themes/app_colors.dart';
 import 'package:internship_ai_weather_app/src/core/utils/app_assets.dart';
