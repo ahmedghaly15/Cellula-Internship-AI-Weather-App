@@ -7,6 +7,7 @@ class AppTextStyles {
   static TextStyle get font28Bold => TextStyle(
         fontSize: 28.sp,
         fontWeight: FontWeight.bold,
+        color: Colors.white,
       );
   static TextStyle get font48WhiteBold => TextStyle(
         fontSize: 48.sp,

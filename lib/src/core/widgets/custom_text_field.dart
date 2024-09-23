@@ -82,6 +82,7 @@ class CustomTextField extends StatelessWidget {
         textCapitalization: textCapitalization,
         textAlign: textAlign,
         style: const TextStyle(color: Colors.white),
+        cursorErrorColor: Colors.white,
         decoration: InputDecoration(
           suffixIcon: suffixIcon,
           prefixIcon: prefixIcon,

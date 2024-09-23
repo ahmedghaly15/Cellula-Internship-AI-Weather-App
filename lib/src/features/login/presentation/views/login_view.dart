@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/auth_view_description.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/auth_view_label.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/have_account_or_not_action.dart';
-import 'package:internship_ai_weather_app/src/core/widgets/main_button.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/my_sized_box.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/widgets/forgot_password_text_button.dart';
+import 'package:internship_ai_weather_app/src/features/login/presentation/widgets/login_button_bloc_consumer.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/widgets/login_form.dart';
 
 class LoginView extends StatelessWidget {
@@ -31,14 +30,10 @@ class LoginView extends StatelessWidget {
                   const LoginForm(),
                   const ForgotPasswordTextButton(),
                   MySizedBox.height24,
-                  MainButton(
-                    margin: EdgeInsets.symmetric(horizontal: 24.w),
-                    onPressed: () {},
-                    text: "LOGIN",
-                  ),
+                  const LoginButtonBlocConsumer(),
                   HaveAccountOrNotAction(
                     onPressed: () {},
-                    buttonText: 'LOGIN',
+                    buttonText: 'Sign up',
                     question: "Don't have an account?",
                   ),
                 ],
