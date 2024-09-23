@@ -30,7 +30,8 @@ class StartView extends StatelessWidget {
               from: 50.h,
               child: MainButton(
                 margin: EdgeInsets.only(top: 24.h, bottom: 12.h),
-                onPressed: () {},
+                onPressed: () =>
+                    context.pushReplacementNamed(Routes.registerRoute),
                 text: "Sign up",
               ),
             ),

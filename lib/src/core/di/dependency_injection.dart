@@ -7,6 +7,9 @@ import 'package:internship_ai_weather_app/src/core/network/internet_checker.dart
 import 'package:internship_ai_weather_app/src/features/login/data/datasources/login_remote_datasource.dart';
 import 'package:internship_ai_weather_app/src/features/login/data/repositories/login_repo.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/blocs/login_bloc.dart';
+import 'package:internship_ai_weather_app/src/features/register/data/datasources/register_remote_datasource.dart';
+import 'package:internship_ai_weather_app/src/features/register/data/repositories/register_repo.dart';
+import 'package:internship_ai_weather_app/src/features/register/presentation/bloc/register_bloc.dart';
 
 final GetIt getIt = GetIt.instance;
 
@@ -41,16 +44,26 @@ void _setupForDatasources() {
   getIt.registerLazySingleton<LoginRemoteDatasource>(
     () => const LoginRemoteDatasource(),
   );
+  getIt.registerLazySingleton<RegisterRemoteDataSource>(
+    () => const RegisterRemoteDataSource(),
+  );
 }
 
 void _setupForRepos() {
   getIt.registerLazySingleton<LoginRepo>(
     () => LoginRepo(getIt.get<LoginRemoteDatasource>()),
   );
+  getIt.registerLazySingleton<RegisterRepo>(
+    () => RegisterRepo(getIt.get<RegisterRemoteDataSource>()),
+  );
 }
 
 void _setupForBlocs() {
   getIt.registerFactory<LoginBloc>(
     () => LoginBloc(getIt.get<LoginRepo>()),
+  );
+
+  getIt.registerFactory<RegisterBloc>(
+    () => RegisterBloc(getIt.get<RegisterRepo>()),
   );
 }
