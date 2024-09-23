@@ -2,11 +2,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:internship_ai_weather_app/src/core/firebase/firebase_error_codes.dart';
 import 'package:internship_ai_weather_app/src/core/firebase/firebase_error_message.dart';
 import 'package:internship_ai_weather_app/src/core/firebase/firebase_error_model.dart';
+import 'package:internship_ai_weather_app/src/core/utils/app_strings.dart';
 
 class FirebaseErrorHandler {
   static FirebaseErrorModel handleError(dynamic error) {
     if (error is FirebaseException) {
       return _fromFirebaseCode(error.code);
+    } else if (error == AppStrings.noInternetConnection) {
+      return const FirebaseErrorModel(error: AppStrings.noInternetConnection);
     } else {
       return const FirebaseErrorModel(error: FirebaseErrorMessage.defaultError);
     }

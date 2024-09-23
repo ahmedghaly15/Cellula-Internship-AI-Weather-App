@@ -12,17 +12,13 @@ class RegisterRepo {
 
   Future<FirebaseRequestResult<UserCredential>> register(
     AuthActionParams params,
-  ) {
+  ) async {
     return executeAndHandleFirebaseErrors(
       () async => await _remoteDataSource.register(params),
     );
   }
 
-  Future<FirebaseRequestResult<void>> saveUserInFirebaseDatabase(
-    AppUser appUser,
-  ) {
-    return executeAndHandleFirebaseErrors(
-      () async => await _remoteDataSource.saveUserInFirebaseDatabase(appUser),
-    );
+  Future<void> saveUserInFirebaseDatabase(AppUser appUser) async {
+    await _remoteDataSource.saveUserInFirebaseDatabase(appUser);
   }
 }
