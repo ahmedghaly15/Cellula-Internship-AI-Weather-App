@@ -22,7 +22,6 @@ mixin _$RegisterState<T> {
     required TResult Function() registerLoading,
     required TResult Function(String userId) registerSuccess,
     required TResult Function(String error) registerFailed,
-    required TResult Function() saveUserInFirebaseDatabase,
     required TResult Function(bool isPassVisible) togglePassVisibility,
     required TResult Function(bool isConfirmPassVisible)
         toggleConfirmPassVisibility,
@@ -34,7 +33,6 @@ mixin _$RegisterState<T> {
     TResult? Function()? registerLoading,
     TResult? Function(String userId)? registerSuccess,
     TResult? Function(String error)? registerFailed,
-    TResult? Function()? saveUserInFirebaseDatabase,
     TResult? Function(bool isPassVisible)? togglePassVisibility,
     TResult? Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
   }) =>
@@ -45,7 +43,6 @@ mixin _$RegisterState<T> {
     TResult Function()? registerLoading,
     TResult Function(String userId)? registerSuccess,
     TResult Function(String error)? registerFailed,
-    TResult Function()? saveUserInFirebaseDatabase,
     TResult Function(bool isPassVisible)? togglePassVisibility,
     TResult Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
     required TResult orElse(),
@@ -57,8 +54,6 @@ mixin _$RegisterState<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterFailed<T> value) registerFailed,
-    required TResult Function(_SaveUserInFirebaseDatabase<T> value)
-        saveUserInFirebaseDatabase,
     required TResult Function(TogglePassVisibility<T> value)
         togglePassVisibility,
     required TResult Function(ToggleConfirmPassVisibility<T> value)
@@ -71,8 +66,6 @@ mixin _$RegisterState<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterFailed<T> value)? registerFailed,
-    TResult? Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult? Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult? Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -84,8 +77,6 @@ mixin _$RegisterState<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterFailed<T> value)? registerFailed,
-    TResult Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -160,7 +151,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() registerLoading,
     required TResult Function(String userId) registerSuccess,
     required TResult Function(String error) registerFailed,
-    required TResult Function() saveUserInFirebaseDatabase,
     required TResult Function(bool isPassVisible) togglePassVisibility,
     required TResult Function(bool isConfirmPassVisible)
         toggleConfirmPassVisibility,
@@ -175,7 +165,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? registerLoading,
     TResult? Function(String userId)? registerSuccess,
     TResult? Function(String error)? registerFailed,
-    TResult? Function()? saveUserInFirebaseDatabase,
     TResult? Function(bool isPassVisible)? togglePassVisibility,
     TResult? Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
   }) {
@@ -189,7 +178,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? registerLoading,
     TResult Function(String userId)? registerSuccess,
     TResult Function(String error)? registerFailed,
-    TResult Function()? saveUserInFirebaseDatabase,
     TResult Function(bool isPassVisible)? togglePassVisibility,
     TResult Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
     required TResult orElse(),
@@ -207,8 +195,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterFailed<T> value) registerFailed,
-    required TResult Function(_SaveUserInFirebaseDatabase<T> value)
-        saveUserInFirebaseDatabase,
     required TResult Function(TogglePassVisibility<T> value)
         togglePassVisibility,
     required TResult Function(ToggleConfirmPassVisibility<T> value)
@@ -224,8 +210,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterFailed<T> value)? registerFailed,
-    TResult? Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult? Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult? Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -240,8 +224,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterFailed<T> value)? registerFailed,
-    TResult Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -303,7 +285,6 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     required TResult Function() registerLoading,
     required TResult Function(String userId) registerSuccess,
     required TResult Function(String error) registerFailed,
-    required TResult Function() saveUserInFirebaseDatabase,
     required TResult Function(bool isPassVisible) togglePassVisibility,
     required TResult Function(bool isConfirmPassVisible)
         toggleConfirmPassVisibility,
@@ -318,7 +299,6 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult? Function()? registerLoading,
     TResult? Function(String userId)? registerSuccess,
     TResult? Function(String error)? registerFailed,
-    TResult? Function()? saveUserInFirebaseDatabase,
     TResult? Function(bool isPassVisible)? togglePassVisibility,
     TResult? Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
   }) {
@@ -332,7 +312,6 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult Function()? registerLoading,
     TResult Function(String userId)? registerSuccess,
     TResult Function(String error)? registerFailed,
-    TResult Function()? saveUserInFirebaseDatabase,
     TResult Function(bool isPassVisible)? togglePassVisibility,
     TResult Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
     required TResult orElse(),
@@ -350,8 +329,6 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterFailed<T> value) registerFailed,
-    required TResult Function(_SaveUserInFirebaseDatabase<T> value)
-        saveUserInFirebaseDatabase,
     required TResult Function(TogglePassVisibility<T> value)
         togglePassVisibility,
     required TResult Function(ToggleConfirmPassVisibility<T> value)
@@ -367,8 +344,6 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterFailed<T> value)? registerFailed,
-    TResult? Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult? Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult? Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -383,8 +358,6 @@ class _$RegisterLoadingImpl<T> implements RegisterLoading<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterFailed<T> value)? registerFailed,
-    TResult Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -474,7 +447,6 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult Function() registerLoading,
     required TResult Function(String userId) registerSuccess,
     required TResult Function(String error) registerFailed,
-    required TResult Function() saveUserInFirebaseDatabase,
     required TResult Function(bool isPassVisible) togglePassVisibility,
     required TResult Function(bool isConfirmPassVisible)
         toggleConfirmPassVisibility,
@@ -489,7 +461,6 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult? Function()? registerLoading,
     TResult? Function(String userId)? registerSuccess,
     TResult? Function(String error)? registerFailed,
-    TResult? Function()? saveUserInFirebaseDatabase,
     TResult? Function(bool isPassVisible)? togglePassVisibility,
     TResult? Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
   }) {
@@ -503,7 +474,6 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult Function()? registerLoading,
     TResult Function(String userId)? registerSuccess,
     TResult Function(String error)? registerFailed,
-    TResult Function()? saveUserInFirebaseDatabase,
     TResult Function(bool isPassVisible)? togglePassVisibility,
     TResult Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
     required TResult orElse(),
@@ -521,8 +491,6 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterFailed<T> value) registerFailed,
-    required TResult Function(_SaveUserInFirebaseDatabase<T> value)
-        saveUserInFirebaseDatabase,
     required TResult Function(TogglePassVisibility<T> value)
         togglePassVisibility,
     required TResult Function(ToggleConfirmPassVisibility<T> value)
@@ -538,8 +506,6 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterFailed<T> value)? registerFailed,
-    TResult? Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult? Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult? Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -554,8 +520,6 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterFailed<T> value)? registerFailed,
-    TResult Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -653,7 +617,6 @@ class _$RegisterFailedImpl<T> implements RegisterFailed<T> {
     required TResult Function() registerLoading,
     required TResult Function(String userId) registerSuccess,
     required TResult Function(String error) registerFailed,
-    required TResult Function() saveUserInFirebaseDatabase,
     required TResult Function(bool isPassVisible) togglePassVisibility,
     required TResult Function(bool isConfirmPassVisible)
         toggleConfirmPassVisibility,
@@ -668,7 +631,6 @@ class _$RegisterFailedImpl<T> implements RegisterFailed<T> {
     TResult? Function()? registerLoading,
     TResult? Function(String userId)? registerSuccess,
     TResult? Function(String error)? registerFailed,
-    TResult? Function()? saveUserInFirebaseDatabase,
     TResult? Function(bool isPassVisible)? togglePassVisibility,
     TResult? Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
   }) {
@@ -682,7 +644,6 @@ class _$RegisterFailedImpl<T> implements RegisterFailed<T> {
     TResult Function()? registerLoading,
     TResult Function(String userId)? registerSuccess,
     TResult Function(String error)? registerFailed,
-    TResult Function()? saveUserInFirebaseDatabase,
     TResult Function(bool isPassVisible)? togglePassVisibility,
     TResult Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
     required TResult orElse(),
@@ -700,8 +661,6 @@ class _$RegisterFailedImpl<T> implements RegisterFailed<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterFailed<T> value) registerFailed,
-    required TResult Function(_SaveUserInFirebaseDatabase<T> value)
-        saveUserInFirebaseDatabase,
     required TResult Function(TogglePassVisibility<T> value)
         togglePassVisibility,
     required TResult Function(ToggleConfirmPassVisibility<T> value)
@@ -717,8 +676,6 @@ class _$RegisterFailedImpl<T> implements RegisterFailed<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterFailed<T> value)? registerFailed,
-    TResult? Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult? Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult? Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -733,8 +690,6 @@ class _$RegisterFailedImpl<T> implements RegisterFailed<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterFailed<T> value)? registerFailed,
-    TResult Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -757,155 +712,6 @@ abstract class RegisterFailed<T> implements RegisterState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RegisterFailedImplCopyWith<T, _$RegisterFailedImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SaveUserInFirebaseDatabaseImplCopyWith<T, $Res> {
-  factory _$$SaveUserInFirebaseDatabaseImplCopyWith(
-          _$SaveUserInFirebaseDatabaseImpl<T> value,
-          $Res Function(_$SaveUserInFirebaseDatabaseImpl<T>) then) =
-      __$$SaveUserInFirebaseDatabaseImplCopyWithImpl<T, $Res>;
-}
-
-/// @nodoc
-class __$$SaveUserInFirebaseDatabaseImplCopyWithImpl<T, $Res>
-    extends _$RegisterStateCopyWithImpl<T, $Res,
-        _$SaveUserInFirebaseDatabaseImpl<T>>
-    implements _$$SaveUserInFirebaseDatabaseImplCopyWith<T, $Res> {
-  __$$SaveUserInFirebaseDatabaseImplCopyWithImpl(
-      _$SaveUserInFirebaseDatabaseImpl<T> _value,
-      $Res Function(_$SaveUserInFirebaseDatabaseImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of RegisterState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$SaveUserInFirebaseDatabaseImpl<T>
-    implements _SaveUserInFirebaseDatabase<T> {
-  const _$SaveUserInFirebaseDatabaseImpl();
-
-  @override
-  String toString() {
-    return 'RegisterState<$T>.saveUserInFirebaseDatabase()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SaveUserInFirebaseDatabaseImpl<T>);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() registerLoading,
-    required TResult Function(String userId) registerSuccess,
-    required TResult Function(String error) registerFailed,
-    required TResult Function() saveUserInFirebaseDatabase,
-    required TResult Function(bool isPassVisible) togglePassVisibility,
-    required TResult Function(bool isConfirmPassVisible)
-        toggleConfirmPassVisibility,
-  }) {
-    return saveUserInFirebaseDatabase();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? registerLoading,
-    TResult? Function(String userId)? registerSuccess,
-    TResult? Function(String error)? registerFailed,
-    TResult? Function()? saveUserInFirebaseDatabase,
-    TResult? Function(bool isPassVisible)? togglePassVisibility,
-    TResult? Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
-  }) {
-    return saveUserInFirebaseDatabase?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? registerLoading,
-    TResult Function(String userId)? registerSuccess,
-    TResult Function(String error)? registerFailed,
-    TResult Function()? saveUserInFirebaseDatabase,
-    TResult Function(bool isPassVisible)? togglePassVisibility,
-    TResult Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
-    required TResult orElse(),
-  }) {
-    if (saveUserInFirebaseDatabase != null) {
-      return saveUserInFirebaseDatabase();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(RegisterLoading<T> value) registerLoading,
-    required TResult Function(RegisterSuccess<T> value) registerSuccess,
-    required TResult Function(RegisterFailed<T> value) registerFailed,
-    required TResult Function(_SaveUserInFirebaseDatabase<T> value)
-        saveUserInFirebaseDatabase,
-    required TResult Function(TogglePassVisibility<T> value)
-        togglePassVisibility,
-    required TResult Function(ToggleConfirmPassVisibility<T> value)
-        toggleConfirmPassVisibility,
-  }) {
-    return saveUserInFirebaseDatabase(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(RegisterLoading<T> value)? registerLoading,
-    TResult? Function(RegisterSuccess<T> value)? registerSuccess,
-    TResult? Function(RegisterFailed<T> value)? registerFailed,
-    TResult? Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
-    TResult? Function(TogglePassVisibility<T> value)? togglePassVisibility,
-    TResult? Function(ToggleConfirmPassVisibility<T> value)?
-        toggleConfirmPassVisibility,
-  }) {
-    return saveUserInFirebaseDatabase?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(RegisterLoading<T> value)? registerLoading,
-    TResult Function(RegisterSuccess<T> value)? registerSuccess,
-    TResult Function(RegisterFailed<T> value)? registerFailed,
-    TResult Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
-    TResult Function(TogglePassVisibility<T> value)? togglePassVisibility,
-    TResult Function(ToggleConfirmPassVisibility<T> value)?
-        toggleConfirmPassVisibility,
-    required TResult orElse(),
-  }) {
-    if (saveUserInFirebaseDatabase != null) {
-      return saveUserInFirebaseDatabase(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _SaveUserInFirebaseDatabase<T> implements RegisterState<T> {
-  const factory _SaveUserInFirebaseDatabase() =
-      _$SaveUserInFirebaseDatabaseImpl<T>;
 }
 
 /// @nodoc
@@ -983,7 +789,6 @@ class _$TogglePassVisibilityImpl<T> implements TogglePassVisibility<T> {
     required TResult Function() registerLoading,
     required TResult Function(String userId) registerSuccess,
     required TResult Function(String error) registerFailed,
-    required TResult Function() saveUserInFirebaseDatabase,
     required TResult Function(bool isPassVisible) togglePassVisibility,
     required TResult Function(bool isConfirmPassVisible)
         toggleConfirmPassVisibility,
@@ -998,7 +803,6 @@ class _$TogglePassVisibilityImpl<T> implements TogglePassVisibility<T> {
     TResult? Function()? registerLoading,
     TResult? Function(String userId)? registerSuccess,
     TResult? Function(String error)? registerFailed,
-    TResult? Function()? saveUserInFirebaseDatabase,
     TResult? Function(bool isPassVisible)? togglePassVisibility,
     TResult? Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
   }) {
@@ -1012,7 +816,6 @@ class _$TogglePassVisibilityImpl<T> implements TogglePassVisibility<T> {
     TResult Function()? registerLoading,
     TResult Function(String userId)? registerSuccess,
     TResult Function(String error)? registerFailed,
-    TResult Function()? saveUserInFirebaseDatabase,
     TResult Function(bool isPassVisible)? togglePassVisibility,
     TResult Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
     required TResult orElse(),
@@ -1030,8 +833,6 @@ class _$TogglePassVisibilityImpl<T> implements TogglePassVisibility<T> {
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterFailed<T> value) registerFailed,
-    required TResult Function(_SaveUserInFirebaseDatabase<T> value)
-        saveUserInFirebaseDatabase,
     required TResult Function(TogglePassVisibility<T> value)
         togglePassVisibility,
     required TResult Function(ToggleConfirmPassVisibility<T> value)
@@ -1047,8 +848,6 @@ class _$TogglePassVisibilityImpl<T> implements TogglePassVisibility<T> {
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterFailed<T> value)? registerFailed,
-    TResult? Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult? Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult? Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -1063,8 +862,6 @@ class _$TogglePassVisibilityImpl<T> implements TogglePassVisibility<T> {
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterFailed<T> value)? registerFailed,
-    TResult Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -1169,7 +966,6 @@ class _$ToggleConfirmPassVisibilityImpl<T>
     required TResult Function() registerLoading,
     required TResult Function(String userId) registerSuccess,
     required TResult Function(String error) registerFailed,
-    required TResult Function() saveUserInFirebaseDatabase,
     required TResult Function(bool isPassVisible) togglePassVisibility,
     required TResult Function(bool isConfirmPassVisible)
         toggleConfirmPassVisibility,
@@ -1184,7 +980,6 @@ class _$ToggleConfirmPassVisibilityImpl<T>
     TResult? Function()? registerLoading,
     TResult? Function(String userId)? registerSuccess,
     TResult? Function(String error)? registerFailed,
-    TResult? Function()? saveUserInFirebaseDatabase,
     TResult? Function(bool isPassVisible)? togglePassVisibility,
     TResult? Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
   }) {
@@ -1198,7 +993,6 @@ class _$ToggleConfirmPassVisibilityImpl<T>
     TResult Function()? registerLoading,
     TResult Function(String userId)? registerSuccess,
     TResult Function(String error)? registerFailed,
-    TResult Function()? saveUserInFirebaseDatabase,
     TResult Function(bool isPassVisible)? togglePassVisibility,
     TResult Function(bool isConfirmPassVisible)? toggleConfirmPassVisibility,
     required TResult orElse(),
@@ -1216,8 +1010,6 @@ class _$ToggleConfirmPassVisibilityImpl<T>
     required TResult Function(RegisterLoading<T> value) registerLoading,
     required TResult Function(RegisterSuccess<T> value) registerSuccess,
     required TResult Function(RegisterFailed<T> value) registerFailed,
-    required TResult Function(_SaveUserInFirebaseDatabase<T> value)
-        saveUserInFirebaseDatabase,
     required TResult Function(TogglePassVisibility<T> value)
         togglePassVisibility,
     required TResult Function(ToggleConfirmPassVisibility<T> value)
@@ -1233,8 +1025,6 @@ class _$ToggleConfirmPassVisibilityImpl<T>
     TResult? Function(RegisterLoading<T> value)? registerLoading,
     TResult? Function(RegisterSuccess<T> value)? registerSuccess,
     TResult? Function(RegisterFailed<T> value)? registerFailed,
-    TResult? Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult? Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult? Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,
@@ -1249,8 +1039,6 @@ class _$ToggleConfirmPassVisibilityImpl<T>
     TResult Function(RegisterLoading<T> value)? registerLoading,
     TResult Function(RegisterSuccess<T> value)? registerSuccess,
     TResult Function(RegisterFailed<T> value)? registerFailed,
-    TResult Function(_SaveUserInFirebaseDatabase<T> value)?
-        saveUserInFirebaseDatabase,
     TResult Function(TogglePassVisibility<T> value)? togglePassVisibility,
     TResult Function(ToggleConfirmPassVisibility<T> value)?
         toggleConfirmPassVisibility,

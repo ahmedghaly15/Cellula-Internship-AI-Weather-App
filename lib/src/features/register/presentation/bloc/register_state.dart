@@ -9,8 +9,6 @@ class RegisterState<T> with _$RegisterState<T> {
   const factory RegisterState.registerSuccess(String userId) =
       RegisterSuccess<T>;
   const factory RegisterState.registerFailed(String error) = RegisterFailed<T>;
-  const factory RegisterState.saveUserInFirebaseDatabase() =
-      _SaveUserInFirebaseDatabase;
   const factory RegisterState.togglePassVisibility(
     bool isPassVisible,
   ) = TogglePassVisibility;
