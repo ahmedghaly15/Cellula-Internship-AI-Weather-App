@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
-import 'package:internship_ai_weather_app/src/core/models/app_user.dart';
+import 'package:internship_ai_weather_app/src/core/models/auth_action_params.dart';
 import 'package:internship_ai_weather_app/src/core/utils/functions/cache_user.dart';
-import 'package:internship_ai_weather_app/src/features/login/data/models/login_params.dart';
 import 'package:internship_ai_weather_app/src/features/login/data/repositories/login_repo.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/blocs/login_event.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/blocs/login_state.dart';
@@ -44,23 +43,18 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     Emitter<LoginState> emit,
   ) async {
     emit(const LoginState.loginLoading());
-    final LoginParams params = LoginParams(
-      email: emailController.text,
+    final AuthActionParams params = AuthActionParams(
+      email: emailController.text.trim(),
       password: passwordController.text,
     );
     final result = await _loginRepo.login(params);
     result.when(
       success: (appUser) async {
-        await _cacheUserAndHisId(appUser);
+        await cacheUserAndHisId(appUser);
         emit(LoginState.loginSuccess(appUser.userId));
       },
       failure: (failure) => emit(LoginState.loginFailed(failure.error)),
     );
-  }
-
-  Future<void> _cacheUserAndHisId(AppUser appUser) async {
-    await cacheAppUser(appUser);
-    await cacheUserId(appUser.userId);
   }
 
   void login(BuildContext context) {
