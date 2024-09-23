@@ -20,12 +20,15 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
 
   late final TextEditingController emailController;
   late final TextEditingController passwordController;
+  late final TextEditingController confirmPassController;
   late final TextEditingController nameController;
   late final GlobalKey<FormState> formKey;
 
   void _initFormAttributes() {
     emailController = TextEditingController();
     passwordController = TextEditingController();
+    confirmPassController = TextEditingController();
+    nameController = TextEditingController();
     formKey = GlobalKey<FormState>();
   }
 
@@ -100,6 +103,8 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   void _disposeFormAttributes() {
     emailController.dispose();
     passwordController.dispose();
+    confirmPassController.dispose();
+    nameController.dispose();
   }
 
   @override
