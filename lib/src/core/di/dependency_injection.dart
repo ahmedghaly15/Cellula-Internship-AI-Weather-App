@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:internship_ai_weather_app/src/core/network/internet_checker.dart';
@@ -17,7 +18,9 @@ void setupDI() {
   _setupForBlocs();
 }
 
-void _setupDIForExternal() {
+Future<void> _setupDIForExternal() async {
+  const flutterSecureStorage = FlutterSecureStorage();
+  getIt.registerLazySingleton<FlutterSecureStorage>(() => flutterSecureStorage);
   getIt.registerLazySingleton<InternetConnectionChecker>(
     () => InternetConnectionChecker(),
   );

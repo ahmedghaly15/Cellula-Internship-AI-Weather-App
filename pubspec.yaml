@@ -16,6 +16,8 @@ dependencies:
   firebase_core: ^2.27.2
   # State management
   flutter_bloc: ^8.1.6
+  # Automatically generate code for converting to and from JSON by annotating Dart classes.
+  json_serializable: ^6.8.0
   # Code generator (mainly used with Cubit & retrofit)
   freezed_annotation: ^2.4.1
   # Easily create beautify toast with a series of animations and make toast more beautiful.
