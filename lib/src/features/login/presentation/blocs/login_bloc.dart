@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
+import 'package:internship_ai_weather_app/src/core/models/app_user.dart';
+import 'package:internship_ai_weather_app/src/core/utils/functions/cache_user.dart';
 import 'package:internship_ai_weather_app/src/features/login/data/models/login_params.dart';
 import 'package:internship_ai_weather_app/src/features/login/data/repositories/login_repo.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/blocs/login_event.dart';
@@ -48,10 +50,17 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     );
     final result = await _loginRepo.login(params);
     result.when(
-      success: (credential) =>
-          emit(LoginState.loginSuccess(credential.user!.uid)),
+      success: (appUser) async {
+        await _cacheUserAndHisId(appUser);
+        emit(LoginState.loginSuccess(appUser.userId));
+      },
       failure: (failure) => emit(LoginState.loginFailed(failure.error)),
     );
+  }
+
+  Future<void> _cacheUserAndHisId(AppUser appUser) async {
+    await cacheAppUser(appUser);
+    await cacheUserId(appUser.userId);
   }
 
   void login(BuildContext context) {

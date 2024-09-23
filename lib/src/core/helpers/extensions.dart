@@ -34,3 +34,8 @@ extension UnfocusKeyboard on BuildContext {
 extension RequestFocusOnFocusNode on BuildContext {
   void requestFocus(FocusNode node) => FocusScope.of(this).requestFocus(node);
 }
+
+extension NullOrEmptyString on String? {
+  /// Check if the string is null or empty
+  bool get isNullOrEmpty => this == null || this == '';
+}
