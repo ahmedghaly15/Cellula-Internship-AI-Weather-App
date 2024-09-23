@@ -6,6 +6,7 @@ import 'package:internship_ai_weather_app/src/ai_weather_app.dart';
 import 'package:internship_ai_weather_app/src/core/di/dependency_injection.dart';
 import 'package:internship_ai_weather_app/src/core/firebase/firebase_options.dart';
 import 'package:internship_ai_weather_app/src/core/utils/bloc_observer.dart';
+import 'package:internship_ai_weather_app/src/core/utils/functions/check_if_user_is_logged_in.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,5 +17,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await checkIfUserIsLoggedIn();
   runApp(const AIWeatherApp());
 }
