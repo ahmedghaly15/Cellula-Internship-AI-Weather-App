@@ -47,7 +47,7 @@ class MainButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width?.w ?? double.infinity,
-      height: height?.h ?? 56.0.h,
+      height: height?.h ?? 52.0.h,
       margin: margin,
       decoration: BoxDecoration(
         color: backgroundColor ?? AppColors.primaryColor,
