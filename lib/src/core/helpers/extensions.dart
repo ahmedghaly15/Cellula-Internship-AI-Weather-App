@@ -26,3 +26,7 @@ extension AppNavigator on BuildContext {
 
   void pop() => Navigator.pop(this);
 }
+
+extension UnfocusKeyboard on BuildContext {
+  void unfocusKeyboard() => FocusScope.of(this).unfocus();
+}
