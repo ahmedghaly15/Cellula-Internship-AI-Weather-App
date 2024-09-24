@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
 import 'package:internship_ai_weather_app/src/core/router/routes.dart';
+import 'package:internship_ai_weather_app/src/core/utils/functions/cache_user.dart';
 import 'package:internship_ai_weather_app/src/core/utils/functions/circular_indicator_or_text_widget.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/custom_toast.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/main_button.dart';
@@ -24,7 +25,10 @@ class LoginButtonBlocConsumer extends StatelessWidget {
             message: error,
             state: CustomToastState.error,
           ),
-          loginSuccess: (_) => context.pushReplacementNamed(Routes.homeRoute),
+          loginSuccess: (appUser) async {
+            await cacheUserAndHisId(appUser);
+            context.pushReplacementNamed(Routes.homeRoute);
+          },
         );
       },
       buildWhen: (_, current) =>

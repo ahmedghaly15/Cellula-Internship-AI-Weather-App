@@ -20,7 +20,7 @@ mixin _$LoginState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginLoading,
-    required TResult Function(String userId) loginSuccess,
+    required TResult Function(AppUser appUser) loginSuccess,
     required TResult Function(String error) loginFailed,
     required TResult Function(bool isLoginPassVisible) togglePasswordVisibility,
   }) =>
@@ -29,7 +29,7 @@ mixin _$LoginState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginLoading,
-    TResult? Function(String userId)? loginSuccess,
+    TResult? Function(AppUser appUser)? loginSuccess,
     TResult? Function(String error)? loginFailed,
     TResult? Function(bool isLoginPassVisible)? togglePasswordVisibility,
   }) =>
@@ -38,7 +38,7 @@ mixin _$LoginState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginLoading,
-    TResult Function(String userId)? loginSuccess,
+    TResult Function(AppUser appUser)? loginSuccess,
     TResult Function(String error)? loginFailed,
     TResult Function(bool isLoginPassVisible)? togglePasswordVisibility,
     required TResult orElse(),
@@ -141,7 +141,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginLoading,
-    required TResult Function(String userId) loginSuccess,
+    required TResult Function(AppUser appUser) loginSuccess,
     required TResult Function(String error) loginFailed,
     required TResult Function(bool isLoginPassVisible) togglePasswordVisibility,
   }) {
@@ -153,7 +153,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginLoading,
-    TResult? Function(String userId)? loginSuccess,
+    TResult? Function(AppUser appUser)? loginSuccess,
     TResult? Function(String error)? loginFailed,
     TResult? Function(bool isLoginPassVisible)? togglePasswordVisibility,
   }) {
@@ -165,7 +165,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginLoading,
-    TResult Function(String userId)? loginSuccess,
+    TResult Function(AppUser appUser)? loginSuccess,
     TResult Function(String error)? loginFailed,
     TResult Function(bool isLoginPassVisible)? togglePasswordVisibility,
     required TResult orElse(),
@@ -267,7 +267,7 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginLoading,
-    required TResult Function(String userId) loginSuccess,
+    required TResult Function(AppUser appUser) loginSuccess,
     required TResult Function(String error) loginFailed,
     required TResult Function(bool isLoginPassVisible) togglePasswordVisibility,
   }) {
@@ -279,7 +279,7 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginLoading,
-    TResult? Function(String userId)? loginSuccess,
+    TResult? Function(AppUser appUser)? loginSuccess,
     TResult? Function(String error)? loginFailed,
     TResult? Function(bool isLoginPassVisible)? togglePasswordVisibility,
   }) {
@@ -291,7 +291,7 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginLoading,
-    TResult Function(String userId)? loginSuccess,
+    TResult Function(AppUser appUser)? loginSuccess,
     TResult Function(String error)? loginFailed,
     TResult Function(bool isLoginPassVisible)? togglePasswordVisibility,
     required TResult orElse(),
@@ -356,7 +356,9 @@ abstract class _$$LoginSuccessImplCopyWith<T, $Res> {
           $Res Function(_$LoginSuccessImpl<T>) then) =
       __$$LoginSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({String userId});
+  $Res call({AppUser appUser});
+
+  $AppUserCopyWith<$Res> get appUser;
 }
 
 /// @nodoc
@@ -372,28 +374,38 @@ class __$$LoginSuccessImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userId = null,
+    Object? appUser = null,
   }) {
     return _then(_$LoginSuccessImpl<T>(
-      null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == appUser
+          ? _value.appUser
+          : appUser // ignore: cast_nullable_to_non_nullable
+              as AppUser,
     ));
+  }
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AppUserCopyWith<$Res> get appUser {
+    return $AppUserCopyWith<$Res>(_value.appUser, (value) {
+      return _then(_value.copyWith(appUser: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
-  const _$LoginSuccessImpl(this.userId);
+  const _$LoginSuccessImpl(this.appUser);
 
   @override
-  final String userId;
+  final AppUser appUser;
 
   @override
   String toString() {
-    return 'LoginState<$T>.loginSuccess(userId: $userId)';
+    return 'LoginState<$T>.loginSuccess(appUser: $appUser)';
   }
 
   @override
@@ -401,11 +413,11 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoginSuccessImpl<T> &&
-            (identical(other.userId, userId) || other.userId == userId));
+            (identical(other.appUser, appUser) || other.appUser == appUser));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, userId);
+  int get hashCode => Object.hash(runtimeType, appUser);
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -421,11 +433,11 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginLoading,
-    required TResult Function(String userId) loginSuccess,
+    required TResult Function(AppUser appUser) loginSuccess,
     required TResult Function(String error) loginFailed,
     required TResult Function(bool isLoginPassVisible) togglePasswordVisibility,
   }) {
-    return loginSuccess(userId);
+    return loginSuccess(appUser);
   }
 
   @override
@@ -433,11 +445,11 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginLoading,
-    TResult? Function(String userId)? loginSuccess,
+    TResult? Function(AppUser appUser)? loginSuccess,
     TResult? Function(String error)? loginFailed,
     TResult? Function(bool isLoginPassVisible)? togglePasswordVisibility,
   }) {
-    return loginSuccess?.call(userId);
+    return loginSuccess?.call(appUser);
   }
 
   @override
@@ -445,13 +457,13 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginLoading,
-    TResult Function(String userId)? loginSuccess,
+    TResult Function(AppUser appUser)? loginSuccess,
     TResult Function(String error)? loginFailed,
     TResult Function(bool isLoginPassVisible)? togglePasswordVisibility,
     required TResult orElse(),
   }) {
     if (loginSuccess != null) {
-      return loginSuccess(userId);
+      return loginSuccess(appUser);
     }
     return orElse();
   }
@@ -501,9 +513,9 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
 }
 
 abstract class LoginSuccess<T> implements LoginState<T> {
-  const factory LoginSuccess(final String userId) = _$LoginSuccessImpl<T>;
+  const factory LoginSuccess(final AppUser appUser) = _$LoginSuccessImpl<T>;
 
-  String get userId;
+  AppUser get appUser;
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -583,7 +595,7 @@ class _$LoginFailedImpl<T> implements LoginFailed<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginLoading,
-    required TResult Function(String userId) loginSuccess,
+    required TResult Function(AppUser appUser) loginSuccess,
     required TResult Function(String error) loginFailed,
     required TResult Function(bool isLoginPassVisible) togglePasswordVisibility,
   }) {
@@ -595,7 +607,7 @@ class _$LoginFailedImpl<T> implements LoginFailed<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginLoading,
-    TResult? Function(String userId)? loginSuccess,
+    TResult? Function(AppUser appUser)? loginSuccess,
     TResult? Function(String error)? loginFailed,
     TResult? Function(bool isLoginPassVisible)? togglePasswordVisibility,
   }) {
@@ -607,7 +619,7 @@ class _$LoginFailedImpl<T> implements LoginFailed<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginLoading,
-    TResult Function(String userId)? loginSuccess,
+    TResult Function(AppUser appUser)? loginSuccess,
     TResult Function(String error)? loginFailed,
     TResult Function(bool isLoginPassVisible)? togglePasswordVisibility,
     required TResult orElse(),
@@ -748,7 +760,7 @@ class _$TogglePasswordVisibilityImpl<T> implements TogglePasswordVisibility<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginLoading,
-    required TResult Function(String userId) loginSuccess,
+    required TResult Function(AppUser appUser) loginSuccess,
     required TResult Function(String error) loginFailed,
     required TResult Function(bool isLoginPassVisible) togglePasswordVisibility,
   }) {
@@ -760,7 +772,7 @@ class _$TogglePasswordVisibilityImpl<T> implements TogglePasswordVisibility<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginLoading,
-    TResult? Function(String userId)? loginSuccess,
+    TResult? Function(AppUser appUser)? loginSuccess,
     TResult? Function(String error)? loginFailed,
     TResult? Function(bool isLoginPassVisible)? togglePasswordVisibility,
   }) {
@@ -772,7 +784,7 @@ class _$TogglePasswordVisibilityImpl<T> implements TogglePasswordVisibility<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginLoading,
-    TResult Function(String userId)? loginSuccess,
+    TResult Function(AppUser appUser)? loginSuccess,
     TResult Function(String error)? loginFailed,
     TResult Function(bool isLoginPassVisible)? togglePasswordVisibility,
     required TResult orElse(),
