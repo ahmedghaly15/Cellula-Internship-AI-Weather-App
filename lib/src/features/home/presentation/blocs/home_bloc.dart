@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:internship_ai_weather_app/src/features/home/data/models/fetch_city_data_params.dart';
 
 import 'package:internship_ai_weather_app/src/features/home/domain/repositories/home_repo.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_event.dart';
@@ -43,8 +44,16 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     FetchCityDataEvent event,
     Emitter<HomeState> emit,
   ) async {
+    final Position position = await Geolocator.getCurrentPosition();
     emit(const HomeState.fetchCityDataLoading());
-    final result = await _homeRepo.fetchCityData(event.params, _cancelToken);
+    final fetchCityDataParams = FetchCityDataParams(
+      lat: position.latitude,
+      lon: position.longitude,
+    );
+    final result = await _homeRepo.fetchCityData(
+      fetchCityDataParams,
+      _cancelToken,
+    );
     result.when(
       success: (cityDataEntity) =>
           emit(HomeState.fetchCityDataSuccess(cityDataEntity)),
