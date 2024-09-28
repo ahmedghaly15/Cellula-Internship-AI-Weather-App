@@ -13,7 +13,7 @@ abstract class HomeApiService {
   @GET(EndPoints.fetchCurrent)
   Future<FetchCurrentResponse> fetchCurrent(
     @Query('q') String city, [
-    @CancelRequest() CancelToken cancelToken,
+    @CancelRequest() CancelToken? cancelToken,
   ]);
 
   @GET(EndPoints.fetchCityData)

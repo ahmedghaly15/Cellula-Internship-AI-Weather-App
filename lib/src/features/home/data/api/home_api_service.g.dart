@@ -26,10 +26,11 @@ class _HomeApiService implements HomeApiService {
   @override
   Future<FetchCurrentResponse> fetchCurrent(
     String city, [
-    CancelToken cancelToken,
+    CancelToken? cancelToken,
   ]) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'q': city};
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<FetchCurrentResponse>(Options(
