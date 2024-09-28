@@ -1,9 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:internship_ai_weather_app/src/core/api/dio_factory.dart';
 import 'package:internship_ai_weather_app/src/core/network/internet_checker.dart';
+import 'package:internship_ai_weather_app/src/features/home/data/api/home_api_service.dart';
+import 'package:internship_ai_weather_app/src/features/home/data/repositories/home_repo_impl.dart';
+import 'package:internship_ai_weather_app/src/features/home/domain/repositories/home_repo.dart';
+import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/login/data/datasources/login_remote_datasource.dart';
 import 'package:internship_ai_weather_app/src/features/login/data/repositories/login_repo.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/blocs/login_bloc.dart';
@@ -47,6 +53,10 @@ void _setupForDatasources() {
   getIt.registerLazySingleton<RegisterRemoteDataSource>(
     () => const RegisterRemoteDataSource(),
   );
+  final Dio dio = DioFactory.getDio();
+  getIt.registerLazySingleton<HomeApiService>(
+    () => HomeApiService(dio),
+  );
 }
 
 void _setupForRepos() {
@@ -56,14 +66,19 @@ void _setupForRepos() {
   getIt.registerLazySingleton<RegisterRepo>(
     () => RegisterRepo(getIt.get<RegisterRemoteDataSource>()),
   );
+  getIt.registerLazySingleton<HomeRepo>(
+    () => HomeRepoImpl(getIt.get<HomeApiService>()),
+  );
 }
 
 void _setupForBlocs() {
   getIt.registerFactory<LoginBloc>(
     () => LoginBloc(getIt.get<LoginRepo>()),
   );
-
   getIt.registerFactory<RegisterBloc>(
     () => RegisterBloc(getIt.get<RegisterRepo>()),
+  );
+  getIt.registerFactory<HomeBloc>(
+    () => HomeBloc(getIt.get<HomeRepo>()),
   );
 }

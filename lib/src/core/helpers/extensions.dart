@@ -39,3 +39,9 @@ extension NullOrEmptyString on String? {
   /// Check if the string is null or empty
   bool get isNullOrEmpty => this == null || this == '';
 }
+
+extension MediaQueryAccessor on BuildContext {
+  MediaQueryData get mediaQuery => MediaQuery.of(this);
+  double get height => mediaQuery.size.height;
+  double get width => mediaQuery.size.width;
+}
