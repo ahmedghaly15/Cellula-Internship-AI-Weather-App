@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:internship_ai_weather_app/src/core/api/api_error_model.dart';
+import 'package:internship_ai_weather_app/src/core/utils/app_strings.dart';
 
 class ApiErrorHandler {
   static ApiErrorModel handle(dynamic error) {
@@ -17,17 +18,19 @@ class ApiErrorHandler {
           return _handleError(error);
         case DioExceptionType.cancel:
           return const ApiErrorModel(
-              error: "Opps, something is wrong. Please try again later");
+            error: "Opps, something is wrong. Please try again later",
+          );
         case DioExceptionType.connectionError:
-          return const ApiErrorModel(
-              error: "No internet connection. Please try again later.");
+          return const ApiErrorModel(error: AppStrings.noInternetConnection);
         case DioExceptionType.badCertificate:
           return const ApiErrorModel(
-              error: "Opps, something is wrong. Please try again later");
+            error: "Opps, something is wrong. Please try again later",
+          );
       }
     } else {
       return const ApiErrorModel(
-          error: "Opps, something is wrong. Please try again later");
+        error: "Opps, something is wrong. Please try again later",
+      );
     }
   }
 
@@ -38,7 +41,8 @@ class ApiErrorHandler {
       return ApiErrorModel.fromJson(error.response!.data);
     } else {
       return const ApiErrorModel(
-          error: "Opps, something is wrong. Please try again later");
+        error: "Opps, something is wrong. Please try again later",
+      );
     }
   }
 }
