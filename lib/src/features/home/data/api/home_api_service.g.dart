@@ -60,6 +60,48 @@ class _HomeApiService implements HomeApiService {
     return _value;
   }
 
+  @override
+  Future<FetchCityData> fetchCityData({
+    required double lat,
+    required double lon,
+    CancelToken? cancelToken,
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'lat': lat,
+      r'lon': lon,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<FetchCityData>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'https://nominatim.openstreetmap.org/reverse?format=json',
+          queryParameters: queryParameters,
+          data: _data,
+          cancelToken: cancelToken,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late FetchCityData _value;
+    try {
+      _value = FetchCityData.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
         !(requestOptions.responseType == ResponseType.bytes ||
