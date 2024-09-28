@@ -20,7 +20,7 @@ ApiErrorModel _$ApiErrorModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ApiErrorModel {
-  int get code => throw _privateConstructorUsedError;
+  int? get code => throw _privateConstructorUsedError;
   @JsonKey(name: 'message')
   String get error => throw _privateConstructorUsedError;
 
@@ -37,7 +37,7 @@ abstract class $ApiErrorModelCopyWith<$Res> {
           ApiErrorModel value, $Res Function(ApiErrorModel) then) =
       _$ApiErrorModelCopyWithImpl<$Res, ApiErrorModel>;
   @useResult
-  $Res call({int code, @JsonKey(name: 'message') String error});
+  $Res call({int? code, @JsonKey(name: 'message') String error});
 }
 
 /// @nodoc
@@ -55,14 +55,14 @@ class _$ApiErrorModelCopyWithImpl<$Res, $Val extends ApiErrorModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = null,
+    Object? code = freezed,
     Object? error = null,
   }) {
     return _then(_value.copyWith(
-      code: null == code
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -79,7 +79,7 @@ abstract class _$$ApiErrorModelImplCopyWith<$Res>
       __$$ApiErrorModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int code, @JsonKey(name: 'message') String error});
+  $Res call({int? code, @JsonKey(name: 'message') String error});
 }
 
 /// @nodoc
@@ -95,14 +95,14 @@ class __$$ApiErrorModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = null,
+    Object? code = freezed,
     Object? error = null,
   }) {
     return _then(_$ApiErrorModelImpl(
-      code: null == code
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -115,13 +115,13 @@ class __$$ApiErrorModelImplCopyWithImpl<$Res>
 @JsonSerializable(createToJson: false)
 class _$ApiErrorModelImpl implements _ApiErrorModel {
   const _$ApiErrorModelImpl(
-      {required this.code, @JsonKey(name: 'message') required this.error});
+      {this.code, @JsonKey(name: 'message') required this.error});
 
   factory _$ApiErrorModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ApiErrorModelImplFromJson(json);
 
   @override
-  final int code;
+  final int? code;
   @override
   @JsonKey(name: 'message')
   final String error;
@@ -155,7 +155,7 @@ class _$ApiErrorModelImpl implements _ApiErrorModel {
 
 abstract class _ApiErrorModel implements ApiErrorModel {
   const factory _ApiErrorModel(
-          {required final int code,
+          {final int? code,
           @JsonKey(name: 'message') required final String error}) =
       _$ApiErrorModelImpl;
 
@@ -163,7 +163,7 @@ abstract class _ApiErrorModel implements ApiErrorModel {
       _$ApiErrorModelImpl.fromJson;
 
   @override
-  int get code;
+  int? get code;
   @override
   @JsonKey(name: 'message')
   String get error;
