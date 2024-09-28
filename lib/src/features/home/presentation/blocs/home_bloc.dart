@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:geolocator/geolocator.dart';
+
 import 'package:internship_ai_weather_app/src/features/home/domain/repositories/home_repo.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_event.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_state.dart';
@@ -11,6 +13,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final HomeRepo _homeRepo;
 
   HomeBloc(this._homeRepo) : super(const HomeState.initial()) {
+    on<EnableLocationPermissionEvent>(_enableLocationPermission);
     on<FetchCityDataEvent>(_fetchCityData);
     on<FetchCurrentEvent>(_fetchCurrent);
     cityController = TextEditingController();
@@ -18,6 +21,23 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   late final TextEditingController cityController;
   final CancelToken _cancelToken = CancelToken();
+
+  void _enableLocationPermission(
+    EnableLocationPermissionEvent event,
+    Emitter<HomeState> emit,
+  ) async {
+    emit(const HomeState.enableLocationPermissionLoading());
+    final locationPermission = await Geolocator.requestPermission();
+    if (_isLocationGranted(locationPermission)) {
+      emit(HomeState.enableLocationPermissionSuccess(locationPermission));
+    } else {
+      emit(const HomeState.enableLocationPermissionError());
+    }
+  }
+
+  bool _isLocationGranted(LocationPermission locationPermission) =>
+      locationPermission == LocationPermission.always ||
+      locationPermission == LocationPermission.whileInUse;
 
   void _fetchCityData(
     FetchCityDataEvent event,
