@@ -129,7 +129,7 @@ Forecast _$ForecastFromJson(Map<String, dynamic> json) => Forecast(
     );
 
 Map<String, dynamic> _$ForecastToJson(Forecast instance) => <String, dynamic>{
-      'forecastday': instance.forecastDay.map((e) => e.toJson()).toList(),
+      'forecastday': instance.forecastDays.map((e) => e.toJson()).toList(),
     };
 
 ForecastDay _$ForecastDayFromJson(Map<String, dynamic> json) => ForecastDay(
@@ -144,10 +144,10 @@ Map<String, dynamic> _$ForecastDayToJson(ForecastDay instance) =>
     };
 
 Day _$DayFromJson(Map<String, dynamic> json) => Day(
-      maxTempC: json['maxtemp_c'] as String,
-      maxTempF: json['maxtemp_f'] as String,
-      minTempC: json['mintemp_c'] as String,
-      minTempF: json['mintemp_f'] as String,
+      maxTempC: (json['maxtemp_c'] as num).toDouble(),
+      maxTempF: (json['maxtemp_f'] as num).toDouble(),
+      minTempC: (json['mintemp_c'] as num).toDouble(),
+      minTempF: (json['mintemp_f'] as num).toDouble(),
       condition: Condition.fromJson(json['condition'] as Map<String, dynamic>),
     );
 
