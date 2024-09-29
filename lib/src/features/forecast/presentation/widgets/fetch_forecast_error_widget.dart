@@ -18,29 +18,39 @@ class FetchForecastErrorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.refresh_rounded,
-            color: Colors.white,
-            size: 250.h,
+    return CustomScrollView(
+      slivers: [
+        SliverPadding(
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          sliver: SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.refresh_rounded,
+                  color: Colors.white,
+                  size: 250.h,
+                ),
+                MySizedBox.height24,
+                Text(
+                  error,
+                  style: AppTextStyles.font16WhiteBold,
+                  textAlign: TextAlign.center,
+                ),
+                MySizedBox.height24,
+                MainButton(
+                  onPressed: () => context
+                      .read<ForecastBloc>()
+                      .add(FetchForecastEvent(city)),
+                  text: 'Try again',
+                ),
+              ],
+            ),
           ),
-          MySizedBox.height24,
-          Text(
-            error,
-            style: AppTextStyles.font16WhiteBold,
-          ),
-          MySizedBox.height24,
-          MainButton(
-            onPressed: () =>
-                context.read<ForecastBloc>().add(FetchForecastEvent(city)),
-            text: 'Try again',
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
