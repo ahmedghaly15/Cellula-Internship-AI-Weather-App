@@ -6,6 +6,10 @@ import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:internship_ai_weather_app/src/core/api/dio_factory.dart';
 import 'package:internship_ai_weather_app/src/core/network/internet_checker.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/data/api/forecast_api_service.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/data/repositories/forecast_repo_impl.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/domain/repositories/forecast_repo.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/home/data/api/home_api_service.dart';
 import 'package:internship_ai_weather_app/src/features/home/data/repositories/home_repo_impl.dart';
 import 'package:internship_ai_weather_app/src/features/home/domain/repositories/home_repo.dart';
@@ -57,6 +61,10 @@ void _setupForDatasources() {
   getIt.registerLazySingleton<HomeApiService>(
     () => HomeApiService(dio),
   );
+
+  getIt.registerLazySingleton<ForecastApiService>(
+    () => ForecastApiService(dio),
+  );
 }
 
 void _setupForRepos() {
@@ -69,6 +77,9 @@ void _setupForRepos() {
   getIt.registerLazySingleton<HomeRepo>(
     () => HomeRepoImpl(getIt.get<HomeApiService>()),
   );
+  getIt.registerLazySingleton<ForecastRepo>(
+    () => ForecastRepoImpl(getIt.get<ForecastApiService>()),
+  );
 }
 
 void _setupForBlocs() {
@@ -80,5 +91,8 @@ void _setupForBlocs() {
   );
   getIt.registerFactory<HomeBloc>(
     () => HomeBloc(getIt.get<HomeRepo>()),
+  );
+  getIt.registerFactory<ForecastBloc>(
+    () => ForecastBloc(getIt.get<ForecastRepo>()),
   );
 }
