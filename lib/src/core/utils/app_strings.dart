@@ -5,5 +5,4 @@ class AppStrings {
   static const String fontFamily = 'Poppins';
   static const String noInternetConnection =
       'No internet connection. Please check your internet connection and try again.';
-  static const String apiKey = 'API_KEY';
 }

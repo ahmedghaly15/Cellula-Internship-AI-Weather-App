@@ -5,7 +5,6 @@ import 'package:internship_ai_weather_app/src/features/home/data/api/home_api_se
 import 'package:internship_ai_weather_app/src/features/home/data/mapper/home_mapper.dart';
 import 'package:internship_ai_weather_app/src/features/home/data/models/fetch_city_data_using_position_params.dart';
 import 'package:internship_ai_weather_app/src/features/home/domain/entities/fetch_city_data_entity.dart';
-import 'package:internship_ai_weather_app/src/features/home/domain/entities/fetch_current_entity.dart';
 import 'package:internship_ai_weather_app/src/features/home/domain/repositories/home_repo.dart';
 
 class HomeRepoImpl implements HomeRepo {
@@ -37,25 +36,6 @@ class HomeRepoImpl implements HomeRepo {
     );
     final cityDataEntity = HomeMapper.toCityDataEntity(cityData);
     return cityDataEntity;
-  }
-
-  @override
-  Future<ApiResult<FetchCurrentEntity>> fetchCurrent(
-    String city, [
-    CancelToken? cancelToken,
-  ]) {
-    return executeAndHandleErrors<FetchCurrentEntity>(
-      () async => await _fetchCurrentAndMapIt(city, cancelToken),
-    );
-  }
-
-  Future<FetchCurrentEntity> _fetchCurrentAndMapIt(
-    String city, [
-    CancelToken? cancelToken,
-  ]) async {
-    final current = await _homeApiService.fetchCurrent(city, cancelToken);
-    final currentEntity = HomeMapper.toCurrentEntity(current);
-    return currentEntity;
   }
 
   @override

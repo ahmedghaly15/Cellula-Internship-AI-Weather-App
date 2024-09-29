@@ -17,7 +17,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<EnableLocationPermissionEvent>(_enableLocationPermission);
     on<FetchCityDataUsingPositionEvent>(_fetchCityDataUsingPosition);
     on<FetchCityDataUsingCityNameEvent>(_fetchCityDataUsingCityName);
-    on<FetchCurrentEvent>(_fetchCurrent);
     _initVariables();
   }
 
@@ -67,22 +66,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       },
       failure: (failure) =>
           emit(HomeState.fetchCityDataUsingPositionError(failure.error)),
-    );
-  }
-
-  void _fetchCurrent(
-    FetchCurrentEvent event,
-    Emitter<HomeState> emit,
-  ) async {
-    emit(const HomeState.fetchCurrentLoading());
-    final result = await _homeRepo.fetchCurrent(
-      cityController.text.trim(),
-      _cancelToken,
-    );
-    result.when(
-      success: (currentEntity) =>
-          emit(HomeState.fetchCurrentSuccess(currentEntity)),
-      failure: (failure) => emit(HomeState.fetchCurrentError(failure.error)),
     );
   }
 
