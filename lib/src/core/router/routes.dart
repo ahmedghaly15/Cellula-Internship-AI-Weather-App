@@ -6,4 +6,5 @@ class Routes {
   static const String homeRoute = '/homeRoute';
   static const String registerRoute = '/registerRoute';
   static const String forecastRoute = '/forecastRoute';
+  static const String currentCityWeather = '/currentCityWeather';
 }

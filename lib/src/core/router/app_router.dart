@@ -4,8 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_ai_weather_app/src/core/di/dependency_injection.dart';
 import 'package:internship_ai_weather_app/src/core/router/routes.dart';
 import 'package:internship_ai_weather_app/src/core/utils/functions/check_if_user_is_logged_in.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/data/models/fetch_forecast_response.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_event.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/presentation/views/current_city_weather_view.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/views/forecast_view.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_event.dart';
@@ -53,8 +55,14 @@ class AppRouter {
           builder: (_) => BlocProvider<ForecastBloc>(
             create: (_) =>
                 getIt.get<ForecastBloc>()..add(FetchForecastEvent(args)),
-            child: const ForecastView(),
+            child: ForecastView(city: args),
           ),
+        );
+
+      case Routes.currentCityWeather:
+        final args = routeSettings.arguments as Current;
+        return MaterialPageRoute(
+          builder: (_) => CurrentCityWeatherView(currentCityWeather: args),
         );
 
       default:
