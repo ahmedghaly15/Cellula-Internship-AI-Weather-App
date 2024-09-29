@@ -5,12 +5,16 @@ import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
 import 'package:internship_ai_weather_app/src/core/themes/app_colors.dart';
 import 'package:internship_ai_weather_app/src/core/themes/app_text_styles.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/my_sized_box.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/data/models/fetch_forecast_response.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_event.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_state.dart';
+import 'package:intl/intl.dart';
 
 class DaysListViewBlocBuilder extends StatelessWidget {
-  const DaysListViewBlocBuilder({super.key});
+  const DaysListViewBlocBuilder({super.key, required this.forecastDays});
+
+  final List<ForecastDay> forecastDays;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +51,7 @@ class DaysListViewBlocBuilder extends StatelessWidget {
                       .add(UpdateSelectedDayEvent(index));
                 },
                 child: Text(
-                  '29',
+                  _getDay(index),
                   style: AppTextStyles.font24WhiteBold.copyWith(
                     color: _isSelected(index, context)
                         ? AppColors.primaryColor
@@ -57,7 +61,7 @@ class DaysListViewBlocBuilder extends StatelessWidget {
               ),
             ),
             separatorBuilder: (_, __) => MySizedBox.width8,
-            itemCount: 7,
+            itemCount: forecastDays.length,
           );
         },
       ),
@@ -66,4 +70,13 @@ class DaysListViewBlocBuilder extends StatelessWidget {
 
   bool _isSelected(int index, BuildContext context) =>
       index == context.read<ForecastBloc>().selectedDay;
+
+  String _getDay(int index) =>
+      _formatDate(forecastDays[index].date).day.toString();
+
+  DateTime _formatDate(String stringDate) {
+    final DateFormat format = DateFormat("d-M-yyyy");
+    final DateTime parsedDate = format.parse(stringDate);
+    return parsedDate;
+  }
 }
