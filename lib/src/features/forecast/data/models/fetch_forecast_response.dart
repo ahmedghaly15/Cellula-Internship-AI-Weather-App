@@ -4,14 +4,14 @@ part 'fetch_forecast_response.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class FetchForecastResponse {
-  final Location? location;
-  final Current? current;
-  final Forecast? forecast;
+  final Location location;
+  final Current current;
+  final Forecast forecast;
 
   FetchForecastResponse({
-    this.location,
-    this.current,
-    this.forecast,
+    required this.location,
+    required this.current,
+    required this.forecast,
   });
 
   factory FetchForecastResponse.fromJson(Map<String, dynamic> json) =>
