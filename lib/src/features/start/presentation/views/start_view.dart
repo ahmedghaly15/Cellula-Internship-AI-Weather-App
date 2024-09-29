@@ -22,7 +22,7 @@ class StartView extends StatelessWidget {
             ElasticIn(
               duration: const Duration(seconds: 2),
               child: SvgPicture.asset(
-                Assets.svgsStartScreen,
+                AppAssets.svgsStartScreen,
               ),
             ),
             FadeInDown(

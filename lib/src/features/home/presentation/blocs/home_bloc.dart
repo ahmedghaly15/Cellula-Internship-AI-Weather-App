@@ -4,7 +4,6 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
-
 import 'package:internship_ai_weather_app/src/features/home/domain/repositories/home_repo.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_event.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_state.dart';
@@ -29,7 +28,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     emit(const HomeState.enableLocationPermissionLoading());
     final locationPermission = await Geolocator.requestPermission();
     if (_isLocationGranted(locationPermission)) {
-      emit(HomeState.enableLocationPermissionSuccess(locationPermission));
+      final Position position = await Geolocator.getCurrentPosition();
+      emit(HomeState.enableLocationPermissionSuccess(position));
     } else {
       emit(const HomeState.enableLocationPermissionError());
     }
@@ -44,10 +44,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     Emitter<HomeState> emit,
   ) async {
     emit(const HomeState.fetchCityDataLoading());
-    final result = await _homeRepo.fetchCityData(event.params, _cancelToken);
+    final result = await _homeRepo.fetchCityData(
+      event.params,
+      _cancelToken,
+    );
     result.when(
-      success: (cityDataEntity) =>
-          emit(HomeState.fetchCityDataSuccess(cityDataEntity)),
+      success: (cityDataEntity) {
+        cityController.text = cityDataEntity.cityName;
+        emit(HomeState.fetchCityDataSuccess(cityDataEntity));
+      },
       failure: (failure) => emit(HomeState.fetchCityDataError(failure.error)),
     );
   }

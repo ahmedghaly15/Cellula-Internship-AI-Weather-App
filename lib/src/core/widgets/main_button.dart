@@ -50,7 +50,9 @@ class MainButton extends StatelessWidget {
       height: height?.h ?? 52.0.h,
       margin: margin,
       decoration: BoxDecoration(
-        color: backgroundColor ?? AppColors.primaryColor,
+        color: isOutlined
+            ? Colors.transparent
+            : backgroundColor ?? AppColors.primaryColor,
         borderRadius: BorderRadiusDirectional.circular(
           borderRadius?.r ?? 34.0.r,
         ),
@@ -75,7 +77,7 @@ class MainButton extends StatelessWidget {
               child: Text(
                 text!,
                 style: textStyle ??
-                    AppTextStyles.font28Bold.copyWith(
+                    AppTextStyles.font28WhiteBold.copyWith(
                       fontSize: fontSize?.sp ?? 28.sp,
                       color: isOutlined
                           ? AppColors.primaryColor

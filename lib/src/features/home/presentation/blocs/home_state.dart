@@ -10,8 +10,7 @@ class HomeState<T> with _$HomeState<T> {
   const factory HomeState.initial() = _HomeInitial;
   const factory HomeState.enableLocationPermissionLoading() =
       EnableLocationPermissionLoading;
-  const factory HomeState.enableLocationPermissionSuccess(
-          LocationPermission locationPermission) =
+  const factory HomeState.enableLocationPermissionSuccess(Position position) =
       EnableLocationPermissionSuccess<T>;
   const factory HomeState.enableLocationPermissionError() =
       EnableLocationPermissionError;

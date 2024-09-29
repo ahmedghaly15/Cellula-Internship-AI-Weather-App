@@ -16,6 +16,6 @@ Widget circularIndicatorOrTextWidget({
         )
       : Text(
           text,
-          style: AppTextStyles.font28Bold,
+          style: AppTextStyles.font28WhiteBold,
         );
 }

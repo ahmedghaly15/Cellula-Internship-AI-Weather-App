@@ -24,9 +24,11 @@ class HomeMapper {
     FetchCityData cityData,
   ) {
     return FetchCityDataEntity(
-      cityName: cityData.cityAddress.cityName,
-      country: cityData.cityAddress.country,
-      countryCode: cityData.cityAddress.countryCode,
+      cityName: cityData.cityAddress.cityName!,
+      country: cityData.cityAddress.country!,
+      countryCode: cityData.cityAddress.countryCode!,
+      lat: cityData.lat,
+      lon: cityData.lon,
     );
   }
 }

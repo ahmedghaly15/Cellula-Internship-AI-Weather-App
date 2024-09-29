@@ -20,6 +20,7 @@ abstract class HomeApiService {
   Future<FetchCityData> fetchCityData({
     @Query('lat') required double lat,
     @Query('lon') required double lon,
+    @Query('en') String lang = 'en',
     @CancelRequest() CancelToken? cancelToken,
   });
 }

@@ -26,8 +26,8 @@ Future<AppUser> _getCachedOrRemoteUser(String userId) async {
       await SecureStorageHelper.getSecuredString(CacheKeys.appUser);
 
   if (cachedUser.isNullOrEmpty) {
-    final user = await getFirebaseUserData(userId);
-    final AppUser appUser = AppUser.fromJson(user.data()!);
+    final remoteUser = await getFirebaseUserData(userId);
+    final AppUser appUser = AppUser.fromJson(remoteUser.data()!);
     await cacheAppUser(appUser);
     return appUser;
   } else {

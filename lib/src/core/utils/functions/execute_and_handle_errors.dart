@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:internship_ai_weather_app/src/core/api/api_error_handler.dart';
 import 'package:internship_ai_weather_app/src/core/api/api_result.dart';
@@ -23,7 +25,7 @@ Future<ApiResult<T>> executeAndHandleErrors<T>(
   try {
     return ApiResult<T>.success(await function());
   } catch (error) {
-    debugPrint('********* Error in executeAndHandleErrors: $error **********');
+    log('********* Error in executeAndHandleErrors: $error **********');
     return ApiResult.failure(ApiErrorHandler.handle(error));
   }
 }
