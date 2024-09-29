@@ -4,8 +4,6 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:internship_ai_weather_app/src/features/home/data/models/fetch_city_data_params.dart';
-
 import 'package:internship_ai_weather_app/src/features/home/domain/repositories/home_repo.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_event.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_state.dart';
@@ -30,7 +28,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     emit(const HomeState.enableLocationPermissionLoading());
     final locationPermission = await Geolocator.requestPermission();
     if (_isLocationGranted(locationPermission)) {
-      emit(HomeState.enableLocationPermissionSuccess(locationPermission));
+      final Position position = await Geolocator.getCurrentPosition();
+      emit(HomeState.enableLocationPermissionSuccess(position));
     } else {
       emit(const HomeState.enableLocationPermissionError());
     }
@@ -44,19 +43,16 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     FetchCityDataEvent event,
     Emitter<HomeState> emit,
   ) async {
-    final Position position = await Geolocator.getCurrentPosition();
     emit(const HomeState.fetchCityDataLoading());
-    final fetchCityDataParams = FetchCityDataParams(
-      lat: position.latitude,
-      lon: position.longitude,
-    );
     final result = await _homeRepo.fetchCityData(
-      fetchCityDataParams,
+      event.params,
       _cancelToken,
     );
     result.when(
-      success: (cityDataEntity) =>
-          emit(HomeState.fetchCityDataSuccess(cityDataEntity)),
+      success: (cityDataEntity) {
+        cityController.text = cityDataEntity.cityName;
+        emit(HomeState.fetchCityDataSuccess(cityDataEntity));
+      },
       failure: (failure) => emit(HomeState.fetchCityDataError(failure.error)),
     );
   }

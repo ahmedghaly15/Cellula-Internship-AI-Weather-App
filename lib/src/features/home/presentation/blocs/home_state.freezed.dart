@@ -20,7 +20,7 @@ mixin _$HomeState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -37,8 +37,7 @@ mixin _$HomeState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -52,8 +51,7 @@ mixin _$HomeState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -184,7 +182,7 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -204,8 +202,7 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -222,8 +219,7 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -358,7 +354,7 @@ class _$EnableLocationPermissionLoadingImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -378,8 +374,7 @@ class _$EnableLocationPermissionLoadingImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -396,8 +391,7 @@ class _$EnableLocationPermissionLoadingImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -492,7 +486,7 @@ abstract class _$$EnableLocationPermissionSuccessImplCopyWith<T, $Res> {
           $Res Function(_$EnableLocationPermissionSuccessImpl<T>) then) =
       __$$EnableLocationPermissionSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({LocationPermission locationPermission});
+  $Res call({Position position});
 }
 
 /// @nodoc
@@ -510,13 +504,13 @@ class __$$EnableLocationPermissionSuccessImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? locationPermission = null,
+    Object? position = null,
   }) {
     return _then(_$EnableLocationPermissionSuccessImpl<T>(
-      null == locationPermission
-          ? _value.locationPermission
-          : locationPermission // ignore: cast_nullable_to_non_nullable
-              as LocationPermission,
+      null == position
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as Position,
     ));
   }
 }
@@ -525,14 +519,14 @@ class __$$EnableLocationPermissionSuccessImplCopyWithImpl<T, $Res>
 
 class _$EnableLocationPermissionSuccessImpl<T>
     implements EnableLocationPermissionSuccess<T> {
-  const _$EnableLocationPermissionSuccessImpl(this.locationPermission);
+  const _$EnableLocationPermissionSuccessImpl(this.position);
 
   @override
-  final LocationPermission locationPermission;
+  final Position position;
 
   @override
   String toString() {
-    return 'HomeState<$T>.enableLocationPermissionSuccess(locationPermission: $locationPermission)';
+    return 'HomeState<$T>.enableLocationPermissionSuccess(position: $position)';
   }
 
   @override
@@ -540,12 +534,12 @@ class _$EnableLocationPermissionSuccessImpl<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EnableLocationPermissionSuccessImpl<T> &&
-            (identical(other.locationPermission, locationPermission) ||
-                other.locationPermission == locationPermission));
+            (identical(other.position, position) ||
+                other.position == position));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, locationPermission);
+  int get hashCode => Object.hash(runtimeType, position);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -562,7 +556,7 @@ class _$EnableLocationPermissionSuccessImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -574,7 +568,7 @@ class _$EnableLocationPermissionSuccessImpl<T>
         fetchCurrentSuccess,
     required TResult Function(String error) fetchCurrentError,
   }) {
-    return enableLocationPermissionSuccess(locationPermission);
+    return enableLocationPermissionSuccess(position);
   }
 
   @override
@@ -582,8 +576,7 @@ class _$EnableLocationPermissionSuccessImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -592,7 +585,7 @@ class _$EnableLocationPermissionSuccessImpl<T>
     TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
     TResult? Function(String error)? fetchCurrentError,
   }) {
-    return enableLocationPermissionSuccess?.call(locationPermission);
+    return enableLocationPermissionSuccess?.call(position);
   }
 
   @override
@@ -600,8 +593,7 @@ class _$EnableLocationPermissionSuccessImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -612,7 +604,7 @@ class _$EnableLocationPermissionSuccessImpl<T>
     required TResult orElse(),
   }) {
     if (enableLocationPermissionSuccess != null) {
-      return enableLocationPermissionSuccess(locationPermission);
+      return enableLocationPermissionSuccess(position);
     }
     return orElse();
   }
@@ -685,11 +677,10 @@ class _$EnableLocationPermissionSuccessImpl<T>
 }
 
 abstract class EnableLocationPermissionSuccess<T> implements HomeState<T> {
-  const factory EnableLocationPermissionSuccess(
-          final LocationPermission locationPermission) =
+  const factory EnableLocationPermissionSuccess(final Position position) =
       _$EnableLocationPermissionSuccessImpl<T>;
 
-  LocationPermission get locationPermission;
+  Position get position;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -747,7 +738,7 @@ class _$EnableLocationPermissionErrorImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -767,8 +758,7 @@ class _$EnableLocationPermissionErrorImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -785,8 +775,7 @@ class _$EnableLocationPermissionErrorImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -919,7 +908,7 @@ class _$FetchCityDataLoadingImpl<T> implements FetchCityDataLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -939,8 +928,7 @@ class _$FetchCityDataLoadingImpl<T> implements FetchCityDataLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -957,8 +945,7 @@ class _$FetchCityDataLoadingImpl<T> implements FetchCityDataLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1118,7 +1105,7 @@ class _$FetchCityDataSuccessImpl<T> implements FetchCityDataSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -1138,8 +1125,7 @@ class _$FetchCityDataSuccessImpl<T> implements FetchCityDataSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1156,8 +1142,7 @@ class _$FetchCityDataSuccessImpl<T> implements FetchCityDataSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1324,7 +1309,7 @@ class _$FetchCityDataErrorImpl<T> implements FetchCityDataError<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -1344,8 +1329,7 @@ class _$FetchCityDataErrorImpl<T> implements FetchCityDataError<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1362,8 +1346,7 @@ class _$FetchCityDataErrorImpl<T> implements FetchCityDataError<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1503,7 +1486,7 @@ class _$FetchCurrentLoadingImpl<T> implements FetchCurrentLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -1523,8 +1506,7 @@ class _$FetchCurrentLoadingImpl<T> implements FetchCurrentLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1541,8 +1523,7 @@ class _$FetchCurrentLoadingImpl<T> implements FetchCurrentLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1701,7 +1682,7 @@ class _$FetchCurrentSuccessImpl<T> implements FetchCurrentSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -1721,8 +1702,7 @@ class _$FetchCurrentSuccessImpl<T> implements FetchCurrentSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1739,8 +1719,7 @@ class _$FetchCurrentSuccessImpl<T> implements FetchCurrentSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1908,7 +1887,7 @@ class _$FetchCurrentErrorImpl<T> implements FetchCurrentError<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(LocationPermission locationPermission)
+    required TResult Function(Position position)
         enableLocationPermissionSuccess,
     required TResult Function() enableLocationPermissionError,
     required TResult Function() fetchCityDataLoading,
@@ -1928,8 +1907,7 @@ class _$FetchCurrentErrorImpl<T> implements FetchCurrentError<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult? Function(Position position)? enableLocationPermissionSuccess,
     TResult? Function()? enableLocationPermissionError,
     TResult? Function()? fetchCityDataLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
@@ -1946,8 +1924,7 @@ class _$FetchCurrentErrorImpl<T> implements FetchCurrentError<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? enableLocationPermissionLoading,
-    TResult Function(LocationPermission locationPermission)?
-        enableLocationPermissionSuccess,
+    TResult Function(Position position)? enableLocationPermissionSuccess,
     TResult Function()? enableLocationPermissionError,
     TResult Function()? fetchCityDataLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)? fetchCityDataSuccess,
