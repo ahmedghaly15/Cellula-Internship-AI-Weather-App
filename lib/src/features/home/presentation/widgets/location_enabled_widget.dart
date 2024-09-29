@@ -1,33 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_ai_weather_app/src/core/widgets/main_button.dart';
-import 'package:internship_ai_weather_app/src/features/home/presentation/widgets/city_search_text_field_bloc_builder.dart';
+import 'package:internship_ai_weather_app/src/features/home/presentation/widgets/city_search_text_field_bloc_consumer.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/widgets/custom_map_bloc_builder.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/widgets/hello_username.dart';
+import 'package:internship_ai_weather_app/src/features/home/presentation/widgets/search_button_bloc_consumer.dart';
 
 class LocationEnabledWidget extends StatelessWidget {
   const LocationEnabledWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: CustomScrollView(
         slivers: [
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: HelloUsername(),
           ),
-          const SliverToBoxAdapter(
-            child: CustomMapBlocBuilder(),
-          ),
-          const SliverToBoxAdapter(
-            child: CitySearchTextFieldBlocBuilder(),
+          CustomMapBlocBuilder(),
+          SliverToBoxAdapter(
+            child: CitySearchTextFieldBlocConsumer(),
           ),
           SliverToBoxAdapter(
-            child: MainButton(
-              margin: EdgeInsets.symmetric(vertical: 16.h, horizontal: 24.w),
-              onPressed: () {},
-              text: 'Search',
-            ),
+            child: SearchButtonBlocConsumer(),
           ),
         ],
       ),
