@@ -53,7 +53,10 @@ class HomeRepoImpl implements HomeRepo {
     String city, [
     CancelToken? cancelToken,
   ]) async {
-    final current = await _homeApiService.fetchCurrent(city, cancelToken);
+    final current = await _homeApiService.fetchCurrent(
+      city: city,
+      cancelToken: cancelToken,
+    );
     final currentEntity = HomeMapper.toCurrentEntity(current);
     return currentEntity;
   }

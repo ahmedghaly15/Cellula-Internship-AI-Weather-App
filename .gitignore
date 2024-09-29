@@ -48,4 +48,4 @@ macos
 windows
 linux
 web
-.env
+lib/src/core/utils/app_keys.dart
