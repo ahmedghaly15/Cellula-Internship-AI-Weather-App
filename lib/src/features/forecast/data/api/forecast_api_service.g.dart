@@ -26,12 +26,14 @@ class _ForecastApiService implements ForecastApiService {
   @override
   Future<FetchForecastResponse> fetchForecast({
     required String city,
+    int days = 7,
     String apiKey = AppKeys.apiKey,
     CancelToken? cancelToken,
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'q': city,
+      r'days': days,
       r'key': apiKey,
     };
     queryParameters.removeWhere((k, v) => v == null);

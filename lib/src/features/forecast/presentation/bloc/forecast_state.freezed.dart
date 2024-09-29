@@ -23,6 +23,7 @@ mixin _$ForecastState<T> {
     required TResult Function(FetchForecastEntity forecastEntity)
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
+    required TResult Function(int selectedDay) updateSelectedDay,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,6 +32,7 @@ mixin _$ForecastState<T> {
     TResult? Function()? fetchForecastLoading,
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
+    TResult? Function(int selectedDay)? updateSelectedDay,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,6 +41,7 @@ mixin _$ForecastState<T> {
     TResult Function()? fetchForecastLoading,
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
+    TResult Function(int selectedDay)? updateSelectedDay,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -50,6 +53,7 @@ mixin _$ForecastState<T> {
     required TResult Function(FetchForecastSuccess<T> value)
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
+    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +62,7 @@ mixin _$ForecastState<T> {
     TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +71,7 @@ mixin _$ForecastState<T> {
     TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -138,6 +144,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(FetchForecastEntity forecastEntity)
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
+    required TResult Function(int selectedDay) updateSelectedDay,
   }) {
     return initial();
   }
@@ -149,6 +156,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? fetchForecastLoading,
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
+    TResult? Function(int selectedDay)? updateSelectedDay,
   }) {
     return initial?.call();
   }
@@ -160,6 +168,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? fetchForecastLoading,
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
+    TResult Function(int selectedDay)? updateSelectedDay,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -177,6 +186,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(FetchForecastSuccess<T> value)
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
+    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
   }) {
     return initial(this);
   }
@@ -188,6 +198,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
   }) {
     return initial?.call(this);
   }
@@ -199,6 +210,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -260,6 +272,7 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     required TResult Function(FetchForecastEntity forecastEntity)
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
+    required TResult Function(int selectedDay) updateSelectedDay,
   }) {
     return fetchForecastLoading();
   }
@@ -271,6 +284,7 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     TResult? Function()? fetchForecastLoading,
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
+    TResult? Function(int selectedDay)? updateSelectedDay,
   }) {
     return fetchForecastLoading?.call();
   }
@@ -282,6 +296,7 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     TResult Function()? fetchForecastLoading,
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
+    TResult Function(int selectedDay)? updateSelectedDay,
     required TResult orElse(),
   }) {
     if (fetchForecastLoading != null) {
@@ -299,6 +314,7 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     required TResult Function(FetchForecastSuccess<T> value)
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
+    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
   }) {
     return fetchForecastLoading(this);
   }
@@ -310,6 +326,7 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
   }) {
     return fetchForecastLoading?.call(this);
   }
@@ -321,6 +338,7 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
     required TResult orElse(),
   }) {
     if (fetchForecastLoading != null) {
@@ -410,6 +428,7 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     required TResult Function(FetchForecastEntity forecastEntity)
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
+    required TResult Function(int selectedDay) updateSelectedDay,
   }) {
     return fetchForecastSuccess(forecastEntity);
   }
@@ -421,6 +440,7 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     TResult? Function()? fetchForecastLoading,
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
+    TResult? Function(int selectedDay)? updateSelectedDay,
   }) {
     return fetchForecastSuccess?.call(forecastEntity);
   }
@@ -432,6 +452,7 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     TResult Function()? fetchForecastLoading,
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
+    TResult Function(int selectedDay)? updateSelectedDay,
     required TResult orElse(),
   }) {
     if (fetchForecastSuccess != null) {
@@ -449,6 +470,7 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     required TResult Function(FetchForecastSuccess<T> value)
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
+    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
   }) {
     return fetchForecastSuccess(this);
   }
@@ -460,6 +482,7 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
   }) {
     return fetchForecastSuccess?.call(this);
   }
@@ -471,6 +494,7 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
     required TResult orElse(),
   }) {
     if (fetchForecastSuccess != null) {
@@ -567,6 +591,7 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     required TResult Function(FetchForecastEntity forecastEntity)
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
+    required TResult Function(int selectedDay) updateSelectedDay,
   }) {
     return fetchForecastError(error);
   }
@@ -578,6 +603,7 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     TResult? Function()? fetchForecastLoading,
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
+    TResult? Function(int selectedDay)? updateSelectedDay,
   }) {
     return fetchForecastError?.call(error);
   }
@@ -589,6 +615,7 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     TResult Function()? fetchForecastLoading,
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
+    TResult Function(int selectedDay)? updateSelectedDay,
     required TResult orElse(),
   }) {
     if (fetchForecastError != null) {
@@ -606,6 +633,7 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     required TResult Function(FetchForecastSuccess<T> value)
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
+    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
   }) {
     return fetchForecastError(this);
   }
@@ -617,6 +645,7 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
   }) {
     return fetchForecastError?.call(this);
   }
@@ -628,6 +657,7 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
     required TResult orElse(),
   }) {
     if (fetchForecastError != null) {
@@ -647,5 +677,169 @@ abstract class FetchForecastError<T> implements ForecastState<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchForecastErrorImplCopyWith<T, _$FetchForecastErrorImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdatedSelectedDayImplCopyWith<T, $Res> {
+  factory _$$UpdatedSelectedDayImplCopyWith(_$UpdatedSelectedDayImpl<T> value,
+          $Res Function(_$UpdatedSelectedDayImpl<T>) then) =
+      __$$UpdatedSelectedDayImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({int selectedDay});
+}
+
+/// @nodoc
+class __$$UpdatedSelectedDayImplCopyWithImpl<T, $Res>
+    extends _$ForecastStateCopyWithImpl<T, $Res, _$UpdatedSelectedDayImpl<T>>
+    implements _$$UpdatedSelectedDayImplCopyWith<T, $Res> {
+  __$$UpdatedSelectedDayImplCopyWithImpl(_$UpdatedSelectedDayImpl<T> _value,
+      $Res Function(_$UpdatedSelectedDayImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ForecastState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? selectedDay = null,
+  }) {
+    return _then(_$UpdatedSelectedDayImpl<T>(
+      null == selectedDay
+          ? _value.selectedDay
+          : selectedDay // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdatedSelectedDayImpl<T> implements UpdatedSelectedDay<T> {
+  const _$UpdatedSelectedDayImpl(this.selectedDay);
+
+  @override
+  final int selectedDay;
+
+  @override
+  String toString() {
+    return 'ForecastState<$T>.updateSelectedDay(selectedDay: $selectedDay)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdatedSelectedDayImpl<T> &&
+            (identical(other.selectedDay, selectedDay) ||
+                other.selectedDay == selectedDay));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, selectedDay);
+
+  /// Create a copy of ForecastState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdatedSelectedDayImplCopyWith<T, _$UpdatedSelectedDayImpl<T>>
+      get copyWith => __$$UpdatedSelectedDayImplCopyWithImpl<T,
+          _$UpdatedSelectedDayImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() fetchForecastLoading,
+    required TResult Function(FetchForecastEntity forecastEntity)
+        fetchForecastSuccess,
+    required TResult Function(String error) fetchForecastError,
+    required TResult Function(int selectedDay) updateSelectedDay,
+  }) {
+    return updateSelectedDay(selectedDay);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? fetchForecastLoading,
+    TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
+    TResult? Function(String error)? fetchForecastError,
+    TResult? Function(int selectedDay)? updateSelectedDay,
+  }) {
+    return updateSelectedDay?.call(selectedDay);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? fetchForecastLoading,
+    TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
+    TResult Function(String error)? fetchForecastError,
+    TResult Function(int selectedDay)? updateSelectedDay,
+    required TResult orElse(),
+  }) {
+    if (updateSelectedDay != null) {
+      return updateSelectedDay(selectedDay);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(FetchForecastLoading<T> value)
+        fetchForecastLoading,
+    required TResult Function(FetchForecastSuccess<T> value)
+        fetchForecastSuccess,
+    required TResult Function(FetchForecastError<T> value) fetchForecastError,
+    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
+  }) {
+    return updateSelectedDay(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
+    TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
+    TResult? Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
+  }) {
+    return updateSelectedDay?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
+    TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
+    TResult Function(FetchForecastError<T> value)? fetchForecastError,
+    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
+    required TResult orElse(),
+  }) {
+    if (updateSelectedDay != null) {
+      return updateSelectedDay(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdatedSelectedDay<T> implements ForecastState<T> {
+  const factory UpdatedSelectedDay(final int selectedDay) =
+      _$UpdatedSelectedDayImpl<T>;
+
+  int get selectedDay;
+
+  /// Create a copy of ForecastState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UpdatedSelectedDayImplCopyWith<T, _$UpdatedSelectedDayImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

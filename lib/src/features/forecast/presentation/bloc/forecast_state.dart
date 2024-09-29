@@ -11,4 +11,6 @@ class ForecastState<T> with _$ForecastState<T> {
       FetchForecastEntity forecastEntity) = FetchForecastSuccess<T>;
   const factory ForecastState.fetchForecastError(String error) =
       FetchForecastError<T>;
+  const factory ForecastState.updateSelectedDay(int selectedDay) =
+      UpdatedSelectedDay<T>;
 }
