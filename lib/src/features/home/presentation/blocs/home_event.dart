@@ -10,8 +10,6 @@ final class FetchCityDataUsingPositionEvent extends HomeEvent {
   FetchCityDataUsingPositionEvent(this.params);
 }
 
-final class FetchCurrentEvent extends HomeEvent {}
-
 final class FetchCityDataUsingCityNameEvent extends HomeEvent {
   final String cityName;
 

@@ -27,10 +27,6 @@ mixin _$HomeState<T> {
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -47,9 +43,6 @@ mixin _$HomeState<T> {
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -66,9 +59,6 @@ mixin _$HomeState<T> {
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -91,9 +81,6 @@ mixin _$HomeState<T> {
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -117,9 +104,6 @@ mixin _$HomeState<T> {
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -143,9 +127,6 @@ mixin _$HomeState<T> {
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -228,10 +209,6 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -251,9 +228,6 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -273,9 +247,6 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -304,9 +275,6 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -333,9 +301,6 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -362,9 +327,6 @@ class _$HomeInitialImpl<T> implements _HomeInitial<T> {
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -439,10 +401,6 @@ class _$EnableLocationPermissionLoadingImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -462,9 +420,6 @@ class _$EnableLocationPermissionLoadingImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -484,9 +439,6 @@ class _$EnableLocationPermissionLoadingImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -515,9 +467,6 @@ class _$EnableLocationPermissionLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -544,9 +493,6 @@ class _$EnableLocationPermissionLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -573,9 +519,6 @@ class _$EnableLocationPermissionLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -680,10 +623,6 @@ class _$EnableLocationPermissionSuccessImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -703,9 +642,6 @@ class _$EnableLocationPermissionSuccessImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -725,9 +661,6 @@ class _$EnableLocationPermissionSuccessImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -756,9 +689,6 @@ class _$EnableLocationPermissionSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -785,9 +715,6 @@ class _$EnableLocationPermissionSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -814,9 +741,6 @@ class _$EnableLocationPermissionSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -901,10 +825,6 @@ class _$EnableLocationPermissionErrorImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -924,9 +844,6 @@ class _$EnableLocationPermissionErrorImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -946,9 +863,6 @@ class _$EnableLocationPermissionErrorImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -977,9 +891,6 @@ class _$EnableLocationPermissionErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -1006,9 +917,6 @@ class _$EnableLocationPermissionErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -1035,9 +943,6 @@ class _$EnableLocationPermissionErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -1113,10 +1018,6 @@ class _$FetchCityDataUsingPositionLoadingImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -1136,9 +1037,6 @@ class _$FetchCityDataUsingPositionLoadingImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -1158,9 +1056,6 @@ class _$FetchCityDataUsingPositionLoadingImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -1189,9 +1084,6 @@ class _$FetchCityDataUsingPositionLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -1218,9 +1110,6 @@ class _$FetchCityDataUsingPositionLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -1247,9 +1136,6 @@ class _$FetchCityDataUsingPositionLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -1354,10 +1240,6 @@ class _$FetchCityDataUsingPositionSuccessImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -1377,9 +1259,6 @@ class _$FetchCityDataUsingPositionSuccessImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -1399,9 +1278,6 @@ class _$FetchCityDataUsingPositionSuccessImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -1430,9 +1306,6 @@ class _$FetchCityDataUsingPositionSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -1459,9 +1332,6 @@ class _$FetchCityDataUsingPositionSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -1488,9 +1358,6 @@ class _$FetchCityDataUsingPositionSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -1604,10 +1471,6 @@ class _$FetchCityDataUsingPositionErrorImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -1627,9 +1490,6 @@ class _$FetchCityDataUsingPositionErrorImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -1649,9 +1509,6 @@ class _$FetchCityDataUsingPositionErrorImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -1680,9 +1537,6 @@ class _$FetchCityDataUsingPositionErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -1709,9 +1563,6 @@ class _$FetchCityDataUsingPositionErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -1738,9 +1589,6 @@ class _$FetchCityDataUsingPositionErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -1767,701 +1615,6 @@ abstract class FetchCityDataUsingPositionError<T> implements HomeState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchCityDataUsingPositionErrorImplCopyWith<T,
           _$FetchCityDataUsingPositionErrorImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FetchCurrentLoadingImplCopyWith<T, $Res> {
-  factory _$$FetchCurrentLoadingImplCopyWith(_$FetchCurrentLoadingImpl<T> value,
-          $Res Function(_$FetchCurrentLoadingImpl<T>) then) =
-      __$$FetchCurrentLoadingImplCopyWithImpl<T, $Res>;
-}
-
-/// @nodoc
-class __$$FetchCurrentLoadingImplCopyWithImpl<T, $Res>
-    extends _$HomeStateCopyWithImpl<T, $Res, _$FetchCurrentLoadingImpl<T>>
-    implements _$$FetchCurrentLoadingImplCopyWith<T, $Res> {
-  __$$FetchCurrentLoadingImplCopyWithImpl(_$FetchCurrentLoadingImpl<T> _value,
-      $Res Function(_$FetchCurrentLoadingImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$FetchCurrentLoadingImpl<T> implements FetchCurrentLoading<T> {
-  const _$FetchCurrentLoadingImpl();
-
-  @override
-  String toString() {
-    return 'HomeState<$T>.fetchCurrentLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FetchCurrentLoadingImpl<T>);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(Position position)
-        enableLocationPermissionSuccess,
-    required TResult Function() enableLocationPermissionError,
-    required TResult Function() fetchCityDataUsingPositionLoading,
-    required TResult Function(FetchCityDataEntity cityDataEntity)
-        fetchCityDataUsingPositionSuccess,
-    required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
-    required TResult Function() fetchCityDataUsingCityNameLoading,
-    required TResult Function(FetchCityDataEntity cityDataEntity)
-        fetchCityDataUsingCityNameSuccess,
-    required TResult Function(String error) fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(Position position)? enableLocationPermissionSuccess,
-    TResult? Function()? enableLocationPermissionError,
-    TResult? Function()? fetchCityDataUsingPositionLoading,
-    TResult? Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingPositionSuccess,
-    TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
-    TResult? Function()? fetchCityDataUsingCityNameLoading,
-    TResult? Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult? Function(String error)? fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? enableLocationPermissionLoading,
-    TResult Function(Position position)? enableLocationPermissionSuccess,
-    TResult Function()? enableLocationPermissionError,
-    TResult Function()? fetchCityDataUsingPositionLoading,
-    TResult Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingPositionSuccess,
-    TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
-    TResult Function()? fetchCityDataUsingCityNameLoading,
-    TResult Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult Function(String error)? fetchCityDataUsingCityNameError,
-    required TResult orElse(),
-  }) {
-    if (fetchCurrentLoading != null) {
-      return fetchCurrentLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_HomeInitial<T> value) initial,
-    required TResult Function(EnableLocationPermissionLoading<T> value)
-        enableLocationPermissionLoading,
-    required TResult Function(EnableLocationPermissionSuccess<T> value)
-        enableLocationPermissionSuccess,
-    required TResult Function(EnableLocationPermissionError<T> value)
-        enableLocationPermissionError,
-    required TResult Function(FetchCityDataUsingPositionLoading<T> value)
-        fetchCityDataUsingPositionLoading,
-    required TResult Function(FetchCityDataUsingPositionSuccess<T> value)
-        fetchCityDataUsingPositionSuccess,
-    required TResult Function(FetchCityDataUsingPositionError<T> value)
-        fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
-    required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
-        fetchCityDataUsingCityNameLoading,
-    required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
-        fetchCityDataUsingCityNameSuccess,
-    required TResult Function(FetchCityDataUsingCityNameError<T> value)
-        fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_HomeInitial<T> value)? initial,
-    TResult? Function(EnableLocationPermissionLoading<T> value)?
-        enableLocationPermissionLoading,
-    TResult? Function(EnableLocationPermissionSuccess<T> value)?
-        enableLocationPermissionSuccess,
-    TResult? Function(EnableLocationPermissionError<T> value)?
-        enableLocationPermissionError,
-    TResult? Function(FetchCityDataUsingPositionLoading<T> value)?
-        fetchCityDataUsingPositionLoading,
-    TResult? Function(FetchCityDataUsingPositionSuccess<T> value)?
-        fetchCityDataUsingPositionSuccess,
-    TResult? Function(FetchCityDataUsingPositionError<T> value)?
-        fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
-    TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
-        fetchCityDataUsingCityNameLoading,
-    TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult? Function(FetchCityDataUsingCityNameError<T> value)?
-        fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_HomeInitial<T> value)? initial,
-    TResult Function(EnableLocationPermissionLoading<T> value)?
-        enableLocationPermissionLoading,
-    TResult Function(EnableLocationPermissionSuccess<T> value)?
-        enableLocationPermissionSuccess,
-    TResult Function(EnableLocationPermissionError<T> value)?
-        enableLocationPermissionError,
-    TResult Function(FetchCityDataUsingPositionLoading<T> value)?
-        fetchCityDataUsingPositionLoading,
-    TResult Function(FetchCityDataUsingPositionSuccess<T> value)?
-        fetchCityDataUsingPositionSuccess,
-    TResult Function(FetchCityDataUsingPositionError<T> value)?
-        fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
-    TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
-        fetchCityDataUsingCityNameLoading,
-    TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult Function(FetchCityDataUsingCityNameError<T> value)?
-        fetchCityDataUsingCityNameError,
-    required TResult orElse(),
-  }) {
-    if (fetchCurrentLoading != null) {
-      return fetchCurrentLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FetchCurrentLoading<T> implements HomeState<T> {
-  const factory FetchCurrentLoading() = _$FetchCurrentLoadingImpl<T>;
-}
-
-/// @nodoc
-abstract class _$$FetchCurrentSuccessImplCopyWith<T, $Res> {
-  factory _$$FetchCurrentSuccessImplCopyWith(_$FetchCurrentSuccessImpl<T> value,
-          $Res Function(_$FetchCurrentSuccessImpl<T>) then) =
-      __$$FetchCurrentSuccessImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({FetchCurrentEntity currentEntity});
-}
-
-/// @nodoc
-class __$$FetchCurrentSuccessImplCopyWithImpl<T, $Res>
-    extends _$HomeStateCopyWithImpl<T, $Res, _$FetchCurrentSuccessImpl<T>>
-    implements _$$FetchCurrentSuccessImplCopyWith<T, $Res> {
-  __$$FetchCurrentSuccessImplCopyWithImpl(_$FetchCurrentSuccessImpl<T> _value,
-      $Res Function(_$FetchCurrentSuccessImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? currentEntity = null,
-  }) {
-    return _then(_$FetchCurrentSuccessImpl<T>(
-      null == currentEntity
-          ? _value.currentEntity
-          : currentEntity // ignore: cast_nullable_to_non_nullable
-              as FetchCurrentEntity,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FetchCurrentSuccessImpl<T> implements FetchCurrentSuccess<T> {
-  const _$FetchCurrentSuccessImpl(this.currentEntity);
-
-  @override
-  final FetchCurrentEntity currentEntity;
-
-  @override
-  String toString() {
-    return 'HomeState<$T>.fetchCurrentSuccess(currentEntity: $currentEntity)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FetchCurrentSuccessImpl<T> &&
-            (identical(other.currentEntity, currentEntity) ||
-                other.currentEntity == currentEntity));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, currentEntity);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FetchCurrentSuccessImplCopyWith<T, _$FetchCurrentSuccessImpl<T>>
-      get copyWith => __$$FetchCurrentSuccessImplCopyWithImpl<T,
-          _$FetchCurrentSuccessImpl<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(Position position)
-        enableLocationPermissionSuccess,
-    required TResult Function() enableLocationPermissionError,
-    required TResult Function() fetchCityDataUsingPositionLoading,
-    required TResult Function(FetchCityDataEntity cityDataEntity)
-        fetchCityDataUsingPositionSuccess,
-    required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
-    required TResult Function() fetchCityDataUsingCityNameLoading,
-    required TResult Function(FetchCityDataEntity cityDataEntity)
-        fetchCityDataUsingCityNameSuccess,
-    required TResult Function(String error) fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentSuccess(currentEntity);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(Position position)? enableLocationPermissionSuccess,
-    TResult? Function()? enableLocationPermissionError,
-    TResult? Function()? fetchCityDataUsingPositionLoading,
-    TResult? Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingPositionSuccess,
-    TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
-    TResult? Function()? fetchCityDataUsingCityNameLoading,
-    TResult? Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult? Function(String error)? fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentSuccess?.call(currentEntity);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? enableLocationPermissionLoading,
-    TResult Function(Position position)? enableLocationPermissionSuccess,
-    TResult Function()? enableLocationPermissionError,
-    TResult Function()? fetchCityDataUsingPositionLoading,
-    TResult Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingPositionSuccess,
-    TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
-    TResult Function()? fetchCityDataUsingCityNameLoading,
-    TResult Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult Function(String error)? fetchCityDataUsingCityNameError,
-    required TResult orElse(),
-  }) {
-    if (fetchCurrentSuccess != null) {
-      return fetchCurrentSuccess(currentEntity);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_HomeInitial<T> value) initial,
-    required TResult Function(EnableLocationPermissionLoading<T> value)
-        enableLocationPermissionLoading,
-    required TResult Function(EnableLocationPermissionSuccess<T> value)
-        enableLocationPermissionSuccess,
-    required TResult Function(EnableLocationPermissionError<T> value)
-        enableLocationPermissionError,
-    required TResult Function(FetchCityDataUsingPositionLoading<T> value)
-        fetchCityDataUsingPositionLoading,
-    required TResult Function(FetchCityDataUsingPositionSuccess<T> value)
-        fetchCityDataUsingPositionSuccess,
-    required TResult Function(FetchCityDataUsingPositionError<T> value)
-        fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
-    required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
-        fetchCityDataUsingCityNameLoading,
-    required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
-        fetchCityDataUsingCityNameSuccess,
-    required TResult Function(FetchCityDataUsingCityNameError<T> value)
-        fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_HomeInitial<T> value)? initial,
-    TResult? Function(EnableLocationPermissionLoading<T> value)?
-        enableLocationPermissionLoading,
-    TResult? Function(EnableLocationPermissionSuccess<T> value)?
-        enableLocationPermissionSuccess,
-    TResult? Function(EnableLocationPermissionError<T> value)?
-        enableLocationPermissionError,
-    TResult? Function(FetchCityDataUsingPositionLoading<T> value)?
-        fetchCityDataUsingPositionLoading,
-    TResult? Function(FetchCityDataUsingPositionSuccess<T> value)?
-        fetchCityDataUsingPositionSuccess,
-    TResult? Function(FetchCityDataUsingPositionError<T> value)?
-        fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
-    TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
-        fetchCityDataUsingCityNameLoading,
-    TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult? Function(FetchCityDataUsingCityNameError<T> value)?
-        fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_HomeInitial<T> value)? initial,
-    TResult Function(EnableLocationPermissionLoading<T> value)?
-        enableLocationPermissionLoading,
-    TResult Function(EnableLocationPermissionSuccess<T> value)?
-        enableLocationPermissionSuccess,
-    TResult Function(EnableLocationPermissionError<T> value)?
-        enableLocationPermissionError,
-    TResult Function(FetchCityDataUsingPositionLoading<T> value)?
-        fetchCityDataUsingPositionLoading,
-    TResult Function(FetchCityDataUsingPositionSuccess<T> value)?
-        fetchCityDataUsingPositionSuccess,
-    TResult Function(FetchCityDataUsingPositionError<T> value)?
-        fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
-    TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
-        fetchCityDataUsingCityNameLoading,
-    TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult Function(FetchCityDataUsingCityNameError<T> value)?
-        fetchCityDataUsingCityNameError,
-    required TResult orElse(),
-  }) {
-    if (fetchCurrentSuccess != null) {
-      return fetchCurrentSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FetchCurrentSuccess<T> implements HomeState<T> {
-  const factory FetchCurrentSuccess(final FetchCurrentEntity currentEntity) =
-      _$FetchCurrentSuccessImpl<T>;
-
-  FetchCurrentEntity get currentEntity;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FetchCurrentSuccessImplCopyWith<T, _$FetchCurrentSuccessImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FetchCurrentErrorImplCopyWith<T, $Res> {
-  factory _$$FetchCurrentErrorImplCopyWith(_$FetchCurrentErrorImpl<T> value,
-          $Res Function(_$FetchCurrentErrorImpl<T>) then) =
-      __$$FetchCurrentErrorImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({String error});
-}
-
-/// @nodoc
-class __$$FetchCurrentErrorImplCopyWithImpl<T, $Res>
-    extends _$HomeStateCopyWithImpl<T, $Res, _$FetchCurrentErrorImpl<T>>
-    implements _$$FetchCurrentErrorImplCopyWith<T, $Res> {
-  __$$FetchCurrentErrorImplCopyWithImpl(_$FetchCurrentErrorImpl<T> _value,
-      $Res Function(_$FetchCurrentErrorImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? error = null,
-  }) {
-    return _then(_$FetchCurrentErrorImpl<T>(
-      null == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FetchCurrentErrorImpl<T> implements FetchCurrentError<T> {
-  const _$FetchCurrentErrorImpl(this.error);
-
-  @override
-  final String error;
-
-  @override
-  String toString() {
-    return 'HomeState<$T>.fetchCurrentError(error: $error)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FetchCurrentErrorImpl<T> &&
-            (identical(other.error, error) || other.error == error));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, error);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FetchCurrentErrorImplCopyWith<T, _$FetchCurrentErrorImpl<T>>
-      get copyWith =>
-          __$$FetchCurrentErrorImplCopyWithImpl<T, _$FetchCurrentErrorImpl<T>>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() enableLocationPermissionLoading,
-    required TResult Function(Position position)
-        enableLocationPermissionSuccess,
-    required TResult Function() enableLocationPermissionError,
-    required TResult Function() fetchCityDataUsingPositionLoading,
-    required TResult Function(FetchCityDataEntity cityDataEntity)
-        fetchCityDataUsingPositionSuccess,
-    required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
-    required TResult Function() fetchCityDataUsingCityNameLoading,
-    required TResult Function(FetchCityDataEntity cityDataEntity)
-        fetchCityDataUsingCityNameSuccess,
-    required TResult Function(String error) fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentError(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? enableLocationPermissionLoading,
-    TResult? Function(Position position)? enableLocationPermissionSuccess,
-    TResult? Function()? enableLocationPermissionError,
-    TResult? Function()? fetchCityDataUsingPositionLoading,
-    TResult? Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingPositionSuccess,
-    TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
-    TResult? Function()? fetchCityDataUsingCityNameLoading,
-    TResult? Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult? Function(String error)? fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentError?.call(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? enableLocationPermissionLoading,
-    TResult Function(Position position)? enableLocationPermissionSuccess,
-    TResult Function()? enableLocationPermissionError,
-    TResult Function()? fetchCityDataUsingPositionLoading,
-    TResult Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingPositionSuccess,
-    TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
-    TResult Function()? fetchCityDataUsingCityNameLoading,
-    TResult Function(FetchCityDataEntity cityDataEntity)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult Function(String error)? fetchCityDataUsingCityNameError,
-    required TResult orElse(),
-  }) {
-    if (fetchCurrentError != null) {
-      return fetchCurrentError(error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_HomeInitial<T> value) initial,
-    required TResult Function(EnableLocationPermissionLoading<T> value)
-        enableLocationPermissionLoading,
-    required TResult Function(EnableLocationPermissionSuccess<T> value)
-        enableLocationPermissionSuccess,
-    required TResult Function(EnableLocationPermissionError<T> value)
-        enableLocationPermissionError,
-    required TResult Function(FetchCityDataUsingPositionLoading<T> value)
-        fetchCityDataUsingPositionLoading,
-    required TResult Function(FetchCityDataUsingPositionSuccess<T> value)
-        fetchCityDataUsingPositionSuccess,
-    required TResult Function(FetchCityDataUsingPositionError<T> value)
-        fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
-    required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
-        fetchCityDataUsingCityNameLoading,
-    required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
-        fetchCityDataUsingCityNameSuccess,
-    required TResult Function(FetchCityDataUsingCityNameError<T> value)
-        fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_HomeInitial<T> value)? initial,
-    TResult? Function(EnableLocationPermissionLoading<T> value)?
-        enableLocationPermissionLoading,
-    TResult? Function(EnableLocationPermissionSuccess<T> value)?
-        enableLocationPermissionSuccess,
-    TResult? Function(EnableLocationPermissionError<T> value)?
-        enableLocationPermissionError,
-    TResult? Function(FetchCityDataUsingPositionLoading<T> value)?
-        fetchCityDataUsingPositionLoading,
-    TResult? Function(FetchCityDataUsingPositionSuccess<T> value)?
-        fetchCityDataUsingPositionSuccess,
-    TResult? Function(FetchCityDataUsingPositionError<T> value)?
-        fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
-    TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
-        fetchCityDataUsingCityNameLoading,
-    TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult? Function(FetchCityDataUsingCityNameError<T> value)?
-        fetchCityDataUsingCityNameError,
-  }) {
-    return fetchCurrentError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_HomeInitial<T> value)? initial,
-    TResult Function(EnableLocationPermissionLoading<T> value)?
-        enableLocationPermissionLoading,
-    TResult Function(EnableLocationPermissionSuccess<T> value)?
-        enableLocationPermissionSuccess,
-    TResult Function(EnableLocationPermissionError<T> value)?
-        enableLocationPermissionError,
-    TResult Function(FetchCityDataUsingPositionLoading<T> value)?
-        fetchCityDataUsingPositionLoading,
-    TResult Function(FetchCityDataUsingPositionSuccess<T> value)?
-        fetchCityDataUsingPositionSuccess,
-    TResult Function(FetchCityDataUsingPositionError<T> value)?
-        fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
-    TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
-        fetchCityDataUsingCityNameLoading,
-    TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
-        fetchCityDataUsingCityNameSuccess,
-    TResult Function(FetchCityDataUsingCityNameError<T> value)?
-        fetchCityDataUsingCityNameError,
-    required TResult orElse(),
-  }) {
-    if (fetchCurrentError != null) {
-      return fetchCurrentError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FetchCurrentError<T> implements HomeState<T> {
-  const factory FetchCurrentError(final String error) =
-      _$FetchCurrentErrorImpl<T>;
-
-  String get error;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FetchCurrentErrorImplCopyWith<T, _$FetchCurrentErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2520,10 +1673,6 @@ class _$FetchCityDataUsingCityNameLoadingImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -2543,9 +1692,6 @@ class _$FetchCityDataUsingCityNameLoadingImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -2565,9 +1711,6 @@ class _$FetchCityDataUsingCityNameLoadingImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -2596,9 +1739,6 @@ class _$FetchCityDataUsingCityNameLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -2625,9 +1765,6 @@ class _$FetchCityDataUsingCityNameLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -2654,9 +1791,6 @@ class _$FetchCityDataUsingCityNameLoadingImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -2761,10 +1895,6 @@ class _$FetchCityDataUsingCityNameSuccessImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -2784,9 +1914,6 @@ class _$FetchCityDataUsingCityNameSuccessImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -2806,9 +1933,6 @@ class _$FetchCityDataUsingCityNameSuccessImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -2837,9 +1961,6 @@ class _$FetchCityDataUsingCityNameSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -2866,9 +1987,6 @@ class _$FetchCityDataUsingCityNameSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -2895,9 +2013,6 @@ class _$FetchCityDataUsingCityNameSuccessImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -3011,10 +2126,6 @@ class _$FetchCityDataUsingCityNameErrorImpl<T>
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingPositionSuccess,
     required TResult Function(String error) fetchCityDataUsingPositionError,
-    required TResult Function() fetchCurrentLoading,
-    required TResult Function(FetchCurrentEntity currentEntity)
-        fetchCurrentSuccess,
-    required TResult Function(String error) fetchCurrentError,
     required TResult Function() fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataEntity cityDataEntity)
         fetchCityDataUsingCityNameSuccess,
@@ -3034,9 +2145,6 @@ class _$FetchCityDataUsingCityNameErrorImpl<T>
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult? Function(String error)? fetchCityDataUsingPositionError,
-    TResult? Function()? fetchCurrentLoading,
-    TResult? Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult? Function(String error)? fetchCurrentError,
     TResult? Function()? fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -3056,9 +2164,6 @@ class _$FetchCityDataUsingCityNameErrorImpl<T>
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingPositionSuccess,
     TResult Function(String error)? fetchCityDataUsingPositionError,
-    TResult Function()? fetchCurrentLoading,
-    TResult Function(FetchCurrentEntity currentEntity)? fetchCurrentSuccess,
-    TResult Function(String error)? fetchCurrentError,
     TResult Function()? fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataEntity cityDataEntity)?
         fetchCityDataUsingCityNameSuccess,
@@ -3087,9 +2192,6 @@ class _$FetchCityDataUsingCityNameErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     required TResult Function(FetchCityDataUsingPositionError<T> value)
         fetchCityDataUsingPositionError,
-    required TResult Function(FetchCurrentLoading<T> value) fetchCurrentLoading,
-    required TResult Function(FetchCurrentSuccess<T> value) fetchCurrentSuccess,
-    required TResult Function(FetchCurrentError<T> value) fetchCurrentError,
     required TResult Function(FetchCityDataUsingCityNameLoading<T> value)
         fetchCityDataUsingCityNameLoading,
     required TResult Function(FetchCityDataUsingCityNameSuccess<T> value)
@@ -3116,9 +2218,6 @@ class _$FetchCityDataUsingCityNameErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult? Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult? Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult? Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult? Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult? Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult? Function(FetchCityDataUsingCityNameSuccess<T> value)?
@@ -3145,9 +2244,6 @@ class _$FetchCityDataUsingCityNameErrorImpl<T>
         fetchCityDataUsingPositionSuccess,
     TResult Function(FetchCityDataUsingPositionError<T> value)?
         fetchCityDataUsingPositionError,
-    TResult Function(FetchCurrentLoading<T> value)? fetchCurrentLoading,
-    TResult Function(FetchCurrentSuccess<T> value)? fetchCurrentSuccess,
-    TResult Function(FetchCurrentError<T> value)? fetchCurrentError,
     TResult Function(FetchCityDataUsingCityNameLoading<T> value)?
         fetchCityDataUsingCityNameLoading,
     TResult Function(FetchCityDataUsingCityNameSuccess<T> value)?
