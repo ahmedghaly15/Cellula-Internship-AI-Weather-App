@@ -9,7 +9,6 @@ import 'package:internship_ai_weather_app/src/features/forecast/data/models/fetc
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_event.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_state.dart';
-import 'package:intl/intl.dart';
 
 class DaysListViewBlocBuilder extends StatelessWidget {
   const DaysListViewBlocBuilder({super.key, required this.forecastDays});
@@ -30,40 +29,36 @@ class DaysListViewBlocBuilder extends StatelessWidget {
       ),
       child: BlocBuilder<ForecastBloc, ForecastState>(
         buildWhen: (_, current) => current is UpdatedSelectedDay,
-        builder: (context, state) {
-          return ListView.separated(
-            scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 8.w),
-            itemBuilder: (_, index) => Container(
-              decoration: BoxDecoration(
-                borderRadius: _isSelected(index, context)
-                    ? BorderRadius.circular(24.r)
-                    : null,
-                color: _isSelected(index, context) ? Colors.white : null,
-              ),
-              child: MaterialButton(
-                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                minWidth: 0,
-                padding: EdgeInsets.all(16.h),
-                onPressed: () {
-                  context
-                      .read<ForecastBloc>()
-                      .add(UpdateSelectedDayEvent(index));
-                },
-                child: Text(
-                  _getDay(index),
-                  style: AppTextStyles.font24WhiteBold.copyWith(
-                    color: _isSelected(index, context)
-                        ? AppColors.primaryColor
-                        : Colors.white,
-                  ),
+        builder: (context, state) => ListView.separated(
+          scrollDirection: Axis.horizontal,
+          padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 8.w),
+          itemBuilder: (_, index) => Container(
+            decoration: BoxDecoration(
+              borderRadius: _isSelected(index, context)
+                  ? BorderRadius.circular(24.r)
+                  : null,
+              color: _isSelected(index, context) ? Colors.white : null,
+            ),
+            child: MaterialButton(
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              minWidth: 0,
+              padding: EdgeInsets.all(16.h),
+              onPressed: () {
+                context.read<ForecastBloc>().add(UpdateSelectedDayEvent(index));
+              },
+              child: Text(
+                _getDay(forecastDays[index].date),
+                style: AppTextStyles.font24WhiteBold.copyWith(
+                  color: _isSelected(index, context)
+                      ? AppColors.primaryColor
+                      : Colors.white,
                 ),
               ),
             ),
-            separatorBuilder: (_, __) => MySizedBox.width8,
-            itemCount: forecastDays.length,
-          );
-        },
+          ),
+          separatorBuilder: (_, __) => MySizedBox.width8,
+          itemCount: forecastDays.length,
+        ),
       ),
     );
   }
@@ -71,12 +66,7 @@ class DaysListViewBlocBuilder extends StatelessWidget {
   bool _isSelected(int index, BuildContext context) =>
       index == context.read<ForecastBloc>().selectedDay;
 
-  String _getDay(int index) =>
-      _formatDate(forecastDays[index].date).day.toString();
-
-  DateTime _formatDate(String stringDate) {
-    final DateFormat format = DateFormat("d-M-yyyy");
-    final DateTime parsedDate = format.parse(stringDate);
-    return parsedDate;
+  String _getDay(String stringDate) {
+    return DateTime.parse(stringDate).day.toString();
   }
 }
