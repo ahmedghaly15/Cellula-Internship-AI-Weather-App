@@ -18,17 +18,22 @@ class CustomMapBlocBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
       buildWhen: (_, current) =>
-          current is FetchCityDataSuccess ||
-          current is FetchCityDataError ||
-          current is FetchCityDataLoading,
+          current is FetchCityDataUsingPositionSuccess ||
+          current is FetchCityDataUsingPositionError ||
+          current is FetchCityDataUsingPositionLoading,
       builder: (_, state) {
-        if (state is FetchCityDataSuccess) {
-          return _mapWidget(context, state);
-        } else if (state is FetchCityDataError) {
-          return _errorWidget(state);
+        if (state is FetchCityDataUsingPositionSuccess) {
+          return SliverToBoxAdapter(
+            child: _mapWidget(context, state),
+          );
+        } else if (state is FetchCityDataUsingPositionError) {
+          return SliverToBoxAdapter(child: _errorWidget(state));
         } else {
-          return const Center(
-            child: CustomCircularProgressIndicator(),
+          return const SliverFillRemaining(
+            hasScrollBody: false,
+            child: Center(
+              child: CustomCircularProgressIndicator(),
+            ),
           );
         }
       },
@@ -37,7 +42,7 @@ class CustomMapBlocBuilder extends StatelessWidget {
 
   Widget _mapWidget(
     BuildContext context,
-    FetchCityDataSuccess<dynamic> state,
+    FetchCityDataUsingPositionSuccess<dynamic> state,
   ) {
     return Container(
       height: context.height * 0.65,
@@ -64,12 +69,12 @@ class CustomMapBlocBuilder extends StatelessWidget {
                     double.parse(state.cityDataEntity.lat),
                     double.parse(state.cityDataEntity.lon),
                   ),
-                  width: 80,
-                  height: 80,
-                  child: const Icon(
+                  width: 80.w,
+                  height: 80.h,
+                  child: Icon(
                     Icons.location_on,
                     color: Colors.red,
-                    size: 40,
+                    size: 40.h,
                   ),
                 ),
               ],
@@ -81,7 +86,7 @@ class CustomMapBlocBuilder extends StatelessWidget {
   }
 }
 
-Widget _errorWidget(FetchCityDataError<dynamic> state) {
+Widget _errorWidget(FetchCityDataUsingPositionError<dynamic> state) {
   return Container(
     margin: EdgeInsets.all(24.h),
     child: Column(

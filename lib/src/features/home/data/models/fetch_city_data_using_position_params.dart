@@ -1,7 +1,7 @@
-class FetchCityDataParams {
+class FetchCityDataUsingPositionParams {
   final double lat, lon;
 
-  FetchCityDataParams({
+  FetchCityDataUsingPositionParams({
     required this.lat,
     required this.lon,
   });
