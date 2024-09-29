@@ -1,10 +1,11 @@
 class FetchCityDataEntity {
-  final String cityName, country, countryCode, lat, lon;
+  final String? cityName, country, countryCode;
+  final String lat, lon;
 
   FetchCityDataEntity({
-    required this.cityName,
-    required this.country,
-    required this.countryCode,
+    this.cityName,
+    this.country,
+    this.countryCode,
     required this.lat,
     required this.lon,
   });
