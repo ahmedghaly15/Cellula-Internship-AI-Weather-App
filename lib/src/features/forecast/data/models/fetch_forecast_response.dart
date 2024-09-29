@@ -192,13 +192,13 @@ class ForecastDay {
 @JsonSerializable()
 class Day {
   @JsonKey(name: 'maxtemp_c')
-  final String maxTempC;
+  final double maxTempC;
   @JsonKey(name: 'maxtemp_f')
-  final String maxTempF;
+  final double maxTempF;
   @JsonKey(name: 'mintemp_c')
-  final String minTempC;
+  final double minTempC;
   @JsonKey(name: 'mintemp_f')
-  final String minTempF;
+  final double minTempF;
   final Condition condition;
 
   Day({

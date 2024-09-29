@@ -17,19 +17,19 @@ class ForecastRepoImpl implements ForecastRepo {
     CancelToken? cancelToken,
   ]) {
     return executeAndHandleErrors<FetchForecastEntity>(
-      () async => await _fetchCurrentAndMapIt(city, cancelToken),
+      () async => await _fetchForecastAndMapIt(city, cancelToken),
     );
   }
 
-  Future<FetchForecastEntity> _fetchCurrentAndMapIt(
+  Future<FetchForecastEntity> _fetchForecastAndMapIt(
     String city, [
     CancelToken? cancelToken,
   ]) async {
-    final current = await _apiService.fetchForecast(
+    final forecast = await _apiService.fetchForecast(
       city: city,
       cancelToken: cancelToken,
     );
-    final currentEntity = ForecastMapper.toForecastEntity(current);
-    return currentEntity;
+    final forecastEntity = ForecastMapper.toForecastEntity(forecast);
+    return forecastEntity;
   }
 }
