@@ -5,18 +5,13 @@ class ForecastMapper {
   ForecastMapper._();
 
   static FetchForecastEntity toForecastEntity(
-    FetchForecastResponse currentResponse,
+    FetchForecastResponse forecastResponse,
   ) {
     return FetchForecastEntity(
-      city: currentResponse.location.name!,
-      tempC: currentResponse.current.tempC!,
-      condition: currentResponse.current.condition!,
-      windDegree: currentResponse.current.windDegree!,
-      humidity: currentResponse.current.humidity!,
-      cloud: currentResponse.current.cloud!,
-      heatIndexC: currentResponse.current.heatIndexC!,
-      country: currentResponse.location.country!,
-      forecast: currentResponse.forecast,
+      city: forecastResponse.location.name!,
+      country: forecastResponse.location.country!,
+      current: forecastResponse.current,
+      forecast: forecastResponse.forecast,
     );
   }
 }
