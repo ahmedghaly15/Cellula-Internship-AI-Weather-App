@@ -62,7 +62,7 @@ class _HomeApiService implements HomeApiService {
   }
 
   @override
-  Future<FetchCityData> fetchCityData({
+  Future<FetchCityData> fetchCityDataUsingPosition({
     required double lat,
     required double lon,
     String lang = 'en',
@@ -98,6 +98,46 @@ class _HomeApiService implements HomeApiService {
     late FetchCityData _value;
     try {
       _value = FetchCityData.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<List<FetchCityData>> fetchCityDataUsingCityName(
+    String cityName,
+    CancelToken? cancelToken,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'q': cityName};
+    queryParameters.removeWhere((k, v) => v == null);
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<List<FetchCityData>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'https://nominatim.openstreetmap.org/search?format=json&limit=1',
+          queryParameters: queryParameters,
+          data: _data,
+          cancelToken: cancelToken,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<FetchCityData> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => FetchCityData.fromJson(i as Map<String, dynamic>))
+          .toList();
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
