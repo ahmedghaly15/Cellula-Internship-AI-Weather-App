@@ -4,6 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_ai_weather_app/src/core/di/dependency_injection.dart';
 import 'package:internship_ai_weather_app/src/core/router/routes.dart';
 import 'package:internship_ai_weather_app/src/core/utils/functions/check_if_user_is_logged_in.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_bloc.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_event.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/presentation/views/forecast_view.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_event.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/views/home_view.dart';
@@ -41,6 +44,16 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (_) => getIt.get<RegisterBloc>(),
             child: const RegisterView(),
+          ),
+        );
+
+      case Routes.forecastRoute:
+        final args = routeSettings.arguments as String;
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider<ForecastBloc>(
+            create: (_) =>
+                getIt.get<ForecastBloc>()..add(FetchForecastEvent(args)),
+            child: const ForecastView(),
           ),
         );
 
