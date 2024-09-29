@@ -7,7 +7,7 @@ import 'package:internship_ai_weather_app/src/features/forecast/presentation/blo
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/city_and_country_and_current_button.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/days_list_view_bloc_builder.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/labeled_circular_percent_indicators.dart';
-import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/weather_icon_bloc_builder.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/weather_image.dart';
 
 class FetchForecastSuccessWidget extends StatelessWidget {
   const FetchForecastSuccessWidget({
@@ -51,12 +51,15 @@ class FetchForecastSuccessWidget extends StatelessWidget {
           child: LabeledCircularPercentIndicators(),
         ),
         SliverToBoxAdapter(
-          child: WeatherIconBlocBuilder(
-            iconUrl: forecastEntity.forecast.forecastDays
-                .elementAt(context.read<ForecastBloc>().selectedDay)
-                .day
-                .condition
-                .icon!,
+          child: BlocBuilder<ForecastBloc, ForecastState>(
+            buildWhen: (_, current) => current is UpdatedSelectedDay,
+            builder: (context, __) => WeatherImage(
+              imageUrl: forecastEntity.forecast.forecastDays
+                  .elementAt(context.read<ForecastBloc>().selectedDay)
+                  .day
+                  .condition
+                  .icon!,
+            ),
           ),
         ),
       ],
