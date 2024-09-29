@@ -16,8 +16,9 @@ FetchCityData _$FetchCityDataFromJson(Map<String, dynamic> json) =>
       lon: json['lon'] as String,
       addressType: json['addresstype'] as String,
       displayName: json['display_name'] as String,
-      cityAddress:
-          CityAddress.fromJson(json['address'] as Map<String, dynamic>),
+      cityAddress: json['address'] == null
+          ? null
+          : CityAddress.fromJson(json['address'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$FetchCityDataToJson(FetchCityData instance) =>
@@ -30,7 +31,7 @@ Map<String, dynamic> _$FetchCityDataToJson(FetchCityData instance) =>
       'lon': instance.lon,
       'addresstype': instance.addressType,
       'display_name': instance.displayName,
-      'address': instance.cityAddress.toJson(),
+      'address': instance.cityAddress?.toJson(),
     };
 
 CityAddress _$CityAddressFromJson(Map<String, dynamic> json) => CityAddress(

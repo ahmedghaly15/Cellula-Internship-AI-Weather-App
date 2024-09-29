@@ -14,14 +14,23 @@ class HomeState<T> with _$HomeState<T> {
       EnableLocationPermissionSuccess<T>;
   const factory HomeState.enableLocationPermissionError() =
       EnableLocationPermissionError;
-  const factory HomeState.fetchCityDataLoading() = FetchCityDataLoading;
-  const factory HomeState.fetchCityDataSuccess(
-      FetchCityDataEntity cityDataEntity) = FetchCityDataSuccess<T>;
-  const factory HomeState.fetchCityDataError(String error) =
-      FetchCityDataError<T>;
+  const factory HomeState.fetchCityDataUsingPositionLoading() =
+      FetchCityDataUsingPositionLoading;
+  const factory HomeState.fetchCityDataUsingPositionSuccess(
+          FetchCityDataEntity cityDataEntity) =
+      FetchCityDataUsingPositionSuccess<T>;
+  const factory HomeState.fetchCityDataUsingPositionError(String error) =
+      FetchCityDataUsingPositionError<T>;
   const factory HomeState.fetchCurrentLoading() = FetchCurrentLoading;
   const factory HomeState.fetchCurrentSuccess(
       FetchCurrentEntity currentEntity) = FetchCurrentSuccess<T>;
   const factory HomeState.fetchCurrentError(String error) =
       FetchCurrentError<T>;
+  const factory HomeState.fetchCityDataUsingCityNameLoading() =
+      FetchCityDataUsingCityNameLoading;
+  const factory HomeState.fetchCityDataUsingCityNameSuccess(
+          FetchCityDataEntity cityDataEntity) =
+      FetchCityDataUsingCityNameSuccess<T>;
+  const factory HomeState.fetchCityDataUsingCityNameError(String error) =
+      FetchCityDataUsingCityNameError<T>;
 }

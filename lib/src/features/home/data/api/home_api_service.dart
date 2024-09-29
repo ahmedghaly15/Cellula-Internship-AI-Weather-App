@@ -16,11 +16,17 @@ abstract class HomeApiService {
     @CancelRequest() CancelToken? cancelToken,
   ]);
 
-  @GET(EndPoints.fetchCityData)
-  Future<FetchCityData> fetchCityData({
+  @GET(EndPoints.fetchCityDataUsingPosition)
+  Future<FetchCityData> fetchCityDataUsingPosition({
     @Query('lat') required double lat,
     @Query('lon') required double lon,
     @Query('en') String lang = 'en',
     @CancelRequest() CancelToken? cancelToken,
   });
+
+  @GET(EndPoints.fetchCityDataUsingCityName)
+  Future<List<FetchCityData>> fetchCityDataUsingCityName(
+    @Query('q') String cityName,
+    @CancelRequest() CancelToken? cancelToken,
+  );
 }

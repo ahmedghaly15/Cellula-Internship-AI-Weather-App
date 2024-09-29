@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/custom_circular_progress_indicator.dart';
-import 'package:internship_ai_weather_app/src/features/home/data/models/fetch_city_data_params.dart';
+import 'package:internship_ai_weather_app/src/features/home/data/models/fetch_city_data_using_position_params.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_event.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_state.dart';
@@ -19,13 +19,13 @@ class HomeView extends StatelessWidget {
         listener: (context, state) {
           state.whenOrNull(
             enableLocationPermissionSuccess: (position) {
-              final fetchCityDataParams = FetchCityDataParams(
+              final fetchCityDataParams = FetchCityDataUsingPositionParams(
                 lat: position.latitude,
                 lon: position.longitude,
               );
               context
                   .read<HomeBloc>()
-                  .add(FetchCityDataEvent(fetchCityDataParams));
+                  .add(FetchCityDataUsingPositionEvent(fetchCityDataParams));
             },
           );
         },

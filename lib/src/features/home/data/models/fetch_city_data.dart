@@ -18,7 +18,7 @@ class FetchCityData {
   @JsonKey(name: 'display_name')
   final String displayName;
   @JsonKey(name: 'address')
-  final CityAddress cityAddress;
+  final CityAddress? cityAddress;
 
   FetchCityData({
     required this.placeId,
