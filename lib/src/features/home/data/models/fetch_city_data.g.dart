@@ -12,8 +12,8 @@ FetchCityData _$FetchCityDataFromJson(Map<String, dynamic> json) =>
       licence: json['licence'] as String,
       osmType: json['osm_type'] as String,
       osmId: (json['osm_id'] as num).toInt(),
-      lat: (json['lat'] as num).toDouble(),
-      lon: (json['lon'] as num).toDouble(),
+      lat: json['lat'] as String,
+      lon: json['lon'] as String,
       addressType: json['addresstype'] as String,
       displayName: json['display_name'] as String,
       cityAddress:
@@ -34,26 +34,28 @@ Map<String, dynamic> _$FetchCityDataToJson(FetchCityData instance) =>
     };
 
 CityAddress _$CityAddressFromJson(Map<String, dynamic> json) => CityAddress(
-      road: json['road'] as String,
-      neighbourhood: json['neighbourhood'] as String,
-      suburb: json['suburb'] as String,
-      cityName: json['cityName'] as String,
-      state: json['state'] as String,
-      postcode: json['postcode'] as String,
-      country: json['country'] as String,
-      iSO31662lvl4: json['ISO3166-2-lvl4'] as String,
-      countryCode: json['country_code'] as String,
+      road: json['road'] as String?,
+      village: json['village'] as String?,
+      neighbourhood: json['neighbourhood'] as String?,
+      suburb: json['suburb'] as String?,
+      cityName: json['city'] as String?,
+      state: json['state'] as String?,
+      postcode: json['postcode'] as String?,
+      country: json['country'] as String?,
+      iSO31662lvl4: json['ISO3166-2-lvl4'] as String?,
+      countryCode: json['country_code'] as String?,
     );
 
 Map<String, dynamic> _$CityAddressToJson(CityAddress instance) =>
     <String, dynamic>{
       'road': instance.road,
+      'village': instance.village,
       'neighbourhood': instance.neighbourhood,
       'suburb': instance.suburb,
-      'cityName': instance.cityName,
       'state': instance.state,
       'postcode': instance.postcode,
       'country': instance.country,
+      'city': instance.cityName,
       'ISO3166-2-lvl4': instance.iSO31662lvl4,
       'country_code': instance.countryCode,
     };

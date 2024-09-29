@@ -14,7 +14,7 @@ class _HomeApiService implements HomeApiService {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'api.weatherapi.com/v1/';
+    baseUrl ??= 'https://api.weatherapi.com/v1/';
   }
 
   final Dio _dio;
@@ -40,7 +40,7 @@ class _HomeApiService implements HomeApiService {
     )
         .compose(
           _dio.options,
-          'api.weatherapi.com/v1/current.json',
+          'current.json',
           queryParameters: queryParameters,
           data: _data,
           cancelToken: cancelToken,
@@ -65,12 +65,14 @@ class _HomeApiService implements HomeApiService {
   Future<FetchCityData> fetchCityData({
     required double lat,
     required double lon,
+    String lang = 'en',
     CancelToken? cancelToken,
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'lat': lat,
       r'lon': lon,
+      r'en': lang,
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};

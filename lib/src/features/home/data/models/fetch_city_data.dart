@@ -11,8 +11,8 @@ class FetchCityData {
   final String osmType;
   @JsonKey(name: 'osm_id')
   final int osmId;
-  final double lat;
-  final double lon;
+  final String lat;
+  final String lon;
   @JsonKey(name: 'addresstype')
   final String addressType;
   @JsonKey(name: 'display_name')
@@ -39,22 +39,25 @@ class FetchCityData {
 
 @JsonSerializable()
 class CityAddress {
-  final String road, neighbourhood, suburb, cityName, state, postcode, country;
+  final String? road, village, neighbourhood, suburb, state, postcode, country;
+  @JsonKey(name: 'city')
+  final String? cityName;
   @JsonKey(name: 'ISO3166-2-lvl4')
-  final String iSO31662lvl4;
+  final String? iSO31662lvl4;
   @JsonKey(name: 'country_code')
-  final String countryCode;
+  final String? countryCode;
 
   CityAddress({
-    required this.road,
-    required this.neighbourhood,
-    required this.suburb,
-    required this.cityName,
-    required this.state,
-    required this.postcode,
-    required this.country,
-    required this.iSO31662lvl4,
-    required this.countryCode,
+    this.road,
+    this.village,
+    this.neighbourhood,
+    this.suburb,
+    this.cityName,
+    this.state,
+    this.postcode,
+    this.country,
+    this.iSO31662lvl4,
+    this.countryCode,
   });
 
   factory CityAddress.fromJson(Map<String, dynamic> json) =>
