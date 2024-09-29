@@ -11,6 +11,7 @@ class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
 
   ForecastBloc(this._forecastRepo) : super(const ForecastState.initial()) {
     on<FetchForecastEvent>(_fetchForecast);
+    on<UpdateSelectedDayEvent>(_updateSelectedDay);
   }
 
   final CancelToken _cancelToken = CancelToken();
@@ -30,6 +31,17 @@ class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
       failure: (failure) =>
           emit(ForecastState.fetchForecastError(failure.error)),
     );
+  }
+
+  int selectedDay = 0;
+  void _updateSelectedDay(
+    UpdateSelectedDayEvent event,
+    Emitter<ForecastState> emit,
+  ) {
+    if (selectedDay != event.selectedDay) {
+      selectedDay = event.selectedDay;
+      emit(ForecastState.updateSelectedDay(selectedDay));
+    }
   }
 
   @override

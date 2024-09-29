@@ -13,6 +13,7 @@ abstract class ForecastApiService {
   @GET(EndPoints.fetchForecast)
   Future<FetchForecastResponse> fetchForecast({
     @Query('q') required String city,
+    @Query('days') int days = 7,
     @Query('key') String apiKey = AppKeys.apiKey,
     @CancelRequest() CancelToken? cancelToken,
   });

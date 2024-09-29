@@ -17,9 +17,9 @@ FetchForecastResponse _$FetchForecastResponseFromJson(
 Map<String, dynamic> _$FetchForecastResponseToJson(
         FetchForecastResponse instance) =>
     <String, dynamic>{
-      'location': instance.location?.toJson(),
-      'current': instance.current?.toJson(),
-      'forecast': instance.forecast?.toJson(),
+      'location': instance.location.toJson(),
+      'current': instance.current.toJson(),
+      'forecast': instance.forecast.toJson(),
     };
 
 Location _$LocationFromJson(Map<String, dynamic> json) => Location(
