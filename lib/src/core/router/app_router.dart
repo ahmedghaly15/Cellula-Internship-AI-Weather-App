@@ -3,6 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_ai_weather_app/src/core/di/dependency_injection.dart';
 import 'package:internship_ai_weather_app/src/core/router/routes.dart';
+import 'package:internship_ai_weather_app/src/core/utils/functions/check_if_user_is_logged_in.dart';
+import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_bloc.dart';
+import 'package:internship_ai_weather_app/src/features/home/presentation/blocs/home_event.dart';
 import 'package:internship_ai_weather_app/src/features/home/presentation/views/home_view.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/blocs/login_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/login/presentation/views/login_view.dart';
@@ -15,10 +18,12 @@ class AppRouter {
 
   static Route<dynamic> onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
-      case Routes.startRoute:
-        return MaterialPageRoute(
-          builder: (_) => const StartView(),
-        );
+      case '/':
+        return isUserLoggedIn
+            ? _homeRoute()
+            : MaterialPageRoute(
+                builder: (_) => const StartView(),
+              );
 
       case Routes.loginRoute:
         return MaterialPageRoute(
@@ -29,9 +34,7 @@ class AppRouter {
         );
 
       case Routes.homeRoute:
-        return MaterialPageRoute(
-          builder: (_) => const HomeView(),
-        );
+        return _homeRoute();
 
       case Routes.registerRoute:
         return MaterialPageRoute(
@@ -44,6 +47,16 @@ class AppRouter {
       default:
         return _unFoundRoute();
     }
+  }
+
+  static MaterialPageRoute<dynamic> _homeRoute() {
+    return MaterialPageRoute(
+      builder: (_) => BlocProvider<HomeBloc>(
+        create: (_) =>
+            getIt.get<HomeBloc>()..add(EnableLocationPermissionEvent()),
+        child: const HomeView(),
+      ),
+    );
   }
 
   static Route<dynamic> _unFoundRoute() {
