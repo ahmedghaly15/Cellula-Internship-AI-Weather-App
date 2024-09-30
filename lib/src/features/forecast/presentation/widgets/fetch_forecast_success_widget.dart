@@ -47,8 +47,10 @@ class FetchForecastSuccessWidget extends StatelessWidget {
             ),
           ),
         ),
-        const SliverToBoxAdapter(
-          child: LabeledCircularPercentIndicators(),
+        SliverToBoxAdapter(
+          child: LabeledCircularPercentIndicators(
+            forecastDays: forecastEntity.forecast.forecastDays,
+          ),
         ),
         SliverToBoxAdapter(
           child: BlocBuilder<ForecastBloc, ForecastState>(
