@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
-import 'package:internship_ai_weather_app/src/core/router/routes.dart';
 import 'package:internship_ai_weather_app/src/core/utils/functions/circular_indicator_or_text_widget.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/custom_toast.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/main_button.dart';
@@ -24,8 +22,11 @@ class RegisterButtonBlocConsumer extends StatelessWidget {
             message: error,
             state: CustomToastState.error,
           ),
-          registerSuccess: (_) =>
-              context.pushReplacementNamed(Routes.homeRoute),
+          registerSuccess: (_) => CustomToast.showToast(
+            context: context,
+            message: "Account created successfully. Please login",
+            state: CustomToastState.success,
+          ),
         );
       },
       buildWhen: (_, current) =>

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
 import 'package:internship_ai_weather_app/src/core/router/routes.dart';
 import 'package:internship_ai_weather_app/src/core/utils/functions/cache_user.dart';
+import 'package:internship_ai_weather_app/src/core/utils/functions/check_if_user_is_logged_in.dart';
 import 'package:internship_ai_weather_app/src/core/utils/functions/circular_indicator_or_text_widget.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/custom_toast.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/main_button.dart';
@@ -26,6 +27,7 @@ class LoginButtonBlocConsumer extends StatelessWidget {
             state: CustomToastState.error,
           ),
           loginSuccess: (appUser) async {
+            currentUser = appUser;
             await cacheUserAndHisId(appUser);
             context.pushReplacementNamed(Routes.homeRoute);
           },
