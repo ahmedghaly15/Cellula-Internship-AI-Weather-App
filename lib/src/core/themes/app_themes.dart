@@ -14,12 +14,16 @@ class AppThemes {
         fontFamily: AppStrings.fontFamily,
         scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
         brightness: Brightness.light,
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
           backgroundColor: AppColors.scaffoldBackgroundColor,
-          systemOverlayStyle: SystemUiOverlayStyle(
+          systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: AppColors.scaffoldBackgroundColor,
             statusBarBrightness: Brightness.light,
             statusBarIconBrightness: Brightness.dark,
+          ),
+          titleTextStyle: AppTextStyles.font24WhiteBold,
+          iconTheme: const IconThemeData(
+            color: Colors.white,
           ),
         ),
         textButtonTheme: TextButtonThemeData(

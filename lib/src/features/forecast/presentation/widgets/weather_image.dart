@@ -16,12 +16,12 @@ class WeatherImage extends StatelessWidget {
     return CustomCachedNetworkImage(
       imageUrl: 'https:$imageUrl',
       imageBuilder: (context, image) => Container(
-        height: context.height * 0.25,
+        height: context.height * 0.2,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24.r),
           image: DecorationImage(
             image: image,
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
           ),
         ),
       ),
