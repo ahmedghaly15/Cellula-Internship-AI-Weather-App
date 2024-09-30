@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/data/models/fetch_forecast_response.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/data/models/labeled_circular_percent_attributes.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/domain/repositories/forecast_repo.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_event.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_state.dart';
@@ -43,6 +45,28 @@ class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
       emit(ForecastState.updateSelectedDay(selectedDay));
     }
   }
+
+  List<LabeledCircularPercentAttributes> forecastIndicatorsAttributes(
+    List<ForecastDay> forecastDays,
+  ) =>
+      [
+        LabeledCircularPercentAttributes(
+          label: 'Max temp (°C)',
+          percent: forecastDays[selectedDay].day.maxTempC / 100,
+        ),
+        LabeledCircularPercentAttributes(
+          label: 'Min temp (°C)',
+          percent: forecastDays[selectedDay].day.minTempC / 100,
+        ),
+        LabeledCircularPercentAttributes(
+          label: 'Max temp (°F)',
+          percent: forecastDays[selectedDay].day.maxTempF / 100,
+        ),
+        LabeledCircularPercentAttributes(
+          label: 'Min temp (°F)',
+          percent: forecastDays[selectedDay].day.minTempF / 100,
+        )
+      ];
 
   @override
   Future<void> close() {
