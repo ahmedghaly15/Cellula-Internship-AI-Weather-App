@@ -37,7 +37,7 @@ It is structured using clean architecture principles, with the use of external A
 1. entities:
 
     - FetchForecastEntity:
-        - This entity is used to hold the data Mapped from the API response (FetchForecastResponse).
+        - This entity is used to hold the data mapped from the API response (FetchForecastResponse).
         - This entity is used to hold the data that will be displayed in the UI.
 
 2. repositories:
@@ -74,4 +74,4 @@ Currently, no need for usecases for this feature because the repository handles 
 
 3. widgets:
 
-    - This contains reusable widgets used in the presentation layer.
+    - Contains widgets used in the presentation layer.

@@ -1,0 +1,70 @@
+********* Home Feature Documentation *********
+
+Overview
+
+The home feature allows users to view their location and search for a specific location using the OpenStreetMap API.
+
+****** Data Layer ******
+
+1. models:
+
+    - FetchCityData model:
+        - This model is used to hold the data returned from the OpenStreetMap API.
+
+    - FetchCityDataUsingPositionParams:
+        - This model is to hold the parameters for the OpenStreetMap API call.
+
+2. api:
+
+    - HomeApiService:
+        - This service is used to fetch specific city data from the OpenStreetMap API using retrofit and dio packages.
+
+3. mapper:
+
+    - Home Mapper:
+        - The mapper is used in the data layer to convert the data from the API to the domain layer.
+        - This mapper is used to map the data from the API (FetchCityData) to the FetchCityDataEntity.
+
+4. repositories:
+
+    - HomeRepoImpl:
+        - This repository implements HomeRepo that contains the business logic related to the home feature.
+
+
+******* Domain Layer *******
+
+1. entities:
+    - FetchCityDataEntity:
+        - This entity is used to hold the data mapped from the API response (FetchCityData).
+        - This entity is used to hold the data that will be displayed in the UI.
+
+2. repositories:
+
+    - HomeRepo:
+        - This repository is used to manage the business logic related to the home feature.
+
+3. usecases: 
+
+Currently, no need for usecases for this feature because the repository handles the business logic.
+
+
+****** Presentation Layer ******
+
+1. bloc:
+    - HomeEvent:
+        - This event is used to handle user interactions with the home feature.
+    
+    - HomeState:
+        - This state is used to manage the state of the home feature.
+    
+    - HomeBloc:
+        - This bloc is used to manage the business logic related to the home feature.
+
+2. views:
+
+    - HomeView:
+        - This view is used to display the current location in map and search for a specific location.
+
+3. widgets:
+    
+    - Contains widgets used in the presentation layer.
