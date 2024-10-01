@@ -57,7 +57,7 @@ class LabeledCircularPercentIndicators extends StatelessWidget {
             backgroundColor: Colors.white,
             circularStrokeCap: CircularStrokeCap.round,
             center: Text(
-              '${percent * 100}%',
+              '${(percent * 100).toStringAsFixed(1)}%',
               style: AppTextStyles.font24WhiteBold,
             ),
           ),

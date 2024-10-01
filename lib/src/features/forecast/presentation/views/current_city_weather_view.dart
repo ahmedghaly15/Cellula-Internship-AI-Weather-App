@@ -49,7 +49,7 @@ class CurrentCityWeatherView extends StatelessWidget {
         ),
         LabeledCircularPercentAttributes(
           label: 'Wind (km/h)',
-          percent: currentCityWeather.windKph! / 10,
+          percent: currentCityWeather.windKph! / 100,
         ),
         LabeledCircularPercentAttributes(
           label: 'Humidity (%)',
@@ -57,7 +57,7 @@ class CurrentCityWeatherView extends StatelessWidget {
         ),
         LabeledCircularPercentAttributes(
           label: 'Cloud (%)',
-          percent: currentCityWeather.cloud! / 10,
+          percent: currentCityWeather.cloud! / 100,
         ),
       ];
 }

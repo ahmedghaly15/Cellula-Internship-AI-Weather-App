@@ -38,7 +38,8 @@ class StartView extends StatelessWidget {
               duration: const Duration(seconds: 1),
               from: 50.h,
               child: MainButton(
-                onPressed: () => context.pushNamed(Routes.loginRoute),
+                onPressed: () =>
+                    context.pushReplacementNamed(Routes.loginRoute),
                 text: "Log in",
                 backgroundColor: Colors.white,
                 textColor: AppColors.primaryColor,
