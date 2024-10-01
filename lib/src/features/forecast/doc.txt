@@ -1,0 +1,77 @@
+******* Forecast Feature Documentation *******
+
+Overview
+
+The forecast feature allows users to view weather forecast for a specific location.
+It is structured using clean architecture principles, with the use of external APIs for weather data.
+
+****** Data Layer ******
+
+1. models:
+
+    - FetchForecastResponse model: 
+        - This model is used to hold the weather data returned from the API.
+    
+    - LabeledCircularPercentAttributes model 
+        - This model is used to hold the attributes for the circular indicator in the UI.
+
+2. api:
+
+    - ForecastApiService:
+        - This service is used to fetch weather data from an external API using retrofit and dio packages.
+
+3. mapper:
+
+    - Forecast Mapper:
+        - The mapper is used in the data layer to convert the data from the API to the domain layer.
+        - This mapper is used to map the data from the API (FetchForecastResponse) to the FetchForecastEntity.
+
+4. repositories:
+
+    - ForecastRepoImpL:
+        - This repository implements ForecastRepo and contains the business logic related to the forecast feature.
+
+
+****** Domain Layer ******
+
+1. entities:
+
+    - FetchForecastEntity:
+        - This entity is used to hold the data Mapped from the API response (FetchForecastResponse).
+        - This entity is used to hold the data that will be displayed in the UI.
+
+2. repositories:
+
+    - ForecastRepo:
+        - This repository is used to manage the business logic related to the forecast feature.
+        
+
+3. usecases: 
+
+Currently, no need for usecases for this feature because the repository handles the business logic.
+
+
+****** Presentation Layer ******
+
+1. blocs:
+ 
+    - ForecastEvent:
+        - This event is used to handle user interactions with the forecast feature.
+    
+    - ForecastState:
+        - This state is used to manage the state of the forecast feature.
+
+    - ForecastBloc:
+        - This bloc is used to manage the business logic related to the forecast feature.
+
+2. views:
+
+    - ForecastView:
+        - This view is used to display the weather forecast for the current location.
+    
+    - CurrentCityWeatherView:
+        - This view is used to display the current weather for the current location.
+
+3. widgets:
+
+    - This contains reusable widgets used in the presentation layer.
