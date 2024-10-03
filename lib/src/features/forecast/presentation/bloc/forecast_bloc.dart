@@ -59,12 +59,12 @@ class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
           percent: forecastDays[selectedDay].day.minTempC / 100,
         ),
         LabeledCircularPercentAttributes(
-          label: 'Max temp (°F)',
-          percent: forecastDays[selectedDay].day.maxTempF / 100,
+          label: 'Average temp (°C)',
+          percent: forecastDays[selectedDay].day.avgTempC / 100,
         ),
         LabeledCircularPercentAttributes(
-          label: 'Min temp (°F)',
-          percent: forecastDays[selectedDay].day.minTempF / 100,
+          label: 'Max Wind (km/h)',
+          percent: forecastDays[selectedDay].day.maxWindKph / 100,
         )
       ];
 

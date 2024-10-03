@@ -193,19 +193,19 @@ class ForecastDay {
 class Day {
   @JsonKey(name: 'maxtemp_c')
   final double maxTempC;
-  @JsonKey(name: 'maxtemp_f')
-  final double maxTempF;
+  @JsonKey(name: 'avgtemp_c')
+  final double avgTempC;
   @JsonKey(name: 'mintemp_c')
   final double minTempC;
-  @JsonKey(name: 'mintemp_f')
-  final double minTempF;
+  @JsonKey(name: 'maxwind_kph')
+  final double maxWindKph;
   final Condition condition;
 
   Day({
     required this.maxTempC,
-    required this.maxTempF,
+    required this.avgTempC,
     required this.minTempC,
-    required this.minTempF,
+    required this.maxWindKph,
     required this.condition,
   });
 
