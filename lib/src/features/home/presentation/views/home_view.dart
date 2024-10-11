@@ -34,12 +34,13 @@ class HomeView extends StatelessWidget {
             current is EnableLocationPermissionSuccess ||
             current is EnableLocationPermissionError,
         builder: (_, state) {
-          if (state is EnableLocationPermissionSuccess) {
-            return const LocationEnabledWidget();
-          } else if (state is EnableLocationPermissionError) {
-            return const LocationDeniedWidget();
-          } else {
-            return const Center(child: CustomCircularProgressIndicator());
+          switch (state) {
+            case EnableLocationPermissionSuccess _:
+              return const LocationEnabledWidget();
+            case EnableLocationPermissionError _:
+              return const LocationDeniedWidget();
+            default:
+              return const Center(child: CustomCircularProgressIndicator());
           }
         },
       ),
