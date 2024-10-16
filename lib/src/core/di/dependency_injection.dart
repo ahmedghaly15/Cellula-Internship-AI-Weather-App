@@ -9,6 +9,7 @@ import 'package:internship_ai_weather_app/src/core/network/internet_checker.dart
 import 'package:internship_ai_weather_app/src/features/forecast/data/api/forecast_api_service.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/data/repositories/forecast_repo_impl.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/domain/repositories/forecast_repo.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/domain/usecases/tennis_play_prediction.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/home/data/api/home_api_service.dart';
 import 'package:internship_ai_weather_app/src/features/home/data/repositories/home_repo_impl.dart';
@@ -28,6 +29,7 @@ void setupDI() {
   _setupForCore();
   _setupForDatasources();
   _setupForRepos();
+  _setupForUseCases();
   _setupForBlocs();
 }
 
@@ -82,6 +84,12 @@ void _setupForRepos() {
   );
 }
 
+void _setupForUseCases() {
+  getIt.registerLazySingleton<TennisPlayPredictionUseCase>(
+    () => TennisPlayPredictionUseCase(getIt.get<ForecastRepo>()),
+  );
+}
+
 void _setupForBlocs() {
   getIt.registerFactory<LoginBloc>(
     () => LoginBloc(getIt.get<LoginRepo>()),
@@ -93,6 +101,72 @@ void _setupForBlocs() {
     () => HomeBloc(getIt.get<HomeRepo>()),
   );
   getIt.registerFactory<ForecastBloc>(
-    () => ForecastBloc(getIt.get<ForecastRepo>()),
+    () => ForecastBloc(
+      getIt.get<ForecastRepo>(),
+      getIt.get<TennisPlayPredictionUseCase>(),
+    ),
   );
 }
+
+
+
+
+// a Unit type to be used as a placeholder
+// abstract class Unit extends Object with BaseApiService {}
+
+// void _registerModule<
+//     ApiService extends BaseApiService,
+//     Datasource extends Object,
+//     Repo extends Object,
+//     UseCase extends Object,
+//     Bloc extends Object>({
+//   ApiService Function()? apiServiceFactoryFunc,
+//   Datasource Function()? datasourceFactoryFunc,
+//   required Repo Function(dynamic apiServiceOrDatasource) repoConstructor,
+//   UseCase Function(Repo repo)? useCaseConstructor,
+//   required Bloc Function(List<dynamic> dependencies) blocConstructor,
+//   List<Type> Function()? blocDependencies,
+// }) {
+//   // Register ApiService if provided
+//   if (apiServiceFactoryFunc != null && ApiService != Unit) {
+//     getIt.registerLazySingleton<ApiService>(
+//       apiServiceFactoryFunc,
+//     );
+//   }
+
+//   // Register Datasource if provided
+//   if (datasourceFactoryFunc != null && Datasource != Unit) {
+//     getIt.registerLazySingleton<Datasource>(
+//       datasourceFactoryFunc,
+//     );
+//   }
+
+//   // Register Repository
+//   getIt.registerLazySingleton<Repo>(() {
+//     if (datasourceFactoryFunc != null && Datasource != Unit) {
+//       return repoConstructor(getIt.get<Datasource>());
+//     } else if (apiServiceFactoryFunc != null && ApiService != Unit) {
+//       return repoConstructor(getIt.get<ApiService>());
+//     } else {
+//       throw StateError('Neither ApiService nor Datasource is available');
+//     }
+//   });
+
+//   // Register UseCase if provided
+//   if (useCaseConstructor != null && UseCase != Unit) {
+//     getIt.registerLazySingleton<UseCase>(
+//       () => useCaseConstructor(getIt.get<Repo>()),
+//     );
+//   }
+
+//   // Register Bloc/Cubit (always required)
+//    getIt.registerFactory<Bloc>(() {
+//     final dependencies = blocDependencies?.call() ?? [
+//       if (UseCase != Unit) UseCase else Repo
+//     ];
+    
+//     return blocConstructor(
+//       dependencies.map((type) => getIt.get()).toList(),
+//     );
+//   });
+// }

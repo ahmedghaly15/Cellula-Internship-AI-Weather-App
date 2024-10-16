@@ -1,10 +1,11 @@
 import 'package:dio/dio.dart';
+import 'package:retrofit/retrofit.dart';
+
 import 'package:internship_ai_weather_app/src/core/api/end_points.dart';
 import 'package:internship_ai_weather_app/src/core/utils/app_keys.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/data/models/fetch_forecast_response.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/data/models/tennis_play_prediction_request.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/data/models/tennis_play_prediction_response.dart';
-import 'package:retrofit/retrofit.dart';
 
 part 'forecast_api_service.g.dart';
 
