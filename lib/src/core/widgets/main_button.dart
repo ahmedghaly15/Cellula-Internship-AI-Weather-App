@@ -77,8 +77,8 @@ class MainButton extends StatelessWidget {
               child: Text(
                 text!,
                 style: textStyle ??
-                    AppTextStyles.font28WhiteBold.copyWith(
-                      fontSize: fontSize?.sp ?? 28.sp,
+                    AppTextStyles.font24WhiteSemiBold.copyWith(
+                      fontSize: fontSize?.sp ?? 24.sp,
                       color: isOutlined
                           ? AppColors.primaryColor
                           : textColor ?? Colors.white,

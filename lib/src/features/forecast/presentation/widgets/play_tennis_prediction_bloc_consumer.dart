@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_ai_weather_app/src/core/helpers/extensions.dart';
-import 'package:internship_ai_weather_app/src/core/themes/app_colors.dart';
-import 'package:internship_ai_weather_app/src/core/themes/app_text_styles.dart';
 import 'package:internship_ai_weather_app/src/core/utils/functions/circular_indicator_or_text_widget.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/custom_toast.dart';
 import 'package:internship_ai_weather_app/src/core/widgets/main_button.dart';
@@ -11,6 +8,7 @@ import 'package:internship_ai_weather_app/src/features/forecast/data/models/fetc
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_event.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_state.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/weather_prediction_dialog.dart';
 
 class PlayTennisPredictionBlocConsumer extends StatelessWidget {
   const PlayTennisPredictionBlocConsumer({
@@ -32,42 +30,15 @@ class PlayTennisPredictionBlocConsumer extends StatelessWidget {
           message: error,
           state: CustomToastState.error,
         ),
-        tennisPlayPredictionSuccess: (tennisPlayPredictionResponse) async {
-          final text = tennisPlayPredictionResponse.prediction[0] == 1
-              ? 'Yes, you can play.'
-              : 'Unfortunately, you can not play.';
-
-          return await showAdaptiveDialog(
-            context: context,
-            barrierDismissible: true,
-            barrierLabel: '',
-            builder: (_) => AlertDialog.adaptive(
-              backgroundColor: AppColors.primaryColor,
-              icon: Icon(
-                Icons.check_circle,
-                color: Colors.green,
-                size: 48.h,
-              ),
-              title: Text(
-                'Tennis Play Prediction',
-                style: AppTextStyles.font24WhiteBold,
-              ),
-              content: Text(
-                text,
-                style: AppTextStyles.font16WhiteRegular,
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () => context.pop(),
-                  child: Text(
-                    'Ok',
-                    style: AppTextStyles.font16WhiteBold,
-                  ),
-                ),
-              ],
-            ),
-          );
-        },
+        tennisPlayPredictionSuccess: (tennisPlayPredictionResponse) async =>
+            await showAdaptiveDialog(
+          context: context,
+          barrierDismissible: true,
+          barrierLabel: '',
+          builder: (_) => WeatherPredictionDialog(
+            prediction: tennisPlayPredictionResponse.prediction,
+          ),
+        ),
       ),
       buildWhen: (_, current) =>
           current is TennisPlayPredictionLoading ||
