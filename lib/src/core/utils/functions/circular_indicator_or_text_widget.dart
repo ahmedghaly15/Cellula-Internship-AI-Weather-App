@@ -14,8 +14,10 @@ Widget circularIndicatorOrTextWidget({
             color: Colors.white,
           ),
         )
-      : Text(
-          text,
-          style: AppTextStyles.font28WhiteBold,
+      : FittedBox(
+          child: Text(
+            text,
+            style: AppTextStyles.font24WhiteSemiBold,
+          ),
         );
 }
