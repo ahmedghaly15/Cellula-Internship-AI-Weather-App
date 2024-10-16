@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
+import 'package:retrofit/retrofit.dart';
+
 import 'package:internship_ai_weather_app/src/core/api/end_points.dart';
 import 'package:internship_ai_weather_app/src/features/home/data/models/fetch_city_data.dart';
-import 'package:retrofit/retrofit.dart';
 
 part 'home_api_service.g.dart';
 
