@@ -85,7 +85,7 @@ class _ForecastApiService implements ForecastApiService {
     )
         .compose(
           _dio.options,
-          'http://127.0.0.1:5001/predict',
+          'http://192.168.1.7:5001/predict',
           queryParameters: queryParameters,
           data: _data,
           cancelToken: cancelToken,
