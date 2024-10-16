@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:internship_ai_weather_app/src/core/api/api_result.dart';
 import 'package:internship_ai_weather_app/src/core/usecases/base_usecase.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/data/models/fetch_forecast_response.dart';
@@ -6,19 +7,20 @@ import 'package:internship_ai_weather_app/src/features/forecast/data/models/tenn
 import 'package:internship_ai_weather_app/src/features/forecast/domain/repositories/forecast_repo.dart';
 
 class TennisPlayPredictionUseCase
-    implements BaseUseCase<TennisPlayPredictionResponse, Current> {
+    implements BaseUseCase<TennisPlayPredictionResponse, Current, CancelToken> {
   final ForecastRepo _forecastRepo;
 
   TennisPlayPredictionUseCase(this._forecastRepo);
 
   @override
   Future<ApiResult<TennisPlayPredictionResponse>> call(
-    Current params,
-  ) async {
+    Current params, [
+    CancelToken? cancelToken,
+  ]) async {
     final TennisPlayPredictionRequest requestBody =
         _filterCurrentWeather(params);
 
-    return await _forecastRepo.tennisPlayPrediction(requestBody);
+    return await _forecastRepo.tennisPlayPrediction(requestBody, cancelToken);
   }
 
   TennisPlayPredictionRequest _filterCurrentWeather(Current current) {
