@@ -55,7 +55,10 @@ class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
     Emitter<ForecastState> emit,
   ) async {
     emit(const ForecastState.tennisPlayPredictionLoading());
-    final result = await _tennisPlayPredictionUseCase(event.current);
+    final result = await _tennisPlayPredictionUseCase(
+      event.current,
+      _cancelToken,
+    );
     result.when(
       success: (tennisPlayPredictionResponse) => emit(
         ForecastState.tennisPlayPredictionSuccess(tennisPlayPredictionResponse),

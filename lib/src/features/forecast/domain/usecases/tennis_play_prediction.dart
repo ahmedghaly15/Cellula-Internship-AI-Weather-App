@@ -35,7 +35,7 @@ class TennisPlayPredictionUseCase
       sunnyCondition,
       hot,
       mild,
-      humidity
+      humidity,
     ];
     return TennisPlayPredictionRequest(features);
   }
