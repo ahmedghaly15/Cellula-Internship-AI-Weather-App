@@ -6,7 +6,7 @@ import 'package:retrofit/retrofit.dart';
 
 part 'forecast_api_service.g.dart';
 
-@RestApi(baseUrl: EndPoints.baseUrl)
+@RestApi(baseUrl: EndPoints.weatherApiBaseUrl)
 abstract class ForecastApiService {
   factory ForecastApiService(Dio dio, {String baseUrl}) = _ForecastApiService;
 

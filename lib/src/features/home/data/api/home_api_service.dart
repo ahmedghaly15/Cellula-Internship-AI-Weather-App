@@ -5,7 +5,7 @@ import 'package:retrofit/retrofit.dart';
 
 part 'home_api_service.g.dart';
 
-@RestApi(baseUrl: EndPoints.baseUrl)
+@RestApi(baseUrl: EndPoints.weatherApiBaseUrl)
 abstract class HomeApiService {
   factory HomeApiService(Dio dio, {String baseUrl}) = _HomeApiService;
 
