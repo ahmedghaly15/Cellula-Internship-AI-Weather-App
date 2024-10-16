@@ -1,36 +1,37 @@
-from flask import Flask, request, jsonify
+from fastapi import FastAPI
+from pydantic import BaseModel
 import pickle
 import numpy as np
 
-app = Flask(__name__)
+# Create the FastAPI app
+app = FastAPI()
 
 # Load the model
-file_path = "random_forest_model.pkl"  # Path to the model file
+file_path = "random_forest_model.pkl"
 with open(file_path, 'rb') as file:
     model = pickle.load(file)
 
+# Pydantic model for request body validation
+class Features(BaseModel):
+    features: list[float]
 
 # Define a route for the home page
-@app.route('/')
+@app.get("/")
 def home():
-    return "Welcome to the ML Prediction API!"
-
+    return {"message": "Welcome to the ML Prediction API!"}
 
 # Define the prediction route
-@app.route('/predict', methods=['POST'])
-def predict():
-    data = request.json  # Get the JSON data from the request
-    features = data['features']  # Extract the features
-
-    # Convert to 2D array (since the model expects 2D input)
-    features = np.array(features).reshape(1, -1)
+@app.post("/predict")
+def predict(features: Features):
+    # Convert the features to a 2D array
+    feature_array = np.array(features.features).reshape(1, -1)
 
     # Make the prediction
-    prediction = model.predict(features)
+    prediction = model.predict(feature_array)
 
     # Return the prediction as JSON
-    return jsonify({'prediction': prediction.tolist()})
+    return {"prediction": prediction.tolist()}
 
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5001)
