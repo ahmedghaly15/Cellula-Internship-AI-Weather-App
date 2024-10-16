@@ -7,6 +7,7 @@ import 'package:internship_ai_weather_app/src/features/forecast/presentation/wid
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/condition_text.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/days_list_view_bloc_builder.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/labeled_circular_percent_indicators.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/play_tennis_prediction_bloc_consumer.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/widgets/weather_image.dart';
 
 class FetchForecastSuccessWidget extends StatelessWidget {
@@ -67,6 +68,10 @@ class FetchForecastSuccessWidget extends StatelessWidget {
                   .icon!,
             ),
           ),
+        ),
+        SliverToBoxAdapter(
+          child:
+              PlayTennisPredictionBlocConsumer(current: forecastEntity.current),
         ),
       ],
     );
