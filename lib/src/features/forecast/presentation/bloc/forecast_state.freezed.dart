@@ -24,10 +24,6 @@ mixin _$ForecastState<T> {
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
     required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,10 +33,6 @@ mixin _$ForecastState<T> {
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
     TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,10 +42,6 @@ mixin _$ForecastState<T> {
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
     TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -66,12 +54,6 @@ mixin _$ForecastState<T> {
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
     required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,12 +63,6 @@ mixin _$ForecastState<T> {
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
     TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -96,12 +72,6 @@ mixin _$ForecastState<T> {
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
     TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -175,10 +145,6 @@ class _$InitialImpl<T> implements _Initial<T> {
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
     required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
   }) {
     return initial();
   }
@@ -191,10 +157,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
     TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
   }) {
     return initial?.call();
   }
@@ -207,10 +169,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
     TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -229,12 +187,6 @@ class _$InitialImpl<T> implements _Initial<T> {
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
     required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
   }) {
     return initial(this);
   }
@@ -247,12 +199,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
     TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
   }) {
     return initial?.call(this);
   }
@@ -265,12 +211,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
     TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -333,10 +273,6 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
     required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
   }) {
     return fetchForecastLoading();
   }
@@ -349,10 +285,6 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
     TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
   }) {
     return fetchForecastLoading?.call();
   }
@@ -365,10 +297,6 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
     TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (fetchForecastLoading != null) {
@@ -387,12 +315,6 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
     required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
   }) {
     return fetchForecastLoading(this);
   }
@@ -405,12 +327,6 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
     TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
   }) {
     return fetchForecastLoading?.call(this);
   }
@@ -423,12 +339,6 @@ class _$FetchForecastLoadingImpl<T> implements FetchForecastLoading<T> {
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
     TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (fetchForecastLoading != null) {
@@ -519,10 +429,6 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
     required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
   }) {
     return fetchForecastSuccess(forecastEntity);
   }
@@ -535,10 +441,6 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
     TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
   }) {
     return fetchForecastSuccess?.call(forecastEntity);
   }
@@ -551,10 +453,6 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
     TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (fetchForecastSuccess != null) {
@@ -573,12 +471,6 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
     required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
   }) {
     return fetchForecastSuccess(this);
   }
@@ -591,12 +483,6 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
     TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
   }) {
     return fetchForecastSuccess?.call(this);
   }
@@ -609,12 +495,6 @@ class _$FetchForecastSuccessImpl<T> implements FetchForecastSuccess<T> {
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
     TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (fetchForecastSuccess != null) {
@@ -712,10 +592,6 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
     required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
   }) {
     return fetchForecastError(error);
   }
@@ -728,10 +604,6 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
     TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
   }) {
     return fetchForecastError?.call(error);
   }
@@ -744,10 +616,6 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
     TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (fetchForecastError != null) {
@@ -766,12 +634,6 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
     required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
   }) {
     return fetchForecastError(this);
   }
@@ -784,12 +646,6 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
     TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
   }) {
     return fetchForecastError?.call(this);
   }
@@ -802,12 +658,6 @@ class _$FetchForecastErrorImpl<T> implements FetchForecastError<T> {
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
     TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (fetchForecastError != null) {
@@ -906,10 +756,6 @@ class _$UpdatedSelectedDayImpl<T> implements UpdatedSelectedDay<T> {
         fetchForecastSuccess,
     required TResult Function(String error) fetchForecastError,
     required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
   }) {
     return updateSelectedDay(selectedDay);
   }
@@ -922,10 +768,6 @@ class _$UpdatedSelectedDayImpl<T> implements UpdatedSelectedDay<T> {
     TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult? Function(String error)? fetchForecastError,
     TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
   }) {
     return updateSelectedDay?.call(selectedDay);
   }
@@ -938,10 +780,6 @@ class _$UpdatedSelectedDayImpl<T> implements UpdatedSelectedDay<T> {
     TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
     TResult Function(String error)? fetchForecastError,
     TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (updateSelectedDay != null) {
@@ -960,12 +798,6 @@ class _$UpdatedSelectedDayImpl<T> implements UpdatedSelectedDay<T> {
         fetchForecastSuccess,
     required TResult Function(FetchForecastError<T> value) fetchForecastError,
     required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
   }) {
     return updateSelectedDay(this);
   }
@@ -978,12 +810,6 @@ class _$UpdatedSelectedDayImpl<T> implements UpdatedSelectedDay<T> {
     TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult? Function(FetchForecastError<T> value)? fetchForecastError,
     TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
   }) {
     return updateSelectedDay?.call(this);
   }
@@ -996,12 +822,6 @@ class _$UpdatedSelectedDayImpl<T> implements UpdatedSelectedDay<T> {
     TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
     TResult Function(FetchForecastError<T> value)? fetchForecastError,
     TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
     required TResult orElse(),
   }) {
     if (updateSelectedDay != null) {
@@ -1021,567 +841,5 @@ abstract class UpdatedSelectedDay<T> implements ForecastState<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdatedSelectedDayImplCopyWith<T, _$UpdatedSelectedDayImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$TennisPlayPredictionLoadingImplCopyWith<T, $Res> {
-  factory _$$TennisPlayPredictionLoadingImplCopyWith(
-          _$TennisPlayPredictionLoadingImpl<T> value,
-          $Res Function(_$TennisPlayPredictionLoadingImpl<T>) then) =
-      __$$TennisPlayPredictionLoadingImplCopyWithImpl<T, $Res>;
-}
-
-/// @nodoc
-class __$$TennisPlayPredictionLoadingImplCopyWithImpl<T, $Res>
-    extends _$ForecastStateCopyWithImpl<T, $Res,
-        _$TennisPlayPredictionLoadingImpl<T>>
-    implements _$$TennisPlayPredictionLoadingImplCopyWith<T, $Res> {
-  __$$TennisPlayPredictionLoadingImplCopyWithImpl(
-      _$TennisPlayPredictionLoadingImpl<T> _value,
-      $Res Function(_$TennisPlayPredictionLoadingImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ForecastState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$TennisPlayPredictionLoadingImpl<T>
-    implements TennisPlayPredictionLoading<T> {
-  const _$TennisPlayPredictionLoadingImpl();
-
-  @override
-  String toString() {
-    return 'ForecastState<$T>.tennisPlayPredictionLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TennisPlayPredictionLoadingImpl<T>);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchForecastLoading,
-    required TResult Function(FetchForecastEntity forecastEntity)
-        fetchForecastSuccess,
-    required TResult Function(String error) fetchForecastError,
-    required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchForecastLoading,
-    TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
-    TResult? Function(String error)? fetchForecastError,
-    TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchForecastLoading,
-    TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
-    TResult Function(String error)? fetchForecastError,
-    TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
-    required TResult orElse(),
-  }) {
-    if (tennisPlayPredictionLoading != null) {
-      return tennisPlayPredictionLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(FetchForecastLoading<T> value)
-        fetchForecastLoading,
-    required TResult Function(FetchForecastSuccess<T> value)
-        fetchForecastSuccess,
-    required TResult Function(FetchForecastError<T> value) fetchForecastError,
-    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
-    TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
-    TResult? Function(FetchForecastError<T> value)? fetchForecastError,
-    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
-    TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
-    TResult Function(FetchForecastError<T> value)? fetchForecastError,
-    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
-    required TResult orElse(),
-  }) {
-    if (tennisPlayPredictionLoading != null) {
-      return tennisPlayPredictionLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TennisPlayPredictionLoading<T> implements ForecastState<T> {
-  const factory TennisPlayPredictionLoading() =
-      _$TennisPlayPredictionLoadingImpl<T>;
-}
-
-/// @nodoc
-abstract class _$$TennisPlayPredictionSuccessImplCopyWith<T, $Res> {
-  factory _$$TennisPlayPredictionSuccessImplCopyWith(
-          _$TennisPlayPredictionSuccessImpl<T> value,
-          $Res Function(_$TennisPlayPredictionSuccessImpl<T>) then) =
-      __$$TennisPlayPredictionSuccessImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({TennisPlayPredictionResponse response});
-}
-
-/// @nodoc
-class __$$TennisPlayPredictionSuccessImplCopyWithImpl<T, $Res>
-    extends _$ForecastStateCopyWithImpl<T, $Res,
-        _$TennisPlayPredictionSuccessImpl<T>>
-    implements _$$TennisPlayPredictionSuccessImplCopyWith<T, $Res> {
-  __$$TennisPlayPredictionSuccessImplCopyWithImpl(
-      _$TennisPlayPredictionSuccessImpl<T> _value,
-      $Res Function(_$TennisPlayPredictionSuccessImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ForecastState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? response = null,
-  }) {
-    return _then(_$TennisPlayPredictionSuccessImpl<T>(
-      null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as TennisPlayPredictionResponse,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$TennisPlayPredictionSuccessImpl<T>
-    implements TennisPlayPredictionSuccess<T> {
-  const _$TennisPlayPredictionSuccessImpl(this.response);
-
-  @override
-  final TennisPlayPredictionResponse response;
-
-  @override
-  String toString() {
-    return 'ForecastState<$T>.tennisPlayPredictionSuccess(response: $response)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TennisPlayPredictionSuccessImpl<T> &&
-            (identical(other.response, response) ||
-                other.response == response));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, response);
-
-  /// Create a copy of ForecastState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TennisPlayPredictionSuccessImplCopyWith<T,
-          _$TennisPlayPredictionSuccessImpl<T>>
-      get copyWith => __$$TennisPlayPredictionSuccessImplCopyWithImpl<T,
-          _$TennisPlayPredictionSuccessImpl<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchForecastLoading,
-    required TResult Function(FetchForecastEntity forecastEntity)
-        fetchForecastSuccess,
-    required TResult Function(String error) fetchForecastError,
-    required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionSuccess(response);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchForecastLoading,
-    TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
-    TResult? Function(String error)? fetchForecastError,
-    TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionSuccess?.call(response);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchForecastLoading,
-    TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
-    TResult Function(String error)? fetchForecastError,
-    TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
-    required TResult orElse(),
-  }) {
-    if (tennisPlayPredictionSuccess != null) {
-      return tennisPlayPredictionSuccess(response);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(FetchForecastLoading<T> value)
-        fetchForecastLoading,
-    required TResult Function(FetchForecastSuccess<T> value)
-        fetchForecastSuccess,
-    required TResult Function(FetchForecastError<T> value) fetchForecastError,
-    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
-    TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
-    TResult? Function(FetchForecastError<T> value)? fetchForecastError,
-    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
-    TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
-    TResult Function(FetchForecastError<T> value)? fetchForecastError,
-    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
-    required TResult orElse(),
-  }) {
-    if (tennisPlayPredictionSuccess != null) {
-      return tennisPlayPredictionSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TennisPlayPredictionSuccess<T> implements ForecastState<T> {
-  const factory TennisPlayPredictionSuccess(
-          final TennisPlayPredictionResponse response) =
-      _$TennisPlayPredictionSuccessImpl<T>;
-
-  TennisPlayPredictionResponse get response;
-
-  /// Create a copy of ForecastState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TennisPlayPredictionSuccessImplCopyWith<T,
-          _$TennisPlayPredictionSuccessImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$TennisPlayPredictionErrorImplCopyWith<T, $Res> {
-  factory _$$TennisPlayPredictionErrorImplCopyWith(
-          _$TennisPlayPredictionErrorImpl<T> value,
-          $Res Function(_$TennisPlayPredictionErrorImpl<T>) then) =
-      __$$TennisPlayPredictionErrorImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({String error});
-}
-
-/// @nodoc
-class __$$TennisPlayPredictionErrorImplCopyWithImpl<T, $Res>
-    extends _$ForecastStateCopyWithImpl<T, $Res,
-        _$TennisPlayPredictionErrorImpl<T>>
-    implements _$$TennisPlayPredictionErrorImplCopyWith<T, $Res> {
-  __$$TennisPlayPredictionErrorImplCopyWithImpl(
-      _$TennisPlayPredictionErrorImpl<T> _value,
-      $Res Function(_$TennisPlayPredictionErrorImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ForecastState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? error = null,
-  }) {
-    return _then(_$TennisPlayPredictionErrorImpl<T>(
-      null == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$TennisPlayPredictionErrorImpl<T>
-    implements TennisPlayPredictionError<T> {
-  const _$TennisPlayPredictionErrorImpl(this.error);
-
-  @override
-  final String error;
-
-  @override
-  String toString() {
-    return 'ForecastState<$T>.tennisPlayPredictionError(error: $error)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TennisPlayPredictionErrorImpl<T> &&
-            (identical(other.error, error) || other.error == error));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, error);
-
-  /// Create a copy of ForecastState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TennisPlayPredictionErrorImplCopyWith<T,
-          _$TennisPlayPredictionErrorImpl<T>>
-      get copyWith => __$$TennisPlayPredictionErrorImplCopyWithImpl<T,
-          _$TennisPlayPredictionErrorImpl<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchForecastLoading,
-    required TResult Function(FetchForecastEntity forecastEntity)
-        fetchForecastSuccess,
-    required TResult Function(String error) fetchForecastError,
-    required TResult Function(int selectedDay) updateSelectedDay,
-    required TResult Function() tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionResponse response)
-        tennisPlayPredictionSuccess,
-    required TResult Function(String error) tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionError(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchForecastLoading,
-    TResult? Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
-    TResult? Function(String error)? fetchForecastError,
-    TResult? Function(int selectedDay)? updateSelectedDay,
-    TResult? Function()? tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(String error)? tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionError?.call(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchForecastLoading,
-    TResult Function(FetchForecastEntity forecastEntity)? fetchForecastSuccess,
-    TResult Function(String error)? fetchForecastError,
-    TResult Function(int selectedDay)? updateSelectedDay,
-    TResult Function()? tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionResponse response)?
-        tennisPlayPredictionSuccess,
-    TResult Function(String error)? tennisPlayPredictionError,
-    required TResult orElse(),
-  }) {
-    if (tennisPlayPredictionError != null) {
-      return tennisPlayPredictionError(error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(FetchForecastLoading<T> value)
-        fetchForecastLoading,
-    required TResult Function(FetchForecastSuccess<T> value)
-        fetchForecastSuccess,
-    required TResult Function(FetchForecastError<T> value) fetchForecastError,
-    required TResult Function(UpdatedSelectedDay<T> value) updateSelectedDay,
-    required TResult Function(TennisPlayPredictionLoading<T> value)
-        tennisPlayPredictionLoading,
-    required TResult Function(TennisPlayPredictionSuccess<T> value)
-        tennisPlayPredictionSuccess,
-    required TResult Function(TennisPlayPredictionError<T> value)
-        tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(FetchForecastLoading<T> value)? fetchForecastLoading,
-    TResult? Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
-    TResult? Function(FetchForecastError<T> value)? fetchForecastError,
-    TResult? Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult? Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult? Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult? Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
-  }) {
-    return tennisPlayPredictionError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(FetchForecastLoading<T> value)? fetchForecastLoading,
-    TResult Function(FetchForecastSuccess<T> value)? fetchForecastSuccess,
-    TResult Function(FetchForecastError<T> value)? fetchForecastError,
-    TResult Function(UpdatedSelectedDay<T> value)? updateSelectedDay,
-    TResult Function(TennisPlayPredictionLoading<T> value)?
-        tennisPlayPredictionLoading,
-    TResult Function(TennisPlayPredictionSuccess<T> value)?
-        tennisPlayPredictionSuccess,
-    TResult Function(TennisPlayPredictionError<T> value)?
-        tennisPlayPredictionError,
-    required TResult orElse(),
-  }) {
-    if (tennisPlayPredictionError != null) {
-      return tennisPlayPredictionError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TennisPlayPredictionError<T> implements ForecastState<T> {
-  const factory TennisPlayPredictionError(final String error) =
-      _$TennisPlayPredictionErrorImpl<T>;
-
-  String get error;
-
-  /// Create a copy of ForecastState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TennisPlayPredictionErrorImplCopyWith<T,
-          _$TennisPlayPredictionErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
