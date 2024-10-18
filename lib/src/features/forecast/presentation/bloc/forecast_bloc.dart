@@ -5,15 +5,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/data/models/fetch_forecast_response.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/data/models/labeled_circular_percent_attributes.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/domain/repositories/forecast_repo.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/domain/usecases/tennis_play_prediction.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_event.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_state.dart';
 
 class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
   final ForecastRepo _forecastRepo;
+  final TennisPlayPredictionUseCase _tennisPlayPredictionUseCase;
 
-  ForecastBloc(this._forecastRepo) : super(const ForecastState.initial()) {
+  ForecastBloc(this._forecastRepo, this._tennisPlayPredictionUseCase)
+      : super(const ForecastState.initial()) {
     on<FetchForecastEvent>(_fetchForecast);
     on<UpdateSelectedDayEvent>(_updateSelectedDay);
+    on<TennisPlayPrediction>(_tennisPlayPrediction);
   }
 
   final CancelToken _cancelToken = CancelToken();
@@ -44,6 +48,24 @@ class ForecastBloc extends Bloc<ForecastEvent, ForecastState> {
       selectedDay = event.selectedDay;
       emit(ForecastState.updateSelectedDay(selectedDay));
     }
+  }
+
+  void _tennisPlayPrediction(
+    TennisPlayPrediction event,
+    Emitter<ForecastState> emit,
+  ) async {
+    emit(const ForecastState.tennisPlayPredictionLoading());
+    final result = await _tennisPlayPredictionUseCase(
+      event.current,
+      _cancelToken,
+    );
+    result.when(
+      success: (tennisPlayPredictionResponse) => emit(
+        ForecastState.tennisPlayPredictionSuccess(tennisPlayPredictionResponse),
+      ),
+      failure: (failure) =>
+          emit(ForecastState.tennisPlayPredictionError(failure.error)),
+    );
   }
 
   List<LabeledCircularPercentAttributes> forecastIndicatorsAttributes(

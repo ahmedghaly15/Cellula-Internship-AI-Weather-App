@@ -9,6 +9,7 @@ import 'package:internship_ai_weather_app/src/core/network/internet_checker.dart
 import 'package:internship_ai_weather_app/src/features/forecast/data/api/forecast_api_service.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/data/repositories/forecast_repo_impl.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/domain/repositories/forecast_repo.dart';
+import 'package:internship_ai_weather_app/src/features/forecast/domain/usecases/tennis_play_prediction.dart';
 import 'package:internship_ai_weather_app/src/features/forecast/presentation/bloc/forecast_bloc.dart';
 import 'package:internship_ai_weather_app/src/features/home/data/api/home_api_service.dart';
 import 'package:internship_ai_weather_app/src/features/home/data/repositories/home_repo_impl.dart';
@@ -28,6 +29,7 @@ void setupDI() {
   _setupForCore();
   _setupForDatasources();
   _setupForRepos();
+  _setupForUseCases();
   _setupForBlocs();
 }
 
@@ -82,6 +84,12 @@ void _setupForRepos() {
   );
 }
 
+void _setupForUseCases() {
+  getIt.registerLazySingleton<TennisPlayPredictionUseCase>(
+    () => TennisPlayPredictionUseCase(getIt.get<ForecastRepo>()),
+  );
+}
+
 void _setupForBlocs() {
   getIt.registerFactory<LoginBloc>(
     () => LoginBloc(getIt.get<LoginRepo>()),
@@ -93,7 +101,10 @@ void _setupForBlocs() {
     () => HomeBloc(getIt.get<HomeRepo>()),
   );
   getIt.registerFactory<ForecastBloc>(
-    () => ForecastBloc(getIt.get<ForecastRepo>()),
+    () => ForecastBloc(
+      getIt.get<ForecastRepo>(),
+      getIt.get<TennisPlayPredictionUseCase>(),
+    ),
   );
 }
 

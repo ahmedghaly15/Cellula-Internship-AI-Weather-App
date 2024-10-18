@@ -36,4 +36,9 @@ class AppTextStyles {
         fontWeight: FontWeight.bold,
         color: Colors.white,
       );
+  static TextStyle get font24WhiteSemiBold => TextStyle(
+        fontSize: 24.sp,
+        fontWeight: FontWeight.w600,
+        color: Colors.white,
+      );
 }

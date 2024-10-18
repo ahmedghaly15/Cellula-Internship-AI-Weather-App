@@ -9,6 +9,6 @@ class EndPoints {
   static const String fetchCityDataUsingCityName =
       '${openStreetApiBaseUrl}search?format=json&limit=1';
   static const String fetchForecast = 'forecast.json';
-  static const String aiApiBaseUrl = 'http://127.0.0.1:5001/';
+  static const String aiApiBaseUrl = 'http://192.168.1.7:5001/';
   static const String tennisPlayPrediction = '${aiApiBaseUrl}predict';
 }
