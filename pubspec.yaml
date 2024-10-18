@@ -32,8 +32,6 @@ dependencies:
   flutter_screenutil: ^5.9.3
   # An SVG rendering and widget library for Flutter, which allows painting
   flutter_svg: ^2.0.10+1
-  # For Beautiful animations 
-  animate_do: ^3.3.4
   # Networking
   dio: ^5.7.0
   retrofit: ^4.4.1

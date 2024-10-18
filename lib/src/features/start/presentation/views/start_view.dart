@@ -1,4 +1,3 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -19,31 +18,17 @@ class StartView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElasticIn(
-              duration: const Duration(seconds: 2),
-              child: SvgPicture.asset(
-                AppAssets.svgsStartScreen,
-              ),
+            SvgPicture.asset(AppAssets.svgsStartScreen),
+            MainButton(
+              margin: EdgeInsets.only(top: 24.h, bottom: 12.h),
+              onPressed: () => context.pushNamed(Routes.registerRoute),
+              text: "Sign up",
             ),
-            FadeInDown(
-              duration: const Duration(seconds: 1),
-              from: 50.h,
-              child: MainButton(
-                margin: EdgeInsets.only(top: 24.h, bottom: 12.h),
-                onPressed: () => context.pushNamed(Routes.registerRoute),
-                text: "Sign up",
-              ),
-            ),
-            FadeInUp(
-              duration: const Duration(seconds: 1),
-              from: 50.h,
-              child: MainButton(
-                onPressed: () =>
-                    context.pushReplacementNamed(Routes.loginRoute),
-                text: "Log in",
-                backgroundColor: Colors.white,
-                textColor: AppColors.primaryColor,
-              ),
+            MainButton(
+              onPressed: () => context.pushReplacementNamed(Routes.loginRoute),
+              text: "Log in",
+              backgroundColor: Colors.white,
+              textColor: AppColors.primaryColor,
             ),
           ],
         ),
